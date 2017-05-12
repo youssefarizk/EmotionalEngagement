@@ -29,4 +29,114 @@ public class Library
             web.Focus(Windows.UI.Xaml.FocusState.Keyboard);
         }
     }
+    public void Go1(ref WebView web)
+    {
+            try
+            {
+                web.Navigate(new System.Uri(@"https://www.youtube.com/watch?v=-v-mCK_tXL4"));
+            }
+            catch
+            {
+
+            }
+    }
+    public void Go2(ref WebView web)
+    {
+        try
+        {
+            web.Navigate(new System.Uri(@"https://google.com"));
+        }
+        catch
+        {
+
+        }
+    }
+    public void Go3(ref WebView web)
+    {
+        try
+        {
+            web.Navigate(new System.Uri(@"https://google.com"));
+        }
+        catch
+        {
+
+        }
+    }
+    public void Go4(ref WebView web)
+    {
+        try
+        {
+            web.Navigate(new System.Uri(@"https://google.com"));
+        }
+        catch
+        {
+
+        }
+    }
+    public void Go5(ref WebView web)
+    {
+        try
+        {
+            web.Navigate(new System.Uri(@"https://google.com"));
+        }
+        catch
+        {
+
+        }
+    }
+    public void Go6(ref WebView web)
+    {
+        try
+        {
+            web.Navigate(new System.Uri(@"https://google.com"));
+        }
+        catch
+        {
+
+        }
+    }
+    public void Go7(ref WebView web)
+    {
+        try
+        {
+            web.Navigate(new System.Uri(@"https://google.com"));
+        }
+        catch
+        {
+
+        }
+    }
+    public void Go8(ref WebView web)
+    {
+        try
+        {
+            web.Navigate(new System.Uri(@"https://google.com"));
+        }
+        catch
+        {
+
+        }
+    }
+    public void Go9(ref WebView web)
+    {
+        try
+        {
+            web.Navigate(new System.Uri(@"https://google.com"));
+        }
+        catch
+        {
+
+        }
+    }
+    public void Go10(ref WebView web)
+    {
+        try
+        {
+            web.Navigate(new System.Uri(@"https://google.com"));
+        }
+        catch
+        {
+
+        }
+    }
 }
