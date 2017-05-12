@@ -191,6 +191,29 @@ namespace App1
             Library.Go5(ref Display);
         }
 
+        private void video6_Click(object sender, RoutedEventArgs e)
+        {
+            Library.Go6(ref Display);
+        }
 
+        private void video7_Click(object sender, RoutedEventArgs e)
+        {
+            Library.Go7(ref Display);
+        }
+
+        private void video8_Click(object sender, RoutedEventArgs e)
+        {
+            Library.Go8(ref Display);
+        }
+
+        private void video9_Click(object sender, RoutedEventArgs e)
+        {
+            Library.Go9(ref Display);
+        }
+
+        private void video10_Click(object sender, RoutedEventArgs e)
+        {
+            Library.Go10(ref Display);
+        }
     }
 }

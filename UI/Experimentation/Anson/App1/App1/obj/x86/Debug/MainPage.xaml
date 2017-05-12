@@ -9,30 +9,35 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="10,0,0,0" RenderTransformOrigin="0.476,0.426">
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" MinHeight="1066"/>
+            <RowDefinition Height="Auto" MinHeight="1061"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
         <TextBox x:ConnectionId='1' x:Name="Value" Grid.Row="0" Margin="887,0,0,1029"                                                        />
-        <WebView x:ConnectionId='2' Margin="887,37,0,0" Name="Display"                                                                                         Source="https://www.youtube.com/"/>
+        <WebView x:ConnectionId='2' Margin="887,37,0,224" Name="Display"                                                                                         Source="https://www.youtube.com/"/>
         <Image x:ConnectionId='3'   Name="image" HorizontalAlignment="Left" Height="500" VerticalAlignment="Top" Width="500" Margin="10,543,0,0"/>
         <TextBox x:ConnectionId='4'  Name="output" HorizontalAlignment="Left" Margin="565,538,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Height="200" Width="200"/>
         <Button x:ConnectionId='5'  Name="takephoto" Content="takePhoto" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="196,491,0,0"                         Height="32" Width="88"/>
         <Button x:ConnectionId='6' Name="getEmotion" Content="getEmotion" HorizontalAlignment="Left" Margin="620,501,0,0" VerticalAlignment="Top"                          Height="32" Width="98"/>
-        <Button x:ConnectionId='7' Name="video1" Content="video1" HorizontalAlignment="Left" Margin="77,117,0,0"  VerticalAlignment="Top"                       Height="32" Width="71"/>
-        <Button x:ConnectionId='8' Name="video2" Content="video2" HorizontalAlignment="Left" Margin="260,117,0,0"  VerticalAlignment="Top"                      Height="32" Width="64"/>
-        <Button x:ConnectionId='9' Name="video3" Content="video3" HorizontalAlignment="Left" Margin="426,117,0,0"  VerticalAlignment="Top"                      Height="32" Width="70"/>
-        <Button x:ConnectionId='10' Name="video4" Content="video4" HorizontalAlignment="Left" Margin="583,117,0,0"  VerticalAlignment="Top"                      Height="32" Width="73"/>
-        <Button x:ConnectionId='11' Name="video5" Content="video5" HorizontalAlignment="Left" Margin="745,117,0,0"  VerticalAlignment="Top"                      Height="32" Width="90"/>
+        <Button x:ConnectionId='7' Name="video1" Content="video1" HorizontalAlignment="Left" Margin="123,117,0,0"  VerticalAlignment="Top"                       Height="32" Width="70"/>
+        <Button x:ConnectionId='8' Name="video2" Content="video2" HorizontalAlignment="Left" Margin="260,117,0,0"  VerticalAlignment="Top"                      Height="32" Width="70"/>
+        <Button x:ConnectionId='9' Name="video3" Content="video3" HorizontalAlignment="Left" Margin="396,117,0,0"  VerticalAlignment="Top"                      Height="32" Width="70"/>
+        <Button x:ConnectionId='10' Name="video4" Content="video4" HorizontalAlignment="Left" Margin="535,117,0,0"  VerticalAlignment="Top"                      Height="32" Width="70"/>
+        <Button x:ConnectionId='11' Name="video5" Content="video5" HorizontalAlignment="Left" Margin="675,117,0,0"  VerticalAlignment="Top"                      Height="32" Width="70"/>
         <TextBox x:ConnectionId='12' Name="output2" HorizontalAlignment="Left" Margin="565,743,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Height="94" Width="200"/>
+        <Button x:ConnectionId='13' Name="video6" Content="video6" HorizontalAlignment="Left" Margin="123,178,0,0" VerticalAlignment="Top"                      Width="70"/>
+        <Button x:ConnectionId='14' Name="video7" Content="video7" HorizontalAlignment="Left" Margin="260,178,0,0" VerticalAlignment="Top"                      Width="70"/>
+        <Button x:ConnectionId='15' Name="video8" Content="video8" HorizontalAlignment="Left" Margin="396,178,0,0" VerticalAlignment="Top" Width="70"                     />
+        <Button x:ConnectionId='16' Name="video9" Content="video9" HorizontalAlignment="Left" Margin="535,178,0,0" VerticalAlignment="Top" Width="70"                     />
+        <Button x:ConnectionId='17' Name="video10" Content="video10" HorizontalAlignment="Left" Margin="675,178,0,0" VerticalAlignment="Top" Width="90"                      />
 
     </Grid>
     <Page.BottomAppBar>
         <AppBar IsOpen="True" IsSticky="True" Height="63" Margin="894,0,0,0">
             <StackPanel Orientation="Horizontal" Margin="0,1,15,0">
-                <AppBarButton x:ConnectionId='13' Name="Back" Icon="Back" Label="Back"                   />
-                <AppBarButton x:ConnectionId='14' Name="Forward" Icon="Forward" Label="Forward"                      />
-                <AppBarButton x:ConnectionId='15' Name="Refresh" Icon="Refresh" Label="Refresh"                       Width="62"/>
-                <AppBarButton x:ConnectionId='16' Name="Cancel" Icon="Cancel" Label="Cancel"                     />
+                <AppBarButton x:ConnectionId='18' Name="Back" Icon="Back" Label="Back"                   />
+                <AppBarButton x:ConnectionId='19' Name="Forward" Icon="Forward" Label="Forward"                      />
+                <AppBarButton x:ConnectionId='20' Name="Refresh" Icon="Refresh" Label="Refresh"                       Width="62"/>
+                <AppBarButton x:ConnectionId='21' Name="Cancel" Icon="Cancel" Label="Cancel"                     />
             </StackPanel>
         </AppBar>
     </Page.BottomAppBar>

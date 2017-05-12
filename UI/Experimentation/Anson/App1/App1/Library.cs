@@ -33,7 +33,7 @@ public class Library
     {
             try
             {
-                web.Navigate(new System.Uri(@"https://www.youtube.com/watch?v=-v-mCK_tXL4"));
+                web.Navigate(new System.Uri(@"https://www.youtube.com/embed/watch?v=ZK3O402wf1c&list=PL49CF3715CB9EF31D"));
             }
             catch
             {
@@ -44,7 +44,7 @@ public class Library
     {
         try
         {
-            web.Navigate(new System.Uri(@"https://google.com"));
+            web.Navigate(new System.Uri(@"https://www.youtube.com/embed/watch?v=mbyG85GZ0PI&list=PLXIPmvMlpicGPhDuIDYWSSUeV8JVElsei"));
         }
         catch
         {
@@ -55,7 +55,7 @@ public class Library
     {
         try
         {
-            web.Navigate(new System.Uri(@"https://google.com"));
+            web.Navigate(new System.Uri(@"https://www.youtube.com/tv#/watch?v=De3-5PpTY3o"));
         }
         catch
         {
@@ -66,7 +66,7 @@ public class Library
     {
         try
         {
-            web.Navigate(new System.Uri(@"https://google.com"));
+            web.Navigate(new System.Uri(@"https://www.youtube.com/tv#/watch?v=GQ7kdlggtUU"));
         }
         catch
         {
@@ -77,7 +77,7 @@ public class Library
     {
         try
         {
-            web.Navigate(new System.Uri(@"https://google.com"));
+            web.Navigate(new System.Uri(@"https://www.youtube.com/tv#/watch?v=PmNIf4p8g48"));
         }
         catch
         {
@@ -88,7 +88,7 @@ public class Library
     {
         try
         {
-            web.Navigate(new System.Uri(@"https://google.com"));
+            web.Navigate(new System.Uri(@"https://www.youtube.com/tv#/watch?v=wVXVy7vJyYc"));
         }
         catch
         {
@@ -99,7 +99,7 @@ public class Library
     {
         try
         {
-            web.Navigate(new System.Uri(@"https://google.com"));
+            web.Navigate(new System.Uri(@"https://www.youtube.com/tv#/watch?v=OctRQoCodVw"));
         }
         catch
         {
@@ -110,7 +110,7 @@ public class Library
     {
         try
         {
-            web.Navigate(new System.Uri(@"https://google.com"));
+            web.Navigate(new System.Uri(@"https://www.youtube.com/tv#/watch?v=rnCLYoCdwyk"));
         }
         catch
         {
@@ -121,7 +121,7 @@ public class Library
     {
         try
         {
-            web.Navigate(new System.Uri(@"https://google.com"));
+            web.Navigate(new System.Uri(@"https://www.youtube.com/tv#/watch?v=rPeGaos7DB4"));
         }
         catch
         {
@@ -132,7 +132,7 @@ public class Library
     {
         try
         {
-            web.Navigate(new System.Uri(@"https://google.com"));
+            web.Navigate(new System.Uri(@"https://www.youtube.com/tv#/watch?v=_PwhiWxHK8o"));
         }
         catch
         {
