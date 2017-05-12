@@ -1,0 +1,40 @@
+﻿<Page
+    x:Class="App1.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="10,0,0,0" RenderTransformOrigin="0.476,0.426">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" MinHeight="912"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBox x:Name="Value" Grid.Row="0" Margin="887,0,0,875" KeyDown="Value_KeyDown" TextChanged="Value_TextChanged"/>
+        <WebView Margin="887,37,0,0" Name="Display" NavigationCompleted="Display_NavigationCompleted" LoadCompleted="Display_LoadCompleted" Source="https://www.youtube.com/"/>
+        <Image   Name="image" HorizontalAlignment="Left" Height="500" VerticalAlignment="Top" Width="500" Margin="30,280,0,0"/>
+        <TextBox  Name="output" HorizontalAlignment="Left" Margin="659,280,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Height="200" Width="200"/>
+        <Button  Name="takephoto" Content="takePhoto" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="224,219,0,0" Click="takephoto_Click" Height="32" Width="88"/>
+        <Button Name="getEmotion" Content="getEmotion" HorizontalAlignment="Left" Margin="712,219,0,0" VerticalAlignment="Top" Click="getEmotion_Click" Height="32" Width="98"/>
+        <Button Name="Strongly_Dislike" Content="Strongly Dislike" HorizontalAlignment="Left" Margin="48,117,0,0" Grid.Row="1" VerticalAlignment="Top" Click="Strongly_Dislike_Click" Height="32" Width="122"/>
+        <Button Name="Dislike" Content="Dislike" HorizontalAlignment="Left" Margin="260,117,0,0" Grid.Row="1" VerticalAlignment="Top" Click="Dislike_Click" Height="32" Width="64"/>
+        <Button Name="Normal" Content="Normal" HorizontalAlignment="Left" Margin="426,117,0,0" Grid.Row="1" VerticalAlignment="Top" Click="Normal_Click" Height="32" Width="70"/>
+        <Button Name="Okay" Content="Okay" HorizontalAlignment="Left" Margin="602,117,0,0" Grid.Row="1" VerticalAlignment="Top" Click="Okay_Click" Height="32" Width="54"/>
+        <Button Name="Very_Good" Content="Very Good" HorizontalAlignment="Left" Margin="745,117,0,0" Grid.Row="1" VerticalAlignment="Top" Click="Very_Good_Click" Height="32" Width="90"/>
+        <TextBox HorizontalAlignment="Left" Margin="48,31,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Do you like the video?" VerticalAlignment="Top" Width="401" Height="48" FontSize="22" FontFamily="Segoe UI Semibold"/>
+        <TextBox Name="output2" HorizontalAlignment="Left" Margin="659,485,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Height="94" Width="200"/>
+
+    </Grid>
+    <Page.BottomAppBar>
+        <AppBar IsOpen="True" IsSticky="True" Height="63" Margin="894,0,0,0">
+            <StackPanel Orientation="Horizontal" Margin="0,1,15,0">
+                <AppBarButton Name="Back" Icon="Back" Label="Back" Click="Back_Click"/>
+                <AppBarButton Name="Forward" Icon="Forward" Label="Forward" Click="Forward_Click"/>
+                <AppBarButton Name="Refresh" Icon="Refresh" Label="Refresh" Click="Refresh_Click" Width="62"/>
+                <AppBarButton Name="Cancel" Icon="Cancel" Label="Cancel" Click="Cancel_Click"/>
+            </StackPanel>
+        </AppBar>
+    </Page.BottomAppBar>
+</Page>
