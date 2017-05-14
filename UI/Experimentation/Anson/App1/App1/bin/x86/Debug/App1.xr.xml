@@ -31,8 +31,6 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Height" />
       <RootProperty Name="Width" />
-      <RootProperty Name="FontSize" />
-      <RootProperty Name="FontFamily" />
       <RootEvent Name="KeyDown" />
       <RootEvent Name="TextChanged" />
     </RootType>

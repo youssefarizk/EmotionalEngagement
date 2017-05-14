@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Diagnostics;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
@@ -19,6 +20,7 @@ using Windows.UI.Xaml.Media.Imaging;
 using Windows.Storage.Streams;
 using Microsoft.ProjectOxford.Emotion;
 using Microsoft.ProjectOxford.Emotion.Contract;
+using System.Diagnostics;
 
 namespace App1
 {
@@ -164,29 +166,54 @@ namespace App1
 
         }
 
-        private void Strongly_Dislike_Click(object sender, RoutedEventArgs e)
+        private void video1_Click(object sender, RoutedEventArgs e)
         {
-
+            Library.Go1(ref Display);
         }
 
-        private void Dislike_Click(object sender, RoutedEventArgs e)
+        private void video2_Click(object sender, RoutedEventArgs e)
         {
-
+            Library.Go2(ref Display);
         }
 
-        private void Normal_Click(object sender, RoutedEventArgs e)
+        private void video3_Click(object sender, RoutedEventArgs e)
         {
-            
+            Library.Go3(ref Display);
         }
 
-        private void Okay_Click(object sender, RoutedEventArgs e)
+        private void video4_Click(object sender, RoutedEventArgs e)
         {
-           
+            Library.Go4(ref Display);
         }
 
-        private void Very_Good_Click(object sender, RoutedEventArgs e)
+        private void video5_Click(object sender, RoutedEventArgs e)
         {
-            
+            Library.Go5(ref Display);
+        }
+
+        private void video6_Click(object sender, RoutedEventArgs e)
+        {
+            Library.Go6(ref Display);
+        }
+
+        private void video7_Click(object sender, RoutedEventArgs e)
+        {
+            Library.Go7(ref Display);
+        }
+
+        private void video8_Click(object sender, RoutedEventArgs e)
+        {
+            Library.Go8(ref Display);
+        }
+
+        private void video9_Click(object sender, RoutedEventArgs e)
+        {
+            Library.Go9(ref Display);
+        }
+
+        private void video10_Click(object sender, RoutedEventArgs e)
+        {
+            Library.Go10(ref Display);
         }
     }
 }

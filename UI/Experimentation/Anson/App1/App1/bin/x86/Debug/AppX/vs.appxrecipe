@@ -10,7 +10,7 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>1a9732bf-bf57-49db-841e-a456d40aa5cd</PackageIdentityName>
     <PackageIdentityPublisher>CN=Anson</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\Anson\Desktop\API emotion\App1\App1\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\Anson\Desktop\EmotionalEngagement\UI\Experimentation\Anson\App1\App1\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -18,7 +18,7 @@
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\Anson\Desktop\API emotion\App1\App1\bin\x86\Debug\AppX</LayoutDir>
+    <LayoutDir>C:\Users\Anson\Desktop\EmotionalEngagement\UI\Experimentation\Anson\App1\App1\bin\x86\Debug\AppX</LayoutDir>
     <RegisteredManifestChecksum>EFBD131E150FFA4ECA6CB8574911BBDF008A2F73DFC6291F72E51D21C2F1C529</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>1a9732bf-bf57-49db-841e-a456d40aa5cd_1.0.0.0_x86__4jx42gm853gy6</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>1a9732bf-bf57-49db-841e-a456d40aa5cd_4jx42gm853gy6!App</RegisteredUserModeAppID>
@@ -28,16 +28,16 @@
     <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\Anson\Desktop\API emotion\App1\App1\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Anson\Desktop\EmotionalEngagement\UI\Experimentation\Anson\App1\App1\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-05-12T13:25:00.316</Modified>
+      <Modified>2017-05-12T23:35:05.980</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\Anson\Desktop\API emotion\App1\App1\bin\x86\Debug\App1.exe">
+    <AppxPackagedFile Include="C:\Users\Anson\Desktop\EmotionalEngagement\UI\Experimentation\Anson\App1\App1\bin\x86\Debug\App1.exe">
       <PackagePath>entrypoint\App1.exe</PackagePath>
-      <Modified>2017-05-12T13:24:59.835</Modified>
+      <Modified>2017-05-12T23:35:05.673</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Anson\.nuget\packages\Microsoft.CSharp\4.3.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -535,60 +535,60 @@
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
       <Modified>2016-06-11T22:15:04.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Anson\Desktop\API emotion\App1\App1\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\Anson\Desktop\EmotionalEngagement\UI\Experimentation\Anson\App1\App1\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2017-05-02T16:21:27.553</Modified>
+      <Modified>2017-05-12T15:07:44.885</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Anson\Desktop\API emotion\App1\App1\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Anson\Desktop\EmotionalEngagement\UI\Experimentation\Anson\App1\App1\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2017-05-02T15:31:40.009</Modified>
+      <Modified>2017-05-12T15:07:44.869</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Anson\Desktop\API emotion\App1\App1\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Anson\Desktop\EmotionalEngagement\UI\Experimentation\Anson\App1\App1\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-05-02T15:31:40.009</Modified>
+      <Modified>2017-05-12T15:07:44.870</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Anson\Desktop\API emotion\App1\App1\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Anson\Desktop\EmotionalEngagement\UI\Experimentation\Anson\App1\App1\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-05-02T15:31:40.009</Modified>
+      <Modified>2017-05-12T15:07:44.872</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Anson\Desktop\API emotion\App1\App1\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Anson\Desktop\EmotionalEngagement\UI\Experimentation\Anson\App1\App1\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-05-02T15:31:40.009</Modified>
+      <Modified>2017-05-12T15:07:44.873</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Anson\Desktop\API emotion\App1\App1\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\Anson\Desktop\EmotionalEngagement\UI\Experimentation\Anson\App1\App1\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-05-02T15:31:40.009</Modified>
+      <Modified>2017-05-12T15:07:44.874</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Anson\Desktop\API emotion\App1\App1\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\Anson\Desktop\EmotionalEngagement\UI\Experimentation\Anson\App1\App1\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-05-02T15:31:40.009</Modified>
+      <Modified>2017-05-12T15:07:44.875</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Anson\Desktop\API emotion\App1\App1\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Anson\Desktop\EmotionalEngagement\UI\Experimentation\Anson\App1\App1\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-05-02T15:31:40.009</Modified>
+      <Modified>2017-05-12T15:07:44.876</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Anson\Desktop\API emotion\App1\App1\bin\x86\Debug\App1.xr.xml">
+    <AppxPackagedFile Include="C:\Users\Anson\Desktop\EmotionalEngagement\UI\Experimentation\Anson\App1\App1\bin\x86\Debug\App1.xr.xml">
       <PackagePath>App1.xr.xml</PackagePath>
-      <Modified>2017-05-12T11:54:40.350</Modified>
+      <Modified>2017-05-12T15:46:07.353</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.15063.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
       <Modified>2017-05-02T15:47:42.079</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Anson\Desktop\API emotion\App1\App1\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Anson\Desktop\EmotionalEngagement\UI\Experimentation\Anson\App1\App1\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-05-12T11:54:40.915</Modified>
+      <Modified>2017-05-12T23:29:48.316</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Anson\Desktop\API emotion\App1\App1\bin\x86\Debug\Core\App1.exe">
+    <AppxPackagedFile Include="C:\Users\Anson\Desktop\EmotionalEngagement\UI\Experimentation\Anson\App1\App1\bin\x86\Debug\Core\App1.exe">
       <PackagePath>App1.exe</PackagePath>
-      <Modified>2017-05-12T13:25:00.304</Modified>
+      <Modified>2017-05-12T23:35:05.969</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
