@@ -29,6 +29,12 @@
         <Button Name="video8" Content="video8" HorizontalAlignment="Left" Margin="396,178,0,0" VerticalAlignment="Top" Width="70" Click="video8_Click"/>
         <Button Name="video9" Content="video9" HorizontalAlignment="Left" Margin="535,178,0,0" VerticalAlignment="Top" Width="70" Click="video9_Click"/>
         <Button Name="video10" Content="video10" HorizontalAlignment="Left" Margin="675,178,0,0" VerticalAlignment="Top" Width="90" Click="video10_Click"/>
+        <Button Name="the_worst" Content="the worst" HorizontalAlignment="Left" Margin="123,364,0,0" VerticalAlignment="Top" Click="the_worst_Click"/>
+        <Button Name="bad" Content="bad" HorizontalAlignment="Left" Margin="265,364,0,0" VerticalAlignment="Top" Click="bad_Click"/>
+        <Button Name="normal" Content="normal" HorizontalAlignment="Left" Margin="401,364,0,0" VerticalAlignment="Top" Click="normal_Click"/>
+        <Button Name="good" Content="good" HorizontalAlignment="Left" Margin="535,364,0,0" VerticalAlignment="Top" Click="good_Click"/>
+        <Button Name="fantastic" Content="fantastic" HorizontalAlignment="Left" Margin="675,364,0,0" VerticalAlignment="Top" Click="fantastic_Click"/>
+        <TextBox HorizontalAlignment="Left" Margin="123,262,0,0" TextWrapping="Wrap" Text="How would you rate the video?" VerticalAlignment="Top" Width="441" Height="80" FontSize="25" TextChanged="TextBox_TextChanged"/>
 
     </Grid>
     <Page.BottomAppBar>
