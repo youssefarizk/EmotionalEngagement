@@ -15,13 +15,16 @@
   <div class="wrapper">
 	<div class="container">
 		<h1>Welcome</h1>
-
-		<form class="form">
-			<input type="text" placeholder="Username">
-			<button type="submit" id="login-button"><a href="indexlog.html">Login</a></button>
-		</form>
-	</div>
-
+  <form class="form">
+			<input type="text" id="field1" placeholder="Username" value="Anson"/>
+			<button type="submit" onclick="username('field1')" id="login-button"><a href="indexlog.html?elemA">Login</a></button>
+      <script type="text/javascript">
+    function username(a) {
+      var elemA = document.getElementById(a).value;
+    }
+</script>
+</form>
+</div>
 	<ul class="bg-bubbles">
 		<li></li>
 		<li></li>
