@@ -21,12 +21,19 @@ using Windows.Storage.Streams;
 using Microsoft.ProjectOxford.Emotion;
 using Microsoft.ProjectOxford.Emotion.Contract;
 using System.Diagnostics;
+using Newtonsoft.Json;
 
 namespace App1
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
+    /// 
+
+
+
+
+
     public sealed partial class MainPage : Page
     {
         
@@ -214,6 +221,35 @@ namespace App1
         private void video10_Click(object sender, RoutedEventArgs e)
         {
             Library.Go10(ref Display);
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void the_worst_Click(object sender, RoutedEventArgs e)
+        {
+        }
+
+        private void bad_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void normal_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void good_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void fantastic_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

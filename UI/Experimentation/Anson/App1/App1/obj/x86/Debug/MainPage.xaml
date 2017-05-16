@@ -29,15 +29,21 @@
         <Button x:ConnectionId='15' Name="video8" Content="video8" HorizontalAlignment="Left" Margin="396,178,0,0" VerticalAlignment="Top" Width="70"                     />
         <Button x:ConnectionId='16' Name="video9" Content="video9" HorizontalAlignment="Left" Margin="535,178,0,0" VerticalAlignment="Top" Width="70"                     />
         <Button x:ConnectionId='17' Name="video10" Content="video10" HorizontalAlignment="Left" Margin="675,178,0,0" VerticalAlignment="Top" Width="90"                      />
+        <Button x:ConnectionId='18' Name="the_worst" Content="the worst" HorizontalAlignment="Left" Margin="123,364,0,0" VerticalAlignment="Top"                        />
+        <Button x:ConnectionId='19' Name="bad" Content="bad" HorizontalAlignment="Left" Margin="265,364,0,0" VerticalAlignment="Top"                  />
+        <Button x:ConnectionId='20' Name="normal" Content="normal" HorizontalAlignment="Left" Margin="401,364,0,0" VerticalAlignment="Top"                     />
+        <Button x:ConnectionId='21' Name="good" Content="good" HorizontalAlignment="Left" Margin="535,364,0,0" VerticalAlignment="Top"                   />
+        <Button x:ConnectionId='22' Name="fantastic" Content="fantastic" HorizontalAlignment="Left" Margin="675,364,0,0" VerticalAlignment="Top"                        />
+        <TextBox x:ConnectionId='23' HorizontalAlignment="Left" Margin="123,262,0,0" TextWrapping="Wrap" Text="How would you rate the video?" VerticalAlignment="Top" Width="441" Height="80" FontSize="25"                                  />
 
     </Grid>
     <Page.BottomAppBar>
         <AppBar IsOpen="True" IsSticky="True" Height="63" Margin="894,0,0,0">
             <StackPanel Orientation="Horizontal" Margin="0,1,15,0">
-                <AppBarButton x:ConnectionId='18' Name="Back" Icon="Back" Label="Back"                   />
-                <AppBarButton x:ConnectionId='19' Name="Forward" Icon="Forward" Label="Forward"                      />
-                <AppBarButton x:ConnectionId='20' Name="Refresh" Icon="Refresh" Label="Refresh"                       Width="62"/>
-                <AppBarButton x:ConnectionId='21' Name="Cancel" Icon="Cancel" Label="Cancel"                     />
+                <AppBarButton x:ConnectionId='24' Name="Back" Icon="Back" Label="Back"                   />
+                <AppBarButton x:ConnectionId='25' Name="Forward" Icon="Forward" Label="Forward"                      />
+                <AppBarButton x:ConnectionId='26' Name="Refresh" Icon="Refresh" Label="Refresh"                       Width="62"/>
+                <AppBarButton x:ConnectionId='27' Name="Cancel" Icon="Cancel" Label="Cancel"                     />
             </StackPanel>
         </AppBar>
     </Page.BottomAppBar>
