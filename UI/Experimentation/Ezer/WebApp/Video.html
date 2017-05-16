@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by TEMPLATED
+http://templated.co
+Released for free under the Creative Commons Attribution License
+
+Name       : Doubtless
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20130428
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<style>
+.button {
+  display: inline;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #798E2C;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #54631F}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<script type="text/javascript" src="webjs.js"></script>
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700|Archivo+Narrow:400,700" rel="stylesheet" type="text/css">
+<link href="default.css" rel="stylesheet" type="text/css" media="all" />
+<!--[if IE 6]>
+<link href="default_ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+</head>
+<body>
+<div id="logo" class="container">
+	<h1><a href="#">Emotional Engagement</a></h1>
+</div>
+<div id="menu-wrapper">
+	<div id="menu" class="container">
+		<ul>
+			<li><a href="indexlog.html">Homepage</a></li>
+			<li class="current_page_item"><a href="Video.html">Video</a></li>
+			<li><a href="Graph.html">Garphical Result</a></li>
+		</ul>
+	</div>
+</div>
+<div id="page" class="container">
+	<div id="box1">
+		<h2 class="title"><a href="#">Choose a video you like.</a></h2>
+    <div style="clear: both;">&nbsp;</div>
+		<div class="entry">
+
+
+<!--			<div class="camera">
+				<video id="video">Video stream not available.</video>
+				<button id="startbutton">Take photo</button>
+			</div>
+			<canvas id="canvas"></canvas> -->
+			<button class="button" onclick="vid1()">Video1</button>
+			<button class="button" onclick="vid2()">Video2</button>
+			<button class="button" onclick="vid3()">Video3</button>
+			<button class="button" onclick="vid4()">Video4</button>
+			<button class="button" onclick="vid5()">Video5</button>
+
+
+
+
+
+
+
+
+
+			<!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
+    <div id="player"></div>
+
+    <script>
+      // 2. This code loads the IFrame Player API code asynchronously.
+      var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      // 3. This function creates an <iframe> (and YouTube player)
+      //    after the API code downloads.
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          height: '390',
+          width: '640',
+          videoId: '',
+          events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+          }
+        });
+      }
+
+      // 4. The API will call this function when the video player is ready.
+      function onPlayerReady(event) {
+        event.target.playVideo();
+      }
+
+      // 5. The API calls this function when the player's state changes.
+      //    The function indicates that when playing a video (state=1),
+      //    the player should play for six seconds and then stop.
+      var done = false;
+      function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING && !done) {
+          setTimeout(stopVideo, inf);
+          done = true;
+        }
+      }
+      function stopVideo() {
+        player.stopVideo();
+      }
+			function vid1() {
+				player.loadVideoById({'videoId': 'bHQqvYy5KYo',
+				               'suggestedQuality': 'default'});
+			}
+			function vid2() {
+				player.loadVideoById({'videoId': 'ddDvm7C1RMo',
+											 'suggestedQuality': 'default'});
+			}
+			function vid3() {
+				player.loadVideoById({'videoId': 'W1BO6FUnI-8',
+											 'suggestedQuality': 'default'});
+			}
+			function vid4() {
+				player.loadVideoById({'videoId': 'TfS5J3gGQa4',
+											 'suggestedQuality': 'default'});
+			}
+			function vid5() {
+				player.loadVideoById({'videoId': 'T8k0fYZ3uzU',
+											 'suggestedQuality': 'default'});
+			}
+			function rate1() {
+			
+			}
+			function rate2() {
+
+			}
+			function rate3() {
+
+			}
+			function rate4() {
+
+			}
+			function rate5() {
+
+			}
+
+    </script>
+
+<p>
+	<br/>
+	<font size="5">How do you want to rate this video? 5 is the best.
+</p>
+		<div>
+			<button id="buttonrate1" class="button" onclick="rate1()">1</button>
+			<button id="buttonrate2" class="button" onclick="rate2()">2</button>
+			<button id="buttonrate3" class="button" onclick="rate3()">3</button>
+			<button id="buttonrate4" class="button" onclick="rate4()">4</button>
+			<button id="buttonrate5" class="button" onclick="rate5()">5</button>
+		</div>
+		<br/>
+	</div>
+	</div>
+</div>
+
+</body>
+</html>

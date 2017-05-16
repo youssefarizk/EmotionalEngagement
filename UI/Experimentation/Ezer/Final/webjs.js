@@ -1,21 +1,53 @@
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement('script');
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var picURL;
+
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player('player', {
+    height: '390',
+    width: '640',
+    videoId: 'M7lc1UVf-VE',
+    mute: 'true',
+    events: {
+      'onReady': onPlayerReady
+    }
+  });
+}
+
+// 4. The API will call this function when the video player is ready.
+function onPlayerReady(event) {
+  event.target.playVideo();
+}
+
+function showTime(){
+  alert(player.getCurrentTime());
+}
+
+
 function sayHello(){
   alert("Hello World")
 }
 
-
-
-var eng = [];
+var dict = [];
 
 function write_rate(valued) {
-
-  eng.push({
-      rate:valued.value
+  dict.push({
+      rate:valued.value,
+      time: player.getCurrentTime(),
+      url: picURL
   });
-str = JSON.stringify(eng, null, 4);
+str = JSON.stringify(dict, null, 4);
   console.log(str); // Logs output to dev tools console.
   alert(str); // Displays output using window.alert()
-});
-
+}
 
 /* GET JSON FROM THE WEB, STORE IT TO A VARIABLE AND PASS IT TO HTML
 
@@ -62,6 +94,18 @@ ourRequest.send();
     canvas = document.getElementById('canvas');
     photo = document.getElementById('photo');
     startbutton = document.getElementById('startbutton');
+    var objbutton1 = document.getElementById('objButton1');
+    var objbutton2 = document.getElementById('objButton2');
+    var objbutton3 = document.getElementById('objButton3');
+    var objbutton4 = document.getElementById('objButton4');
+    var objbutton5 = document.getElementById('objButton5');
+    var downloadButton = document.getElementById('download');
+
+    function download(){
+      var dt = canvas.toDataURL('image/jpeg');
+      this.href = dt;
+    }
+
 
     navigator.getMedia = ( navigator.getUserMedia ||
                            navigator.webkitGetUserMedia ||
@@ -111,11 +155,50 @@ ourRequest.send();
       ev.preventDefault();
     }, false);
 
+    objbutton1.addEventListener('click', function(ev){
+      write_rate(objbutton1);
+      takepicture();
+      ev.preventDefault();
+    }, false);
+
+    objbutton2.addEventListener('click', function(ev){
+      write_rate(objbutton2);
+      takepicture();
+      ev.preventDefault();
+    }, false);
+
+    objbutton3.addEventListener('click', function(ev){
+      write_rate(objbutton3);
+      takepicture();
+      ev.preventDefault();
+    }, false);
+
+    objbutton4.addEventListener('click', function(ev){
+      write_rate(objbutton4);
+      takepicture();
+      ev.preventDefault();
+    }, false);
+
+    objbutton5.addEventListener('click', function(ev){
+      write_rate(objbutton5);
+      takepicture();
+      ev.preventDefault();
+    }, false);
+
+    downloadButton.addEventListener('click',download,false);
+
     clearphoto();
   }
 
+
+
   // Fill the photo with an indication that none has been
   // captured.
+  function downloadCanvas(link, canvasId, filename) {
+    link.href = document.getElementById(canvasId).toDataURL();
+    link.download = filename;
+  }
+
 
   function clearphoto() {
     var context = canvas.getContext('2d');
@@ -123,6 +206,7 @@ ourRequest.send();
     context.fillRect(0, 0, canvas.width, canvas.height);
 
     var data = canvas.toDataURL('image/png');
+    picURL = data;
     photo.setAttribute('src', data);
   }
 

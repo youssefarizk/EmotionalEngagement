@@ -1,40 +1,14 @@
 function sayHello(){
   alert("Hello World")
 }
+var user=[];
+function username(a){
+  user.push({
+    userna:a.value
+  })
 
-
-
-var eng = [];
-
-function write_rate(valued) {
-
-  eng.push({
-      rate:valued.value
-  });
-str = JSON.stringify(eng, null, 4);
-  console.log(str); // Logs output to dev tools console.
-  alert(str); // Displays output using window.alert()
-});
-
-
-/* GET JSON FROM THE WEB, STORE IT TO A VARIABLE AND PASS IT TO HTML
-
-var btn = document.getElementById("btn")
-btn.addEventListener("click", function() {
-
-}
-)
-
-var ourRequest = new XMLHttpRequest();
-ourRequest.open('GET', 'https://...');
-ourRequest.onload=function(){
-  var ourData = JSON.parse(ourRequest.responseText);
-  renderHTML(ourData);
+  str = JSON.stringify(user, null, 4);
 };
-
-ourRequest.send();
-
-*/
 
 (function() {
   // The width and height of the captured photo. We will set the
