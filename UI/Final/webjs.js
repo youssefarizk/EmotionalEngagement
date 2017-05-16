@@ -7,12 +7,15 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 // 3. This function creates an <iframe> (and YouTube player)
 //    after the API code downloads.
+var picURL;
+
 var player;
 function onYouTubeIframeAPIReady() {
   player = new YT.Player('player', {
     height: '390',
     width: '640',
     videoId: 'M7lc1UVf-VE',
+    mute: 'true',
     events: {
       'onReady': onPlayerReady
     }
@@ -38,7 +41,8 @@ var dict = [];
 function write_rate(valued) {
   dict.push({
       rate:valued.value,
-      time: player.getCurrentTime()
+      time: player.getCurrentTime(),
+      url: picURL
   });
 str = JSON.stringify(dict, null, 4);
   console.log(str); // Logs output to dev tools console.
@@ -95,6 +99,13 @@ ourRequest.send();
     var objbutton3 = document.getElementById('objButton3');
     var objbutton4 = document.getElementById('objButton4');
     var objbutton5 = document.getElementById('objButton5');
+    var downloadButton = document.getElementById('download');
+
+    function download(){
+      var dt = canvas.toDataURL('image/jpeg');
+      this.href = dt;
+    }
+
 
     navigator.getMedia = ( navigator.getUserMedia ||
                            navigator.webkitGetUserMedia ||
@@ -174,11 +185,20 @@ ourRequest.send();
       ev.preventDefault();
     }, false);
 
+    downloadButton.addEventListener('click',download,false);
+
     clearphoto();
   }
 
+
+
   // Fill the photo with an indication that none has been
   // captured.
+  function downloadCanvas(link, canvasId, filename) {
+    link.href = document.getElementById(canvasId).toDataURL();
+    link.download = filename;
+  }
+
 
   function clearphoto() {
     var context = canvas.getContext('2d');
@@ -186,6 +206,7 @@ ourRequest.send();
     context.fillRect(0, 0, canvas.width, canvas.height);
 
     var data = canvas.toDataURL('image/png');
+    picURL = data;
     photo.setAttribute('src', data);
   }
 
