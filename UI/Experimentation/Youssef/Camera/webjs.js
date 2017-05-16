@@ -1,7 +1,3 @@
-function sayHello(){
-  alert("Hello World")
-}
-
 (function() {
   // The width and height of the captured photo. We will set the
   // width to the value defined here, but the height will be
@@ -22,12 +18,16 @@ function sayHello(){
   var canvas = null;
   var photo = null;
   var startbutton = null;
+  var endbutton = null;
+  var downloadLnk = null;
 
   function startup() {
     video = document.getElementById('video');
     canvas = document.getElementById('canvas');
     photo = document.getElementById('photo');
     startbutton = document.getElementById('startbutton');
+    endbutton = document.getElementById('endButton');
+    downloadLnk = document.getElementById('downloadLnk');
 
     navigator.getMedia = ( navigator.getUserMedia ||
                            navigator.webkitGetUserMedia ||
@@ -66,8 +66,8 @@ function sayHello(){
 
         video.setAttribute('width', width);
         video.setAttribute('height', height);
-        canvas.setAttribute('width', width);
-        canvas.setAttribute('height', height);
+        // canvas.setAttribute('width', width);
+        // canvas.setAttribute('height', height);
         streaming = true;
       }
     }, false);
@@ -77,7 +77,13 @@ function sayHello(){
       ev.preventDefault();
     }, false);
 
+
     clearphoto();
+
+    endbutton.addEventListener('click', function(ev){
+      clearpicture();
+      ev.preventDefault();
+    })
   }
 
   // Fill the photo with an indication that none has been
@@ -85,7 +91,7 @@ function sayHello(){
 
   function clearphoto() {
     var context = canvas.getContext('2d');
-    context.fillStyle = "#AAA";
+    context.fillStyle = "#AA";
     context.fillRect(0, 0, canvas.width, canvas.height);
 
     var data = canvas.toDataURL('image/png');
@@ -107,6 +113,7 @@ function sayHello(){
 
       var data = canvas.toDataURL('image/png');
       photo.setAttribute('src', data);
+      window.open(canvas.toDataURL('png'), "");
     } else {
       clearphoto();
     }
@@ -114,7 +121,22 @@ function sayHello(){
   }
 
 
+
+
   // Set up our event listener to run the startup process
   // once loading is complete.
   window.addEventListener('load', startup, false);
+
+  function downloadCanvas(link, canvasId, filename) {
+    link.href = document.getElementById(canvasId).toDataURL();
+    link.download = filename;
+  }
+
+/**
+ * The event handler for the link's onclick event. We give THIS as a
+ * parameter (=the link element), ID of the canvas and a filename.
+*/
+  document.getElementById('download').addEventListener('click', function() {
+    downloadCanvas(this, 'canvas', 'test.png');
+  }, false);
 })();
