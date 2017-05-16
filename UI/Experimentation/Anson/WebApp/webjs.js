@@ -59,8 +59,11 @@ function write_user(a) {
     //document.getElementById('test').innerHTML = (str); // Displays output using window.alert()
   alert(str);
 }
+
+
 function write_rate(valued) {
   dict.push({
+    username:l,
       rate:valued.value,
       time: player.getCurrentTime(),
       picuri: picURL
