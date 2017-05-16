@@ -2,6 +2,36 @@ function sayHello(){
   alert("Hello World")
 }
 
+var dict = [];
+
+function write_rate(valued) {
+  dict.push({
+      rate:valued.value,
+  });
+str = JSON.stringify(dict, null, 4);
+  console.log(str); // Logs output to dev tools console.
+  alert(str); // Displays output using window.alert()
+}
+
+/* GET JSON FROM THE WEB, STORE IT TO A VARIABLE AND PASS IT TO HTML
+
+var btn = document.getElementById("btn")
+btn.addEventListener("click", function() {
+
+}
+)
+
+var ourRequest = new XMLHttpRequest();
+ourRequest.open('GET', 'https://...');
+ourRequest.onload=function(){
+  var ourData = JSON.parse(ourRequest.responseText);
+  renderHTML(ourData);
+};
+
+ourRequest.send();
+
+*/
+
 (function() {
   // The width and height of the captured photo. We will set the
   // width to the value defined here, but the height will be
