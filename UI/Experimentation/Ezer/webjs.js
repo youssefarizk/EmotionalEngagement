@@ -2,15 +2,45 @@ function sayHello(){
   alert("Hello World")
 }
 
-var dict = [];
+var eng = [];
 
 function write_rate(valued) {
-  dict.push({
+  eng.push({
       rate:valued.value,
   });
-str = JSON.stringify(dict, null, 4);
+str = JSON.stringify(eng, null, 4);
   console.log(str); // Logs output to dev tools console.
   alert(str); // Displays output using window.alert()
+
+  $.ajax({
+       url: "http://url_name_here.com",
+       type: "POST",
+       data: {
+           myArray : str
+       }
+   }).done(function(data,text,jQxhr){
+  alert("success");
+});
+
+
+function postJSONData(JSONData, localMode)
+        {
+            var localJSONData = JSONData;
+            var postMode = localMode;
+
+             $.ajax({
+                    type: 'POST',
+                    url: 'https://tt.s2.com/tmobile/subscribe-service/uid=ankit_bharat_tanna',
+                    dataType: 'xml',
+                    success: function(data){
+                        alert("SECOND POST JSON DATA");
+                    }   // Success Function
+    }); // AJAX Call
+
+            alert("POST JSON ------------> "+localJSONData +" "+postMode);
+        }
+
+
 }
 
 /* GET JSON FROM THE WEB, STORE IT TO A VARIABLE AND PASS IT TO HTML
