@@ -2,16 +2,20 @@ function sayHello(){
   alert("Hello World")
 }
 
-var dict = [];
+var eng = [];
 
 function write_rate(valued) {
+
+  eng.push({
+      rate:valued.value,
   dict.push({
       rate:valued.value
   });
-str = JSON.stringify(dict, null, 4);
+str = JSON.stringify(eng, null, 4);
   console.log(str); // Logs output to dev tools console.
   alert(str); // Displays output using window.alert()
-}
+});
+
 
 /* GET JSON FROM THE WEB, STORE IT TO A VARIABLE AND PASS IT TO HTML
 
