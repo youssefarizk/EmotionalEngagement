@@ -42,11 +42,11 @@ function write_rate(valued) {
   dict.push({
       rate:valued.value,
       time: player.getCurrentTime(),
-      url: picURL
+      picuri: picURL
   });
 str = JSON.stringify(dict, null, 4);
   console.log(str); // Logs output to dev tools console.
-  alert(str); // Displays output using window.alert()
+  document.getElementById('test').innerHTML = (str); // Displays output using window.alert()
 }
 
 /* GET JSON FROM THE WEB, STORE IT TO A VARIABLE AND PASS IT TO HTML
@@ -99,12 +99,6 @@ ourRequest.send();
     var objbutton3 = document.getElementById('objButton3');
     var objbutton4 = document.getElementById('objButton4');
     var objbutton5 = document.getElementById('objButton5');
-    var downloadButton = document.getElementById('download');
-
-    function download(){
-      var dt = canvas.toDataURL('image/jpeg');
-      this.href = dt;
-    }
 
 
     navigator.getMedia = ( navigator.getUserMedia ||
@@ -185,19 +179,9 @@ ourRequest.send();
       ev.preventDefault();
     }, false);
 
-    downloadButton.addEventListener('click',download,false);
-
     clearphoto();
   }
 
-
-
-  // Fill the photo with an indication that none has been
-  // captured.
-  function downloadCanvas(link, canvasId, filename) {
-    link.href = document.getElementById(canvasId).toDataURL();
-    link.download = filename;
-  }
 
 
   function clearphoto() {
