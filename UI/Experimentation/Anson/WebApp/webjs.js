@@ -15,9 +15,9 @@ function onYouTubeIframeAPIReady() {
     height: '390',
     width: '640',
     videoId: '',
-    mute: 'true',
     events: {
-      'onReady': onPlayerReady
+      'onReady': onPlayerReady,
+      'onStateChange': onPlayerStateChange
     }
   });
 }
@@ -49,65 +49,69 @@ function sayHello(){
 }
 
 var dict = [];
-var user =[];
-function write_user(a) {
-  user.push({
-      username:a.value
-  });
-  str = JSON.stringify(user, null, 4);
-    console.log(str); // Logs output to dev tools console.
-    //document.getElementById('test').innerHTML = (str); // Displays output using window.alert()
-  alert(str);
-}
-
+var all = [];
+var vid =[];
 
 function write_rate(valued) {
   dict.push({
-    username:l,
       rate:valued.value,
       time: player.getCurrentTime(),
       picuri: picURL
   });
-str = JSON.stringify(dict, null, 4);
-  console.log(str); // Logs output to dev tools console.
-  //document.getElementById('test').innerHTML = (str); // Displays output using window.alert()
-alert(str);
 }
+
+function onPlayerStateChange(event) {
+    if(event.data === 0) {
+      all = [
+        {user},
+        vid,
+        dict
+      ];
+      str = JSON.stringify(all, null, 4);
+        console.log(str); // Logs output to dev tools console.
+        //document.getElementById('test').innerHTML = (str); // Displays output using window.alert()
+      alert(str);
+    }
+}
+
+
+
 function vid1() {
   player.loadVideoById({'videoId': 'bHQqvYy5KYo',
                  'suggestedQuality': 'default'});
+                 vid.push({
+                     vidname:"Movie a"
+                 });
 }
 function vid2() {
   player.loadVideoById({'videoId': 'ddDvm7C1RMo',
                  'suggestedQuality': 'default'});
+                 vid.push({
+                     vidname:"Movie b"
+                 });
 }
 function vid3() {
   player.loadVideoById({'videoId': 'W1BO6FUnI-8',
                  'suggestedQuality': 'default'});
+                 vid.push({
+                     vidname:"Movie c"
+                 })
 }
 function vid4() {
   player.loadVideoById({'videoId': 'TfS5J3gGQa4',
                  'suggestedQuality': 'default'});
+                 vid.push({
+                     vidname:"Movie d"
+                 })
 }
 function vid5() {
   player.loadVideoById({'videoId': 'T8k0fYZ3uzU',
                  'suggestedQuality': 'default'});
+                 vid.push({
+                     vidname:"Movie e"
+                 })
 }
-function rate1() {
 
-}
-function rate2() {
-
-}
-function rate3() {
-
-}
-function rate4() {
-
-}
-function rate5() {
-
-}
 /* GET JSON FROM THE WEB, STORE IT TO A VARIABLE AND PASS IT TO HTML
 
 var btn = document.getElementById("btn")
