@@ -1,4 +1,5 @@
 // 2. This code loads the IFrame Player API code asynchronously.
+var testing = document.getElementById('test');
 var tag = document.createElement('script');
 
 tag.src = "https://www.youtube.com/iframe_api";
@@ -20,6 +21,10 @@ function onYouTubeIframeAPIReady() {
       'onStateChange': onPlayerStateChange
     }
   });
+}
+
+function clickme(){
+  testing.innerHTML = picURL;
 }
 
 // 4. The API will call this function when the video player is ready.
@@ -47,6 +52,8 @@ function stopVideo() {
 function sayHello(){
   alert("Hello World")
 }
+
+var testing = document.getElementById('test');
 
 var dict = [];
 var all = [];
