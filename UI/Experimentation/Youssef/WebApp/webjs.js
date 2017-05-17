@@ -27,19 +27,25 @@ function onPlayerReady(event) {
   event.target.playVideo();
 }
 
+function onPlayerStateChange(event) {
+    if(event.data === 0) {
+        alert('done');
+    }
+}
+
 function showTime(){
   alert(player.getCurrentTime());
 }
 // 5. The API calls this function when the player's state changes.
 //    The function indicates that when playing a video (state=1),
 //    the player should play for six seconds and then stop.
-var done = false;
-function onPlayerStateChange(event) {
-  if (event.data == YT.PlayerState.PLAYING && !done) {
-    setTimeout(stopVideo, inf);
-    done = true;
-  }
-}
+// var done = false;
+// function onPlayerStateChange(event) {
+//   if (event.data == YT.PlayerState.PLAYING && !done) {
+//     setTimeout(stopVideo, 6000);
+//     done = true;
+//   }
+// }
 function stopVideo() {
   player.stopVideo();
 }
@@ -49,12 +55,19 @@ function sayHello(){
 }
 
 var dict = [];
-<<<<<<< HEAD
-var user ={};
-=======
->>>>>>> 15b866b12fed05cbce519423fa5aa14407af15d8
+var user =[];
 var all = [];
 var vid =[];
+function write_user() {
+  user = l;
+  // user.push({
+  //     username:l
+  // });
+};
+
+write_user();
+
+
 
 function write_rate(valued) {
   dict.push({
@@ -63,48 +76,16 @@ function write_rate(valued) {
       picuri: picURL
   });
 }
-
-<<<<<<< HEAD
 function send(){
   all = [
-    {l},
+    user,
     vid,
     dict
   ];
-
   str = JSON.stringify(all, null, 4);
-  console.log(str);
+    console.log(str); // Logs output to dev tools console.
+    //document.getElementById('test').innerHTML = (str); // Displays output using window.alert()
   alert(str);
-=======
-function onPlayerStateChange(event) {
-    if(event.data === 0) {
-      all = [
-        {user},
-        vid,
-        dict
-      ];
-      str = JSON.stringify(all, null, 4);
-        console.log(str); // Logs output to dev tools console.
-        //document.getElementById('test').innerHTML = (str); // Displays output using window.alert()
-      alert(str);
-    }
-}
->>>>>>> 15b866b12fed05cbce519423fa5aa14407af15d8
-
-  $.ajax({
-      type: "POST",
-      url: "/webservices/PodcastService.asmx/CreateMarkers",
-      // The key needs to match your method's input parameter (case-sensitive).
-      data: str
-      contentType: "application/json; charset=utf-8",
-      dataType: "json",
-      success: function(data){alert(data);},
-      failure: function(errMsg) {
-          alert(errMsg);
-      }
-  });
-
-
 }
 
 
