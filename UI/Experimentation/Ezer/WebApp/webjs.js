@@ -15,9 +15,9 @@ function onYouTubeIframeAPIReady() {
     height: '390',
     width: '640',
     videoId: '',
-    mute: 'true',
     events: {
-      'onReady': onPlayerReady
+      'onReady': onPlayerReady,
+      'onStateChange': onPlayerStateChange
     }
   });
 }
@@ -49,18 +49,8 @@ function sayHello(){
 }
 
 var dict = [];
-var user =[];
 var all = [];
 var vid =[];
-function write_user() {
-  user.push({
-      username:l
-  });
-};
-
-write_user();
-
-
 
 function write_rate(valued) {
   dict.push({
@@ -69,17 +59,21 @@ function write_rate(valued) {
       picuri: picURL
   });
 }
-function send(){
-  all = [
-    user,
-    vid,
-    dict
-  ];
-  str = JSON.stringify(all, null, 4);
-    console.log(str); // Logs output to dev tools console.
-    //document.getElementById('test').innerHTML = (str); // Displays output using window.alert()
-  alert(str);
+
+function onPlayerStateChange(event) {
+    if(event.data === 0) {
+      all = [
+        {user},
+        vid,
+        dict
+      ];
+      str = JSON.stringify(all, null, 4);
+        console.log(str); // Logs output to dev tools console.
+        //document.getElementById('test').innerHTML = (str); // Displays output using window.alert()
+      alert(str);
+    }
 }
+
 
 
 function vid1() {

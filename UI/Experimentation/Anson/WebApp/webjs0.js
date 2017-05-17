@@ -14,10 +14,10 @@ function onYouTubeIframeAPIReady() {
   player = new YT.Player('player', {
     height: '390',
     width: '640',
-    videoId: '',
+    videoId: 'M7lc1UVf-VE',
+    mute: 'true',
     events: {
-      'onReady': onPlayerReady,
-      'onStateChange': onPlayerStateChange
+      'onReady': onPlayerReady
     }
   });
 }
@@ -30,87 +30,45 @@ function onPlayerReady(event) {
 function showTime(){
   alert(player.getCurrentTime());
 }
-// 5. The API calls this function when the player's state changes.
-//    The function indicates that when playing a video (state=1),
-//    the player should play for six seconds and then stop.
-var done = false;
-function onPlayerStateChange(event) {
-  if (event.data == YT.PlayerState.PLAYING && !done) {
-    setTimeout(stopVideo, inf);
-    done = true;
-  }
-}
-function stopVideo() {
-  player.stopVideo();
-}
+
 
 function sayHello(){
   alert("Hello World")
 }
-
+var all={};
 var dict = [];
-var all = [];
-var vid =[];
+var user=[];
+
+function usern(a){
+  user.push({
+    username:a.value
+  });
+  str1 = JSON.stringify(user, null, 4);
+  console.log(str1); // Logs output to dev tools console.
+  alert(str1); // Displays output using window.alert()
+};
 
 function write_rate(valued) {
   dict.push({
       rate:valued.value,
       time: player.getCurrentTime(),
-      picuri: picURL
+      url: picURL
   });
-}
+    str = JSON.stringify(dict, null, 4);
+    str1 = JSON.stringify(user, null, 4);
+    console.log(str1); // Logs output to dev tools console.
+    alert(str1); // Displays output using window.alert()
+};
 
-function onPlayerStateChange(event) {
-    if(event.data === 0) {
-      all = [
-        {user},
-        vid,
-        dict
-      ];
-      str = JSON.stringify(all, null, 4);
-        console.log(str); // Logs output to dev tools console.
-        //document.getElementById('test').innerHTML = (str); // Displays output using window.alert()
-      alert(str);
-    }
-}
-
-
-
-function vid1() {
-  player.loadVideoById({'videoId': 'bHQqvYy5KYo',
-                 'suggestedQuality': 'default'});
-                 vid.push({
-                     vidname:"Movie a"
-                 });
-}
-function vid2() {
-  player.loadVideoById({'videoId': 'ddDvm7C1RMo',
-                 'suggestedQuality': 'default'});
-                 vid.push({
-                     vidname:"Movie b"
-                 });
-}
-function vid3() {
-  player.loadVideoById({'videoId': 'W1BO6FUnI-8',
-                 'suggestedQuality': 'default'});
-                 vid.push({
-                     vidname:"Movie c"
-                 })
-}
-function vid4() {
-  player.loadVideoById({'videoId': 'TfS5J3gGQa4',
-                 'suggestedQuality': 'default'});
-                 vid.push({
-                     vidname:"Movie d"
-                 })
-}
-function vid5() {
-  player.loadVideoById({'videoId': 'T8k0fYZ3uzU',
-                 'suggestedQuality': 'default'});
-                 vid.push({
-                     vidname:"Movie e"
-                 })
-}
+function out(){
+all = {
+  user,
+  dict
+};
+str = JSON.stringify(all, null, 4);
+  console.log(all); // Logs output to dev tools console.
+  alert(all); // Displays output using window.alert()
+};
 
 /* GET JSON FROM THE WEB, STORE IT TO A VARIABLE AND PASS IT TO HTML
 
@@ -157,12 +115,17 @@ ourRequest.send();
     canvas = document.getElementById('canvas');
     photo = document.getElementById('photo');
     startbutton = document.getElementById('startbutton');
-
     var objbutton1 = document.getElementById('objButton1');
     var objbutton2 = document.getElementById('objButton2');
     var objbutton3 = document.getElementById('objButton3');
     var objbutton4 = document.getElementById('objButton4');
     var objbutton5 = document.getElementById('objButton5');
+    var downloadButton = document.getElementById('download');
+
+    function download(){
+      var dt = canvas.toDataURL('image/jpeg');
+      this.href = dt;
+    }
 
 
     navigator.getMedia = ( navigator.getUserMedia ||
@@ -213,7 +176,6 @@ ourRequest.send();
       ev.preventDefault();
     }, false);
 
-
     objbutton1.addEventListener('click', function(ev){
       write_rate(objbutton1);
       takepicture();
@@ -244,9 +206,19 @@ ourRequest.send();
       ev.preventDefault();
     }, false);
 
+    downloadButton.addEventListener('click',download,false);
+
     clearphoto();
   }
 
+
+
+  // Fill the photo with an indication that none has been
+  // captured.
+  function downloadCanvas(link, canvasId, filename) {
+    link.href = document.getElementById(canvasId).toDataURL();
+    link.download = filename;
+  }
 
 
   function clearphoto() {
