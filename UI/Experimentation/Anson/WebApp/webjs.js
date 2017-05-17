@@ -70,7 +70,7 @@ function onPlayerStateChange(event) {
       str = JSON.stringify(all, null, 4);
         console.log(str); // Logs output to dev tools console.
         //document.getElementById('test').innerHTML = (str); // Displays output using window.alert()
-      alert(str);
+
 
       $.ajax({
           url: "http://requestb.in/16ts33c1",
