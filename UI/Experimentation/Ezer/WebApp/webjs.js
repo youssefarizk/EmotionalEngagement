@@ -49,18 +49,9 @@ function sayHello(){
 }
 
 var dict = [];
-var user =[];
+var user ={};
 var all = [];
 var vid =[];
-function write_user() {
-  user.push({
-      username:l
-  });
-};
-
-write_user();
-
-
 
 function write_rate(valued) {
   dict.push({
@@ -69,18 +60,33 @@ function write_rate(valued) {
       picuri: picURL
   });
 }
+
 function send(){
   all = [
-    user,
+    {l},
     vid,
     dict
   ];
-  str = JSON.stringify(all, null, 4);
-    console.log(str); // Logs output to dev tools console.
-    //document.getElementById('test').innerHTML = (str); // Displays output using window.alert()
-  alert(str);
-}
 
+  str = JSON.stringify(all, null, 4);
+  console.log(str);
+  alert(str);
+
+  $.ajax({
+      type: "POST",
+      url: "/webservices/PodcastService.asmx/CreateMarkers",
+      // The key needs to match your method's input parameter (case-sensitive).
+      data: str
+      contentType: "application/json; charset=utf-8",
+      dataType: "json",
+      success: function(data){alert(data);},
+      failure: function(errMsg) {
+          alert(errMsg);
+      }
+  });
+
+
+}
 
 function vid1() {
   player.loadVideoById({'videoId': 'bHQqvYy5KYo',
