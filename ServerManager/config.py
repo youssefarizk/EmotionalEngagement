@@ -1,6 +1,9 @@
 #Usage: True for Azure File Storage, False for Local using pathToLocalDisk
 usage=False
 
+#Storage: True if DocumentDB , False for Azure Table
+storage=False
+
 
 #Config Azure File Storage
 STORAGE_ACCOUNT_NAME = 'emotionprocessibecb'
@@ -40,6 +43,7 @@ scores='Scores.txt'
 userID= 'Jeff'
 clicks= 5
 timeSpent=10
+timestamp=1209819287
 
 #File location on Azure File Storage / Input Data
 share='emotion-processingbecb'
