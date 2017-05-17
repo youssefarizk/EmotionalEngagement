@@ -1,14 +1,141 @@
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement('script');
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var picURL;
+
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player('player', {
+    height: '390',
+    width: '640',
+    videoId: '',
+    mute: 'true',
+    events: {
+      'onReady': onPlayerReady
+    }
+  });
+}
+
+// 4. The API will call this function when the video player is ready.
+function onPlayerReady(event) {
+  event.target.playVideo();
+}
+
+function showTime(){
+  alert(player.getCurrentTime());
+}
+// 5. The API calls this function when the player's state changes.
+//    The function indicates that when playing a video (state=1),
+//    the player should play for six seconds and then stop.
+var done = false;
+function onPlayerStateChange(event) {
+  if (event.data == YT.PlayerState.PLAYING && !done) {
+    setTimeout(stopVideo, inf);
+    done = true;
+  }
+}
+function stopVideo() {
+  player.stopVideo();
+}
+
 function sayHello(){
   alert("Hello World")
 }
-var user=[];
-function username(a){
-  user.push({
-    userna:a.value
-  })
 
-  str = JSON.stringify(user, null, 4);
+var dict = [];
+var user =[];
+var all = [];
+var vid =[];
+function write_user() {
+  user.push({
+      username:l
+  });
 };
+
+write_user();
+
+
+
+function write_rate(valued) {
+  dict.push({
+      rate:valued.value,
+      time: player.getCurrentTime(),
+      picuri: picURL
+  });
+}
+function send(){
+  all = [
+    user,
+    vid,
+    dict
+  ];
+  str = JSON.stringify(all, null, 4);
+    console.log(str); // Logs output to dev tools console.
+    //document.getElementById('test').innerHTML = (str); // Displays output using window.alert()
+  alert(str);
+}
+
+
+function vid1() {
+  player.loadVideoById({'videoId': 'bHQqvYy5KYo',
+                 'suggestedQuality': 'default'});
+                 vid.push({
+                     vidname:"Movie a"
+                 });
+}
+function vid2() {
+  player.loadVideoById({'videoId': 'ddDvm7C1RMo',
+                 'suggestedQuality': 'default'});
+                 vid.push({
+                     vidname:"Movie b"
+                 });
+}
+function vid3() {
+  player.loadVideoById({'videoId': 'W1BO6FUnI-8',
+                 'suggestedQuality': 'default'});
+                 vid.push({
+                     vidname:"Movie c"
+                 })
+}
+function vid4() {
+  player.loadVideoById({'videoId': 'TfS5J3gGQa4',
+                 'suggestedQuality': 'default'});
+                 vid.push({
+                     vidname:"Movie d"
+                 })
+}
+function vid5() {
+  player.loadVideoById({'videoId': 'T8k0fYZ3uzU',
+                 'suggestedQuality': 'default'});
+                 vid.push({
+                     vidname:"Movie e"
+                 })
+}
+
+/* GET JSON FROM THE WEB, STORE IT TO A VARIABLE AND PASS IT TO HTML
+
+var btn = document.getElementById("btn")
+btn.addEventListener("click", function() {
+
+}
+)
+
+var ourRequest = new XMLHttpRequest();
+ourRequest.open('GET', 'https://...');
+ourRequest.onload=function(){
+  var ourData = JSON.parse(ourRequest.responseText);
+  renderHTML(ourData);
+};
+
+ourRequest.send();
+
+*/
 
 (function() {
   // The width and height of the captured photo. We will set the
@@ -36,6 +163,13 @@ function username(a){
     canvas = document.getElementById('canvas');
     photo = document.getElementById('photo');
     startbutton = document.getElementById('startbutton');
+
+    var objbutton1 = document.getElementById('objButton1');
+    var objbutton2 = document.getElementById('objButton2');
+    var objbutton3 = document.getElementById('objButton3');
+    var objbutton4 = document.getElementById('objButton4');
+    var objbutton5 = document.getElementById('objButton5');
+
 
     navigator.getMedia = ( navigator.getUserMedia ||
                            navigator.webkitGetUserMedia ||
@@ -85,11 +219,41 @@ function username(a){
       ev.preventDefault();
     }, false);
 
+
+    objbutton1.addEventListener('click', function(ev){
+      write_rate(objbutton1);
+      takepicture();
+      ev.preventDefault();
+    }, false);
+
+    objbutton2.addEventListener('click', function(ev){
+      write_rate(objbutton2);
+      takepicture();
+      ev.preventDefault();
+    }, false);
+
+    objbutton3.addEventListener('click', function(ev){
+      write_rate(objbutton3);
+      takepicture();
+      ev.preventDefault();
+    }, false);
+
+    objbutton4.addEventListener('click', function(ev){
+      write_rate(objbutton4);
+      takepicture();
+      ev.preventDefault();
+    }, false);
+
+    objbutton5.addEventListener('click', function(ev){
+      write_rate(objbutton5);
+      takepicture();
+      ev.preventDefault();
+    }, false);
+
     clearphoto();
   }
 
-  // Fill the photo with an indication that none has been
-  // captured.
+
 
   function clearphoto() {
     var context = canvas.getContext('2d');
@@ -97,6 +261,7 @@ function username(a){
     context.fillRect(0, 0, canvas.width, canvas.height);
 
     var data = canvas.toDataURL('image/png');
+    picURL = data;
     photo.setAttribute('src', data);
   }
 
