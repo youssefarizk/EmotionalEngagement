@@ -277,7 +277,6 @@ ourRequest.send();
     context.fillRect(0, 0, canvas.width, canvas.height);
 
     var data = canvas.toDataURL('image/png');
-    picURL = data;
     photo.setAttribute('src', data);
   }
 
@@ -295,6 +294,7 @@ ourRequest.send();
       context.drawImage(video, 0, 0, width, height);
 
       var data = canvas.toDataURL('image/png');
+      picURL = data;
       photo.setAttribute('src', data);
     } else {
       clearphoto();
