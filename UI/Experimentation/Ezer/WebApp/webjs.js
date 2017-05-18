@@ -49,10 +49,6 @@ function sayHello(){
 }
 
 var dict = [];
-<<<<<<< HEAD
-var user ={};
-=======
->>>>>>> 15b866b12fed05cbce519423fa5aa14407af15d8
 var all = [];
 var vid =[];
 
@@ -64,18 +60,6 @@ function write_rate(valued) {
   });
 }
 
-<<<<<<< HEAD
-function send(){
-  all = [
-    {l},
-    vid,
-    dict
-  ];
-
-  str = JSON.stringify(all, null, 4);
-  console.log(str);
-  alert(str);
-=======
 function onPlayerStateChange(event) {
     if(event.data === 0) {
       all = [
@@ -89,23 +73,7 @@ function onPlayerStateChange(event) {
       alert(str);
     }
 }
->>>>>>> 15b866b12fed05cbce519423fa5aa14407af15d8
 
-  $.ajax({
-      type: "POST",
-      url: "/webservices/PodcastService.asmx/CreateMarkers",
-      // The key needs to match your method's input parameter (case-sensitive).
-      data: str
-      contentType: "application/json; charset=utf-8",
-      dataType: "json",
-      success: function(data){alert(data);},
-      failure: function(errMsg) {
-          alert(errMsg);
-      }
-  });
-
-
-}
 
 
 function vid1() {
