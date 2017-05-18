@@ -1,4 +1,5 @@
 // 2. This code loads the IFrame Player API code asynchronously.
+var testing = document.getElementById('test');
 var tag = document.createElement('script');
 
 tag.src = "https://www.youtube.com/iframe_api";
@@ -20,6 +21,10 @@ function onYouTubeIframeAPIReady() {
       'onStateChange': onPlayerStateChange
     }
   });
+}
+
+function clickme(){
+  testing.innerHTML = picURL;
 }
 
 // 4. The API will call this function when the video player is ready.
@@ -48,6 +53,8 @@ function sayHello(){
   alert("Hello World")
 }
 
+var testing = document.getElementById('test');
+
 var dict = [];
 var all = [];
 var vid =[];
@@ -70,9 +77,31 @@ function onPlayerStateChange(event) {
       str = JSON.stringify(all, null, 4);
         console.log(str); // Logs output to dev tools console.
         //document.getElementById('test').innerHTML = (str); // Displays output using window.alert()
-      alert(str);
+
+
+      $.ajax({
+          url: "http://requestb.in/16ts33c1",
+          type: "POST",
+          data: str,
+          dataType: "json",
+          success: function (result) {
+              switch (result) {
+                  case true:
+                      processResponse(result);
+                      break;
+                  default:
+                      resultDiv.html(result);
+              }
+          },
+          error: function (xhr, ajaxOptions, thrownError) {
+          alert(xhr.status);
+          alert(thrownError);
+          }
+      });
     }
 }
+
+
 
 
 
@@ -255,7 +284,6 @@ ourRequest.send();
     context.fillRect(0, 0, canvas.width, canvas.height);
 
     var data = canvas.toDataURL('image/png');
-    picURL = data;
     photo.setAttribute('src', data);
   }
 
@@ -273,6 +301,7 @@ ourRequest.send();
       context.drawImage(video, 0, 0, width, height);
 
       var data = canvas.toDataURL('image/png');
+      picURL = data;
       photo.setAttribute('src', data);
     } else {
       clearphoto();
