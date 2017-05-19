@@ -1,5 +1,4 @@
 // 2. This code loads the IFrame Player API code asynchronously.
-var testing = document.getElementById('test');
 var tag = document.createElement('script');
 
 tag.src = "https://www.youtube.com/iframe_api";
@@ -23,10 +22,6 @@ function onYouTubeIframeAPIReady() {
   });
 }
 
-function clickme(){
-  testing.innerHTML = picURL;
-}
-
 // 4. The API will call this function when the video player is ready.
 function onPlayerReady(event) {
   event.target.playVideo();
@@ -38,7 +33,13 @@ function showTime(){
 // 5. The API calls this function when the player's state changes.
 //    The function indicates that when playing a video (state=1),
 //    the player should play for six seconds and then stop.
-
+var done = false;
+function onPlayerStateChange(event) {
+  if (event.data == YT.PlayerState.PLAYING && !done) {
+    setTimeout(stopVideo, inf);
+    done = true;
+  }
+}
 function stopVideo() {
   player.stopVideo();
 }
@@ -46,8 +47,6 @@ function stopVideo() {
 function sayHello(){
   alert("Hello World")
 }
-
-var testing = document.getElementById('test');
 
 var dict = [];
 var all = [];
@@ -71,31 +70,9 @@ function onPlayerStateChange(event) {
       str = JSON.stringify(all, null, 4);
         console.log(str); // Logs output to dev tools console.
         //document.getElementById('test').innerHTML = (str); // Displays output using window.alert()
-
-
-      $.ajax({
-          url: "http://requestb.in/16ts33c1",
-          type: "POST",
-          data: str,
-          dataType: "json",
-          success: function (result) {
-              switch (result) {
-                  case true:
-                      processResponse(result);
-                      break;
-                  default:
-                      resultDiv.html(result);
-              }
-          },
-          error: function (xhr, ajaxOptions, thrownError) {
-          alert(xhr.status);
-          alert(thrownError);
-          }
-      });
+      alert(str);
     }
 }
-
-
 
 
 
@@ -278,6 +255,7 @@ ourRequest.send();
     context.fillRect(0, 0, canvas.width, canvas.height);
 
     var data = canvas.toDataURL('image/png');
+    picURL = data;
     photo.setAttribute('src', data);
   }
 
@@ -295,7 +273,6 @@ ourRequest.send();
       context.drawImage(video, 0, 0, width, height);
 
       var data = canvas.toDataURL('image/png');
-      picURL = data;
       photo.setAttribute('src', data);
     } else {
       clearphoto();
