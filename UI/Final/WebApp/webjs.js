@@ -1,3 +1,5 @@
+var dataAcc = "";
+
 // 2. This code loads the IFrame Player API code asynchronously.
 var testing = document.getElementById('test');
 var tag = document.createElement('script');
@@ -59,6 +61,11 @@ function write_rate(valued) {
       time: player.getCurrentTime(),
       picuri: picURL
   });
+  dataAcc += String(player.getCurrentTime())+ ", " +valued.value + "\n";
+  g2 = new Dygraph(
+    document.getElementById("graphdiv2"),
+    "Time, Engagement Level\n" + dataAcc        // options
+  );
 }
 
 function onPlayerStateChange(event) {
@@ -241,30 +248,55 @@ ourRequest.send();
       write_rate(objbutton1);
       takepicture();
       ev.preventDefault();
+      g2 = new Dygraph(
+        document.getElementById("graphdiv2"),
+        "Time, Engagement Level\n" +
+        dataAcc        // options
+      );
     }, false);
 
     objbutton2.addEventListener('click', function(ev){
       write_rate(objbutton2);
       takepicture();
       ev.preventDefault();
+      g2 = new Dygraph(
+        document.getElementById("graphdiv2"),
+        "Time, Engagement Level\n" +
+        dataAcc        // options
+      );
     }, false);
 
     objbutton3.addEventListener('click', function(ev){
       write_rate(objbutton3);
       takepicture();
       ev.preventDefault();
+      g2 = new Dygraph(
+        document.getElementById("graphdiv2"),
+        "Time, Engagement Level\n" +
+        dataAcc        // options
+      );
     }, false);
 
     objbutton4.addEventListener('click', function(ev){
       write_rate(objbutton4);
       takepicture();
       ev.preventDefault();
+      g2 = new Dygraph(
+        document.getElementById("graphdiv2"),
+        "Time, Engagement Level\n" +
+        dataAcc        // options
+      );
     }, false);
 
     objbutton5.addEventListener('click', function(ev){
       write_rate(objbutton5);
       takepicture();
       ev.preventDefault();
+      g2 = new Dygraph(
+        document.getElementById("graphdiv2"),
+        "Time, Engagement Level\n" +
+        dataAcc        // options
+      );
     }, false);
 
     clearphoto();
