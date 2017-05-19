@@ -74,7 +74,7 @@ function onPlayerStateChange(event) {
 
 
       $.ajax({
-          url: "http://requestb.in/16ts33c1",
+          url: "http://requestb.in/wg5guxwg",
           type: "POST",
           data: str,
           dataType: "json",

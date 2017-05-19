@@ -12,6 +12,9 @@ Released   : 20130428
 -->
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+<script type="text/javascript"
+  src="../Graph/graph.js"></script>
+<link rel="stylesheet" src="../Graph/graph.css" />
 <style>
 .button {
   display: inline;
@@ -119,9 +122,16 @@ Released   : 20130428
     <button class="button" id=objButton5 value="5">Engaged</button>
 
     <canvas id="canvas"></canvas>
-    <p id="test">hello</p>
-    <button onclick="document.getElementById('test').innerHTML = picURL;">p</button>
 
+    <div id="graphdiv2"
+      style="width:500px; height:300px;"></div>
+    <script type="text/javascript">
+      g2 = new Dygraph(
+        document.getElementById("graphdiv2"),
+        "../Graph/temperatures.csv", // path to CSV file
+        {}          // options
+      );
+    </script>
 
 		<br/>
 	</div>
