@@ -13,7 +13,6 @@ function sendData(){
     console.log(str); // Logs output to dev tools console.
     //document.getElementById('test').innerHTML = (str); // Displays output using window.alert()
 
-
   $.ajax({
       url: "https://requestb.in/13a3vxu1",
       type: "POST",
@@ -29,8 +28,8 @@ function sendData(){
           }
       },
       error: function (xhr, ajaxOptions, thrownError) {
-      alert(xhr.status);
-      alert(thrownError);
+        alert(xhr.status);
+        alert(thrownError);
       }
   });
 }
