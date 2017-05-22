@@ -53,6 +53,33 @@ var testing = document.getElementById('test');
 
 var dict = [];
 
+function sendData(){
+  str = JSON.stringify(dict, null, 4);
+    console.log(str); // Logs output to dev tools console.
+    //document.getElementById('test').innerHTML = (str); // Displays output using window.alert()
+
+
+  $.ajax({
+      url: "https://requestb.in/vmlsy5vm",
+      type: "POST",
+      data: str,
+      dataType: "json",
+      success: function (result) {
+          switch (result) {
+              case true:
+                  processResponse(result);
+                  break;
+              default:
+                  resultDiv.html(result);
+          }
+      },
+      error: function (xhr, ajaxOptions, thrownError) {
+      alert(xhr.status);
+      alert(thrownError);
+      }
+  });
+}
+
 function write_rate(valued) {
   dict.push({
       username:user,
@@ -68,37 +95,20 @@ function write_rate(valued) {
   );
 }
 
+
 function onPlayerStateChange(event) {
-    if(event.data === 0) {
-
-downloadCSV({ filename: "data.csv" });
-
-      str = JSON.stringify(dict, null, 4);
-        console.log(str); // Logs output to dev tools console.
-        //document.getElementById('test').innerHTML = (str); // Displays output using window.alert()
-
-
-      $.ajax({
-          url: "http://requestb.in/wg5guxwg",
-          type: "POST",
-          data: str,
-          dataType: "json",
-          success: function (result) {
-              switch (result) {
-                  case true:
-                      processResponse(result);
-                      break;
-                  default:
-                      resultDiv.html(result);
-              }
-          },
-          error: function (xhr, ajaxOptions, thrownError) {
-          alert(xhr.status);
-          alert(thrownError);
-          }
-      });
+    if(event.data == 0){
+// downloadCSV({ filename: "data.csv" });
+      sendData();
     }
 }
+
+//This should deal with sending the JSON data once the browser is closed
+// window.addEventListener("beforeunload", function (e) {
+//   sendData();            // Gecko, WebKit, Chrome <34
+// });
+
+
 
 
 function convertArrayOfObjectsToCSV(args) {
