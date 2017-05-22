@@ -1,3 +1,13 @@
+/*
+
+Module: csv
+
+Description: Deals with everything related to CSV output file generation
+
+Owner: Ezer Moysis
+
+*/
+
 function convertArrayOfObjectsToCSV(args) {
     var result, ctr, keys, columnDelimiter, lineDelimiter, data;
 

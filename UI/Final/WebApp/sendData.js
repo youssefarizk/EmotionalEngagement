@@ -1,3 +1,13 @@
+/*
+
+Module: SendData
+
+Description: Sends the data via AJAX to the appropriate end point
+
+Owner: Anson
+
+*/
+
 function sendData(){
   str = JSON.stringify(dict, null, 4);
     console.log(str); // Logs output to dev tools console.

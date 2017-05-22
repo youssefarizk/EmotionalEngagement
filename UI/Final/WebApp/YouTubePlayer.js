@@ -1,3 +1,13 @@
+/*
+
+Module: YouTube Player
+
+Description: Deals with everything related to the YouTube player on the website. Some code is used form the YouTube API start guide
+
+Owner: Youssef Rizk
+
+*/
+
 // 2. This code loads the IFrame Player API code asynchronously.
 var testing = document.getElementById('test');
 var tag = document.createElement('script');
