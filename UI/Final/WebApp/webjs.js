@@ -52,11 +52,11 @@ function sayHello(){
 var testing = document.getElementById('test');
 
 var dict = [];
-var all = [];
-var vid =[];
 
 function write_rate(valued) {
   dict.push({
+      username:user,
+      movieId:vid,
       rate:valued.value,
       time: player.getCurrentTime(),
       picuri: picURL
@@ -70,12 +70,10 @@ function write_rate(valued) {
 
 function onPlayerStateChange(event) {
     if(event.data === 0) {
-      all = [
-        {user},
-        vid,
-        dict
-      ];
-      str = JSON.stringify(all, null, 4);
+
+downloadCSV({ filename: "data.csv" });
+
+      str = JSON.stringify(dict, null, 4);
         console.log(str); // Logs output to dev tools console.
         //document.getElementById('test').innerHTML = (str); // Displays output using window.alert()
 
@@ -103,43 +101,85 @@ function onPlayerStateChange(event) {
 }
 
 
+function convertArrayOfObjectsToCSV(args) {
+    var result, ctr, keys, columnDelimiter, lineDelimiter, data;
+
+    data = args.data || null;
+    if (data == null || !data.length) {
+        return null;
+    }
+
+    columnDelimiter = args.columnDelimiter || ',';
+    lineDelimiter = args.lineDelimiter || '\n';
+
+    keys = Object.keys(data[0]);
+
+    result = '';
+    result += keys.join(columnDelimiter);
+    result += lineDelimiter;
+
+    data.forEach(function(item) {
+        ctr = 0;
+        keys.forEach(function(key) {
+            if (ctr > 0) result += columnDelimiter;
+
+            result += item[key];
+            ctr++;
+        });
+        result += lineDelimiter;
+    });
+
+    return result;
+}
+
+function downloadCSV(args) {
+    var data, filename, link;
+
+    var csv = convertArrayOfObjectsToCSV({
+        data: dict
+    });
+    if (csv == null) return;
+
+    filename = args.filename || 'export.csv';
+
+    if (!csv.match(/^data:text\/csv/i)) {
+        csv = 'data:text/csv;charset=utf-8,' + csv;
+    }
+    data = encodeURI(csv);
+
+    link = document.createElement('a');
+    link.setAttribute('href', data);
+    link.setAttribute('download', filename);
+    link.click();
+}
+
 
 
 
 function vid1() {
   player.loadVideoById({'videoId': 'bHQqvYy5KYo',
                  'suggestedQuality': 'default'});
-                 vid.push({
-                     vidname:"Movie a"
-                 });
+                 vid="Movie a";
 }
 function vid2() {
   player.loadVideoById({'videoId': 'ddDvm7C1RMo',
                  'suggestedQuality': 'default'});
-                 vid.push({
-                     vidname:"Movie b"
-                 });
+                 vid="Movie b";
 }
 function vid3() {
   player.loadVideoById({'videoId': 'W1BO6FUnI-8',
                  'suggestedQuality': 'default'});
-                 vid.push({
-                     vidname:"Movie c"
-                 })
+                 vid="Movie c";
 }
 function vid4() {
   player.loadVideoById({'videoId': 'TfS5J3gGQa4',
                  'suggestedQuality': 'default'});
-                 vid.push({
-                     vidname:"Movie d"
-                 })
+                 vid="Movie d";
 }
 function vid5() {
   player.loadVideoById({'videoId': 'T8k0fYZ3uzU',
                  'suggestedQuality': 'default'});
-                 vid.push({
-                     vidname:"Movie e"
-                 })
+                 vid="Movie e";
 }
 
 /* GET JSON FROM THE WEB, STORE IT TO A VARIABLE AND PASS IT TO HTML
