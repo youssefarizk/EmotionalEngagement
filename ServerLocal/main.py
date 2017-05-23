@@ -29,7 +29,7 @@ table_service = TableService(account_name=STORAGE_ACCOUNT_NAME, account_key=STOR
 @app.route('/', methods=['GET', 'POST'])
 def entry_page():
     if request.method == 'POST':
-        json_dict = request.get_json(True)
+        json_dict = request.get_json(True)[0]
         #print(json_dict)
         
         data_out=Entity()

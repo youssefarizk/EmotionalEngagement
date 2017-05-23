@@ -10,7 +10,7 @@ import operator
 
 
 # Import library to display results
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 #%matplotlib inline 
 # Display images within Jupyter
 
@@ -69,19 +69,3 @@ def processRequest( json, data, headers, params ):
     return result
 
 
-
-# Load raw image file into memory
-pathToFileInDisk = r'/Users/simonweill/Desktop/Emotion.jpg'
-with open( pathToFileInDisk, 'rb' ) as f:
-    data = f.read()
-
-headers = dict()
-headers['Ocp-Apim-Subscription-Key'] = _key
-headers['Content-Type'] = 'application/octet-stream'
-
-json = None
-params = None
-
-result = processRequest( json, data, headers, params )
-
-#print(result)
