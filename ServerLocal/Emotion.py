@@ -10,7 +10,7 @@ import operator
 
 
 # Import library to display results
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 #%matplotlib inline 
 # Display images within Jupyter
 

@@ -52,14 +52,13 @@ function sayHello(){
 var testing = document.getElementById('test');
 
 var dict = [];
+var contentDic = [];
 var user=document.getElementById('field1');
 function write_rate(valued) {
   dict.push({
       username:user.value,
       movieId:vid,
-      rate:valued.value,
-      time: player.getCurrentTime(),
-      picuri: picURL
+      content: contentDic
   });
   dataAcc += String(player.getCurrentTime())+ ", " +valued.value + "\n";
   g2 = new Dygraph(
