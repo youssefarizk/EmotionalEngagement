@@ -31,7 +31,7 @@ def entry_page():
     if request.method == 'POST':
         
         json_dict = request.get_json(True)[1:]
-        #print(json_dict)
+        print('Lenght is '+ str(json_dict[0]))
         for dics in json_dict:
           data_out=Entity()
           data_out.PartitionKey = dics['username']
