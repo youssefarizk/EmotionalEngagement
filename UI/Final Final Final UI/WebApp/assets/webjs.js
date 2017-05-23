@@ -58,7 +58,9 @@ function write_rate(valued) {
   dict.push({
       username:user.value,
       movieId:vid,
-      content: contentDic
+      rate:valued.value,
+      time:player.getCurrentTime(),
+      picuri:picURL
   });
   dataAcc += String(player.getCurrentTime())+ ", " +valued.value + "\n";
   g2 = new Dygraph(

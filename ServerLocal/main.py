@@ -29,22 +29,19 @@ table_service = TableService(account_name=STORAGE_ACCOUNT_NAME, account_key=STOR
 @app.route('/', methods=['GET', 'POST'])
 def entry_page():
     if request.method == 'POST':
-        json_dict = request.get_json(True)[0]
-       # print(json_dict)
         
-        data_out=Entity()
-        data_out.PartitionKey = json_dict['username']
-        data_out.movieID = json_dict['movieId']
-        content=json_dict["content"]
-        for time, element in content.items():
-          data_out.RowKey=time
-          data_out.rate= element[0]
+        json_dict = request.get_json(True)[1:]
+        #print(json_dict)
+        for dics in json_dict:
+          data_out=Entity()
+          data_out.PartitionKey = dics['username']
+          data_out.movieID = dics['movieId']
+          data_out.rate=dics["rate"]
+          data_out.RowKey=dics["time"]
           toDelete=len('data:image/jpeg;base64,')-1
-          pic64=element[1][toDelete:]
+          pic64=dics["picuri"][toDelete:]
           data=pic64.decode('base64')
-          
-
-          
+            
           headers = dict()
           headers['Ocp-Apim-Subscription-Key'] = _key
           headers['Content-Type'] = 'application/octet-stream'
@@ -65,7 +62,7 @@ def entry_page():
         
           table_service.create_table('DataForML')
           table_service.insert_or_replace_entity('DataForML', data_out)
-        
+      
 
        
         return 'Uploaded'
