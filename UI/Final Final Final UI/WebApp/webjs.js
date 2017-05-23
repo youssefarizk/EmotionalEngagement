@@ -79,7 +79,7 @@ downloadCSV({ filename: "data.csv" });
 
 
       $.ajax({
-          url: "https://requestb.in/1gceti31",
+          url: "https://requestb.in/137od0r1",
           type: "POST",
           data: str,
           dataType: "json",
