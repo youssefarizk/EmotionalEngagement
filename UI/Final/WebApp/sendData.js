@@ -14,7 +14,7 @@ function sendData(){
     //document.getElementById('test').innerHTML = (str); // Displays output using window.alert()
 
   $.ajax({
-      url: "https://requestb.in/13a3vxu1",
+      url: "http://webinterfaceimperialemotion.azurewebsites.net/",
       type: "POST",
       data: str,
       dataType: "json",
