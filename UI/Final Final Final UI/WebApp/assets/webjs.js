@@ -56,12 +56,21 @@ var dict = [];
 var user=document.getElementById('field1');
 function write_rate(valued) {
   dict.push({
+<<<<<<< HEAD
     username:user.value,
     movieId:vid,
     rate:valued.value,
     time: player.getCurrentTime(),
     picuri: picURL
   })
+=======
+      username:user.value,
+      movieId:vid,
+      rate:valued.value,
+      time:player.getCurrentTime(),
+      picuri:picURL
+  });
+>>>>>>> f870db0148326ed195457bb296ac081f41f2d02d
   dataAcc += String(player.getCurrentTime())+ ", " +valued.value + "\n";
   g2 = new Dygraph(
     document.getElementById("graphdiv2"),
@@ -80,7 +89,7 @@ downloadCSV({ filename: "data.csv" });
 
 
       $.ajax({
-          url: "https://requestb.in/137od0r1",
+          url: "http://localhost:5000/",
           type: "POST",
           data: str,
           dataType: "json",
