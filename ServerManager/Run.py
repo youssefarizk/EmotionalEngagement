@@ -65,6 +65,7 @@ else:
     with open( pathToFileInDisk, 'rb' ) as f:
        data = f.read()
 
+print(data)
 headers = dict()
 headers['Ocp-Apim-Subscription-Key'] = _key
 headers['Content-Type'] = 'application/octet-stream'
@@ -97,6 +98,8 @@ if (storage):
     print('\nFinished :) ')
 
 else:
+
+    print('Azure Table \n')
     data_out=Entity()
     data_out.PartitionKey=userID
     data_out.RowKey=timestamp
@@ -117,8 +120,9 @@ else:
 
     table_service.insert_or_replace_entity('Results', data_out)
 
-    output = table_service.get_entity('Results',userID)
+    output = table_service.get_entity('Results',userID,timestamp)
     print(output)
+    print('\nFinished :) ')
 
 
 
