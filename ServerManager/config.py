@@ -40,10 +40,10 @@ scores='Scores.txt'
 
 
 #Data Common
-userID= 'Jeff'
-clicks= 5
-timeSpent=10
-timestamp=1209819287
+userID= 'Youssef'
+clicks= 9
+timeSpent=3
+timestamp=1209819289
 
 #File location on Azure File Storage / Input Data
 share='emotion-processingbecb'
