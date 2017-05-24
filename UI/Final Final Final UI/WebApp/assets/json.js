@@ -17,14 +17,47 @@ ourRequest.send();
 
 */
 
+
 var dataAcc = "";
 var testing = document.getElementById('test');
 var dict = [];
 var user=document.getElementById('field1');
 
+window.onbeforeunload = DOjson;
+
+Dojson = function(){
+  downloadCSV({ filename: "data.csv" });
+
+  str = JSON.stringify(dict, null, 4);
+    console.log(str); // Logs output to dev tools console.
+    //document.getElementById('test').innerHTML = (str); // Displays output using window.alert()
+
+
+  $.ajax({
+      url: "https://requestb.in/137od0r1",
+      type: "POST",
+      data: str,
+      dataType: "json",
+      success: function (result) {
+          switch (result) {
+              case true:
+                  processResponse(result);
+                  break;
+              default:
+                  resultDiv.html(result);
+          }
+      },
+      error: function (xhr, ajaxOptions, thrownError) {
+      alert(xhr.status);
+
+      }
+  });
+
+}
+
 
 function onPlayerStateChange(event) {
-    if(event.data === 0) {
+    if(event.data === 0 ) {
 
       downloadCSV({ filename: "data.csv" });
 
@@ -54,7 +87,6 @@ function onPlayerStateChange(event) {
       });
     }
 }
-
 
 function convertArrayOfObjectsToCSV(args) {
     var result, ctr, keys, columnDelimiter, lineDelimiter, data;
@@ -116,7 +148,9 @@ function write_rate(valued) {
       movieId:vid,
       rate:valued.value,
       time: player.getCurrentTime(),
+      videocompletion: player.getCurrentTime() / player.getDuration(),
       picuri: picURL
+
   });
   dataAcc += String(player.getCurrentTime())+ ", " +valued.value + "\n";
   g2 = new Dygraph(
