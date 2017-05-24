@@ -76,25 +76,20 @@
       }
     }, false);
 
-    objbutton0.addEventListener('click', function(ev){
-          takepicture();
-    write_rate(objbutton0);
-
-    //write_rate(objbutton1);
-    ev.preventDefault();
-    g2 = new Dygraph(
-      document.getElementById("graphdiv2"),
-      "Time, Engagement Level\n" +
-      dataAcc        // options
-    );
-  }, false);
+      document.addEventListener('click', function(ev){
+        takepicture();
+        write_rate(objbutton0);
+        ev.preventDefault();
+        g2 = new Dygraph(
+        document.getElementById("graphdiv2"),
+        "Time, Engagement Level\n" +
+        dataAcc        // options
+      );
+    }, false);
 
       objbutton1.addEventListener('click', function(ev){
-
       write_rate(objbutton1);
       takepicture();
-
-      //write_rate(objbutton1);
       ev.preventDefault();
       g2 = new Dygraph(
         document.getElementById("graphdiv2"),
