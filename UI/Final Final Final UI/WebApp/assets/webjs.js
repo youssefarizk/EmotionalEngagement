@@ -50,28 +50,15 @@ function sayHello(){
 }
 
 var testing = document.getElementById('test');
-
 var dict = [];
 var user=document.getElementById('field1');
-function write_rate(valued) {
-  dict.push({
-      username:user.value,
-      movieId:vid,
-      rate:valued.value,
-      time: player.getCurrentTime(),
-      picuri: picURL
-  });
-  dataAcc += String(player.getCurrentTime())+ ", " +valued.value + "\n";
-  g2 = new Dygraph(
-    document.getElementById("graphdiv2"),
-    "Time, Engagement Level\n" + dataAcc        // options
-  );
-}
+
+
 
 function onPlayerStateChange(event) {
     if(event.data === 0) {
 
-downloadCSV({ filename: "data.csv" });
+      downloadCSV({ filename: "data.csv" });
 
       str = JSON.stringify(dict, null, 4);
         console.log(str); // Logs output to dev tools console.
@@ -94,7 +81,7 @@ downloadCSV({ filename: "data.csv" });
           },
           error: function (xhr, ajaxOptions, thrownError) {
           alert(xhr.status);
-          alert(thrownError);
+
           }
       });
     }
@@ -159,7 +146,7 @@ function downloadCSV(args) {
 function vid1() {
   player.loadVideoById({'videoId': 'ZK3O402wf1c',
                  'suggestedQuality': 'default'});
-                 vid="Lec 1 MIT 18.06 Linear Algebra, Spring 2005";
+                 vid="Lec 1 MIT 18.06 Linear Algebra Spring 2005";
 }
 function vid2() {
   player.loadVideoById({'videoId': 'mbyG85GZ0PI',
@@ -169,7 +156,7 @@ function vid2() {
 function vid3() {
   player.loadVideoById({'videoId': 'gv-AB35V2k8',
                  'suggestedQuality': 'default'});
-                 vid="Lec 1 | MIT 18.086 Mathematical Methods for Engineers II";
+                 vid="Lec 1 MIT 18.086 Mathematical Methods for Engineers II";
 }
 function vid4() {
   player.loadVideoById({'videoId': 'T_I-CUOc_bk',
@@ -206,8 +193,8 @@ ourRequest.send();
   // width to the value defined here, but the height will be
   // calculated based on the aspect ratio of the input stream.
 
-  var width = 320;    // We will scale the photo width to this
-  var height = 0;     // This will be computed based on the input stream
+  var width1 = 320;    // We will scale the photo width to this
+  var height1 = 0;     // This will be computed based on the input stream
 
   // |streaming| indicates whether or not we're currently streaming
   // video from the camera. Obviously, we start at false.
@@ -220,13 +207,13 @@ ourRequest.send();
   var video = null;
   var canvas = null;
   var photo = null;
-  var startbutton = null;
+
 
   function startup() {
     video = document.getElementById('video');
     canvas = document.getElementById('canvas');
     photo = document.getElementById('photo');
-    startbutton = document.getElementById('startbutton');
+
 
     var objbutton1 = document.getElementById('objButton1');
     var objbutton2 = document.getElementById('objButton2');
@@ -261,32 +248,29 @@ ourRequest.send();
 
     video.addEventListener('canplay', function(ev){
       if (!streaming) {
-        height = video.videoHeight / (video.videoWidth/width);
+        height1 = video.videoHeight / (video.videoWidth/width1);
 
         // Firefox currently has a bug where the height can't be read from
         // the video, so we will make assumptions if this happens.
 
-        if (isNaN(height)) {
-          height = width / (4/3);
+        if (isNaN(height1)) {
+          height1 = width1 / (4/3);
         }
 
-        video.setAttribute('width', width);
-        video.setAttribute('height', height);
-        canvas.setAttribute('width', width);
-        canvas.setAttribute('height', height);
+        video.setAttribute('width', width1);
+        video.setAttribute('height', height1);
+        canvas.setAttribute('width', width1);
+        canvas.setAttribute('height', height1);
         streaming = true;
       }
     }, false);
 
-    startbutton.addEventListener('click', function(ev){
-      takepicture();
-      ev.preventDefault();
-    }, false);
 
 
-    objbutton1.addEventListener('click', function(ev){
-      write_rate(objbutton1);
+      objbutton1.addEventListener('click', function(ev){
       takepicture();
+      alert('reached');
+      //write_rate(objbutton1);
       ev.preventDefault();
       g2 = new Dygraph(
         document.getElementById("graphdiv2"),
@@ -338,7 +322,6 @@ ourRequest.send();
         dataAcc        // options
       );
     }, false);
-
     clearphoto();
   }
 
@@ -361,11 +344,11 @@ ourRequest.send();
 
   function takepicture() {
     var context = canvas.getContext('2d');
-    if (width && height) {
-      canvas.width = width;
-      canvas.height = height;
-      context.drawImage(video, 0, 0, width, height);
-
+    if (width1 && height1) {
+      canvas.width = width1;
+      canvas.height = height1;
+      context.drawImage(video, 0, 0, width1, height1);
+      alert('in takepicture');
       var data = canvas.toDataURL('image/png');
       picURL = data;
       photo.setAttribute('src', data);
@@ -380,3 +363,19 @@ ourRequest.send();
   // once loading is complete.
   window.addEventListener('load', startup, false);
 })();
+
+function write_rate(valued) {
+  alert('reached');
+  dict.push({
+      username:user.value,
+      movieId:vid,
+      rate:valued.value,
+      time: player.getCurrentTime(),
+      picuri: picURL
+  });
+  dataAcc += String(player.getCurrentTime())+ ", " +valued.value + "\n";
+  g2 = new Dygraph(
+    document.getElementById("graphdiv2"),
+    "Time, Engagement Level\n" + dataAcc        // options
+  );
+}
