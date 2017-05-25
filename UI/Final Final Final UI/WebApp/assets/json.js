@@ -23,7 +23,7 @@ var testing = document.getElementById('test');
 var dict = [];
 var user=document.getElementById('field1');
 
-window.onbeforeunload = function(e){
+window.onbeforeunload = function(){
  //downloadCSV({ filename: "data.csv" });
  str = JSON.stringify(dict, null, 4);
    console.log(str); // Logs output to dev tools console.
