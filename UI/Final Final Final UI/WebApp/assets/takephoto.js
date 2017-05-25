@@ -31,6 +31,11 @@
     var objbutton3 = document.getElementById('objButton3');
     var objbutton4 = document.getElementById('objButton4');
     var objbutton5 = document.getElementById('objButton5');
+    var video1 = document.getElementById('video1');
+    var video2 = document.getElementById('video2');
+    var video3 = document.getElementById('video3');
+    var video4 = document.getElementById('video4');
+    var video5 = document.getElementById('video5');
 
 
     navigator.getMedia = ( navigator.getUserMedia ||
@@ -76,9 +81,9 @@
       }
     }, false);
 
-      document.addEventListener('click', function(ev){
+      video1.addEventListener('click', function(ev){
         takepicture();
-        write_rate(objbutton0);
+        write_rate(video1);
         ev.preventDefault();
         g2 = new Dygraph(
         document.getElementById("graphdiv2"),
@@ -86,6 +91,46 @@
         dataAcc        // options
       );
     }, false);
+    video2.addEventListener('click', function(ev){
+      takepicture();
+      write_rate(video2);
+      ev.preventDefault();
+      g2 = new Dygraph(
+      document.getElementById("graphdiv2"),
+      "Time, Engagement Level\n" +
+      dataAcc        // options
+    );
+  }, false);
+  video3.addEventListener('click', function(ev){
+    takepicture();
+    write_rate(video13);
+    ev.preventDefault();
+    g2 = new Dygraph(
+    document.getElementById("graphdiv2"),
+    "Time, Engagement Level\n" +
+    dataAcc        // options
+  );
+}, false);
+video4.addEventListener('click', function(ev){
+  takepicture();
+  write_rate(video4);
+  ev.preventDefault();
+  g2 = new Dygraph(
+  document.getElementById("graphdiv2"),
+  "Time, Engagement Level\n" +
+  dataAcc        // options
+);
+}, false);
+video5.addEventListener('click', function(ev){
+  takepicture();
+  write_rate(video5);
+  ev.preventDefault();
+  g2 = new Dygraph(
+  document.getElementById("graphdiv2"),
+  "Time, Engagement Level\n" +
+  dataAcc        // options
+);
+}, false);
 
       objbutton1.addEventListener('click', function(ev){
       write_rate(objbutton1);

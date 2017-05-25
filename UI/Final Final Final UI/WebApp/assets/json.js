@@ -23,7 +23,30 @@ var testing = document.getElementById('test');
 var dict = [];
 var user=document.getElementById('field1');
 
-
+window.onbeforeunload = function(e){
+ //downloadCSV({ filename: "data.csv" });
+ str = JSON.stringify(dict, null, 4);
+   console.log(str); // Logs output to dev tools console.
+   //document.getElementById('test').innerHTML = (str); // Displays output using window.alert()
+ $.ajax({
+     url: "http://projectemotion.azurewebsites.net/",
+     type: "POST",
+     data: str,
+     dataType: "json",
+     success: function (result) {
+         switch (result) {
+             case true:
+                 processResponse(result);
+                 break;
+             default:
+                 resultDiv.html(result);
+         }
+     },
+     error: function (xhr, ajaxOptions, thrownError) {
+     alert(xhr.status);
+     }
+ });
+}
 
 
 function onPlayerStateChange(event) {
@@ -34,10 +57,10 @@ function onPlayerStateChange(event) {
       str = JSON.stringify(dict, null, 4);
         console.log(str); // Logs output to dev tools console.
         //document.getElementById('test').innerHTML = (str); // Displays output using window.alert()
-
+        alert(str);
 
       $.ajax({
-          url: "https://requestb.in/1j6r8j01",
+          url: "http://projectemotion.azurewebsites.net/",
           type: "POST",
           data: str,
           dataType: "json",
