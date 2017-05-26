@@ -1,0 +1,812 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Emotional Engagement</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/default.css" type="text/css" media="all" />
+		<link rel="stylesheet" src="assets/css/graph.css" type="text/css" media="all" />
+		<link rel="stylesheet" href="assets/css/button.css" type="text/css" media="all" />
+		<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700|Archivo+Narrow:400,700" rel="stylesheet" type="text/css"/>
+	</head>
+
+	<body>
+
+		<script type="text/php">
+		php include('CORS1.php');
+		</script>
+
+		<div id="loginpage"> // login page
+		<!-- Banner -->
+			<section id="banner">
+				<h1>Emotional Engagement</h1>
+				<p>Let your emotions speak for you!</p>
+			</section>
+			<!-- Three -->
+				<section id="three" class="wrapper special">
+					<div class="inner">
+						<header class="align-center">
+							<h2>Who are you</h2>
+              <input type="text" id="field1" name="field1" placeholder="Username" />
+							<p>User or Provider? </p>
+						</header>
+						<div class="flex flex-2">
+							<article>
+								<div class="image fit">
+									<img src="images/pic01.jpg" alt="Pic 01" />
+								</div>
+								<header>
+									<h3>User</h3>
+								</header>
+								<p>Users have the opportunity to...</p>
+								<footer>
+									<button class="button special"onclick="return show1('videopro','loginpage');">User</button>
+								</footer>
+							</article>
+							<article>
+								<div class="image fit">
+									<img src="images/pic02.jpg" alt="Pic 02" />
+								</div>
+								<header>
+									<h3>Provider</h3>
+								</header>
+								<p>As a provider you can now...</p>
+								<footer>
+									<button class="button special" onclick="return show1('videopro','loginpage');">Provider</button>
+								</footer>
+							</article>
+						</div>
+					</div>
+				</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<div class="flex">
+						<div class="copyright">
+							&copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com">Unsplash</a>.
+						</div>
+						<ul class="icons">
+							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon fa-linkedin"><span class="label">linkedIn</span></a></li>
+							<li><a href="#" class="icon fa-pinterest-p"><span class="label">Pinterest</span></a></li>
+							<li><a href="#" class="icon fa-vimeo"><span class="label">Vimeo</span></a></li>
+						</ul>
+					</div>
+				</div>
+			</footer>
+		</div>
+
+
+<div id="videopro" style="display:none"> // video pro page
+
+		<body class="subpage">
+
+			<!-- Header -->
+				<header id="header">
+					<div class="inner">
+						<a href="index.html" class="logo">Theory</a>
+						<nav id="nav">
+							<a onclick="return show1('homepro','videopro');">Homepage</a>
+							<a onclick="return show1('videopro','videopro');">Video</a>
+							<a onclick="return show1('feedpro','videopro');">Feedback</a>
+						</nav>
+						<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+					</div>
+				</header>
+
+			<!-- Three -->
+				<section id="three" class="wrapper">
+					<div class="inner">
+						<header class="align-center">
+							<h2>Videos</h2>
+							<p>Choose which lectrure you want to watch</p>
+						</header>
+
+						<button class="button" onclick="vid1()">Video1</button>
+						<button class="button" onclick="vid2()">Video2</button>
+						<button class="button" onclick="vid3()">Video3</button>
+						<button class="button" onclick="vid4()">Video4</button>
+						<button class="button" onclick="vid5()">Video5</button>
+						<br/>
+						<br/>
+						<div id="player"></div>
+						<br/>
+						<br/>
+						<br/>
+						<div class="camera">
+					  	<video id="video" hidden>Video stream not available.</video>
+					  </div>
+						<p>
+	          	<br/>
+	            <font size="5">How engaged are you?
+	          </p>
+						<br/>
+						<button class="button" id=objButton1 value="1">Unengaged</button>
+						<button class="button" id=objButton2 value="2">Slightly Unengaged</button>
+						<button class="button" id=objButton3 value="3">Neutral</button>
+						<button class="button" id=objButton4 value="4">Slightly Engaged</button>
+						<button class="button" id=objButton5 value="5">Engaged</button>
+						<br/>
+						<br/>
+						<!-- <script>
+	            // window.onbeforeunload = function(){
+
+	              downloadCSV({ filename: "data.csv" });
+
+	              str = JSON.stringify(dict, null, 4);
+	                console.log(str); // Logs output to dev tools console.
+									alert(str);
+	                //document.getElementById('test').innerHTML = (str); // Displays output using window.alert()
+	              $.ajax({
+	                  url: "https://requestb.in/186phle1",
+	                  type: "POST",
+	                  data: str,
+	                  dataType: "json",
+	                  success: function (result) {
+	                      switch (result) {
+	                          case true:
+	                              processResponse(result);
+	                              break;
+	                          default:
+	                              resultDiv.html(result);
+	                      }
+	                  },
+	                  error: function (xhr, ajaxOptions, thrownError) {
+	                  alert(xhr.status);
+	                  }
+	              });
+	            }
+	            </script> -->
+	            <br/>
+							<p>
+								<br/>
+								<font size="5">Here you can see the pictures that are taken
+							</p>
+
+	            <canvas id="canvas"></canvas>
+	            <br/>
+	            <br/>
+	            <br/>
+					</div>
+				</section>
+
+
+			<!-- Footer -->
+				<footer id="footer">
+					<div class="inner">
+						<div class="flex">
+							<div class="copyright">
+								&copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com">Unsplash</a>.
+							</div>
+							<ul class="icons">
+								<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+								<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="#" class="icon fa-linkedin"><span class="label">linkedIn</span></a></li>
+								<li><a href="#" class="icon fa-pinterest-p"><span class="label">Pinterest</span></a></li>
+								<li><a href="#" class="icon fa-vimeo"><span class="label">Vimeo</span></a></li>
+							</ul>
+						</div>
+					</div>
+				</footer>
+</div>
+
+
+
+
+
+<div id="homepro" style="display:none"> // home page
+
+
+<!-- Header -->
+	<header id="header">
+		<div class="inner">
+			<a href="index.html" class="logo">Theory</a>
+			<nav id="nav">
+				<a onclick="return show1('homepro','videopro');">Homepage</a>
+				<a onclick="return show1('videopro','videopro');">Video</a>
+				<a onclick="return show1('feedpro','videopro');">Feedback</a>
+			</nav>
+			<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+		</div>
+	</header>
+
+<!-- Banner -->
+	<section id="banner">
+		<h1>Emotional Engagement</h1>
+		<p>Let your emotions speak for you!</p>
+	</section>
+
+
+	<!-- Three -->
+		<section id="three" class="wrapper special">
+			<div class="inner">
+				<header class="align-center">
+					<h2>Who are you</h2>
+					<input type="text" id="field1" name="field1" placeholder="Username" />
+					<!-- <input type="submit" value="provider" name="login" id="loginbutton" onclick="return show1('videopage','loginpage','loginpage','loginpage');"></input> -->
+					<p>User or Provider? </p>
+				</header>
+				<div class="flex flex-2">
+					<article>
+						<div class="image fit">
+							<img src="images/pic01.jpg" alt="Pic 01" />
+						</div>
+						<header>
+							<h3>User</h3>
+						</header>
+						<p>Users have the opportunity to...</p>
+						<footer>
+							<a href="indexuse.html" class="button special">User</a>
+						</footer>
+					</article>
+					<article>
+						<div class="image fit">
+							<img src="images/pic02.jpg" alt="Pic 02" />
+						</div>
+						<header>
+							<h3>Provider</h3>
+						</header>
+						<p>As a provider you can now...</p>
+						<footer>
+							<a href="indexpro.html" class="button special">Provider</a>
+						</footer>
+					</article>
+				</div>
+			</div>
+		</section>
+
+
+<!-- One -->
+	<section id="one" class="wrapper">
+		<div class="inner">
+			<div class="flex flex-3">
+				<article>
+					<header>
+						<h3>UI<br /> All about our web developement</h3>
+					</header>
+					<p>Bla bla bla...</p>
+					<footer>
+						<a href="#" class="button special">More</a>
+					</footer>
+				</article>
+				<article>
+					<header>
+						<h3>Server<br /> Communication and processing</h3>
+					</header>
+					<p>Bla bla bla...</p>
+					<footer>
+						<a href="#" class="button special">More</a>
+					</footer>
+				</article>
+				<article>
+					<header>
+						<h3>Machine Learning<br /> Recommendation using emotions</h3>
+					</header>
+					<p>Bla bla bla...</p>
+					<footer>
+						<a href="#" class="button special">More</a>
+					</footer>
+				</article>
+			</div>
+		</div>
+	</section>
+
+<!-- Two -->
+	<section id="two" class="wrapper style1 special">
+		<div class="inner">
+			<header>
+				<h2>Our Team</h2>
+				<p>Check our emotions</p>
+			</header>
+			<div class="flex flex-4">
+				<div class="box person">
+					<div class="image round">
+						<img src="images/pic03.jpg" alt="Person 1" />
+					</div>
+					<h3>Magna</h3>
+					<p>Cipdum dolor</p>
+				</div>
+				<div class="box person">
+					<div class="image round">
+						<img src="images/pic04.jpg" alt="Person 2" />
+					</div>
+					<h3>Ipsum</h3>
+					<p>Vestibulum comm</p>
+				</div>
+				<div class="box person">
+					<div class="image round">
+						<img src="images/pic05.jpg" alt="Person 3" />
+					</div>
+					<h3>Tempus</h3>
+					<p>Fusce pellentes</p>
+				</div>
+				<div class="box person">
+					<div class="image round">
+						<img src="images/pic06.jpg" alt="Person 4" />
+					</div>
+					<h3>Dolore</h3>
+					<p>Praesent placer</p>
+				</div>
+				<div class="box person">
+					<div class="image round">
+						<img src="images/pic03.jpg" alt="Person 1" />
+					</div>
+					<h3>Magna</h3>
+					<p>Cipdum dolor</p>
+				</div>
+				<div class="box person">
+					<div class="image round">
+						<img src="images/pic03.jpg" alt="Person 1" />
+					</div>
+					<h3>Magna</h3>
+					<p>Cipdum dolor</p>
+				</div>
+				<div class="box person">
+					<div class="image round">
+						<img src="images/pic03.jpg" alt="Person 1" />
+					</div>
+					<h3>Magna</h3>
+					<p>Cipdum dolor</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+<!-- Three -->
+	<section id="three" class="wrapper special">
+		<div class="inner">
+			<header class="align-center">
+				<h2>Nunc Dignissim</h2>
+				<p>Aliquam erat volutpat nam dui </p>
+			</header>
+			<div class="flex flex-2">
+				<article>
+					<div class="image fit">
+						<img src="images/pic01.jpg" alt="Pic 01" />
+					</div>
+					<header>
+						<h3>Praesent placerat magna</h3>
+					</header>
+					<p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor lorem ipsum.</p>
+					<footer>
+						<a href="#" class="button special">More</a>
+					</footer>
+				</article>
+				<article>
+					<div class="image fit">
+						<img src="images/pic02.jpg" alt="Pic 02" />
+					</div>
+					<header>
+						<h3>Fusce pellentesque tempus</h3>
+					</header>
+					<p>Sed adipiscing ornare risus. Morbi est est, blandit sit amet, sagittis vel, euismod vel, velit. Pellentesque egestas sem. Suspendisse commodo ullamcorper magna non comodo sodales tempus.</p>
+					<footer>
+						<a href="#" class="button special">More</a>
+					</footer>
+				</article>
+			</div>
+		</div>
+	</section>
+</div>
+
+
+
+
+
+<div id="homeuse" style="display:none"> // home page
+
+
+<!-- Header -->
+	<header id="header">
+		<div class="inner">
+			<a href="index.html" class="logo">Theory</a>
+			<nav id="nav">
+				<a onclick="return show1('homeuse','homeuse');">Homepage</a>
+				<a onclick="return show1('videouse','homeuse');">Video</a>
+			</nav>
+			<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+		</div>
+	</header>
+
+<!-- Banner -->
+	<section id="banner">
+		<h1>Emotional Engagement</h1>
+		<p>Let your emotions speak for you!</p>
+	</section>
+
+
+	<!-- Three -->
+		<section id="three" class="wrapper special">
+			<div class="inner">
+				<header class="align-center">
+					<h2>Who are you</h2>
+					<input type="text" id="field1" name="field1" placeholder="Username" />
+					<!-- <input type="submit" value="provider" name="login" id="loginbutton" onclick="return show1('videopage','loginpage','loginpage','loginpage');"></input> -->
+					<p>User or Provider? </p>
+				</header>
+				<div class="flex flex-2">
+					<article>
+						<div class="image fit">
+							<img src="images/pic01.jpg" alt="Pic 01" />
+						</div>
+						<header>
+							<h3>User</h3>
+						</header>
+						<p>Users have the opportunity to...</p>
+						<footer>
+							<a href="indexuse.html" class="button special">User</a>
+						</footer>
+					</article>
+					<article>
+						<div class="image fit">
+							<img src="images/pic02.jpg" alt="Pic 02" />
+						</div>
+						<header>
+							<h3>Provider</h3>
+						</header>
+						<p>As a provider you can now...</p>
+						<footer>
+							<a href="indexpro.html" class="button special">Provider</a>
+						</footer>
+					</article>
+				</div>
+			</div>
+		</section>
+
+
+<!-- One -->
+	<section id="one" class="wrapper">
+		<div class="inner">
+			<div class="flex flex-3">
+				<article>
+					<header>
+						<h3>UI<br /> All about our web developement</h3>
+					</header>
+					<p>Bla bla bla...</p>
+					<footer>
+						<a href="#" class="button special">More</a>
+					</footer>
+				</article>
+				<article>
+					<header>
+						<h3>Server<br /> Communication and processing</h3>
+					</header>
+					<p>Bla bla bla...</p>
+					<footer>
+						<a href="#" class="button special">More</a>
+					</footer>
+				</article>
+				<article>
+					<header>
+						<h3>Machine Learning<br /> Recommendation using emotions</h3>
+					</header>
+					<p>Bla bla bla...</p>
+					<footer>
+						<a href="#" class="button special">More</a>
+					</footer>
+				</article>
+			</div>
+		</div>
+	</section>
+
+<!-- Two -->
+	<section id="two" class="wrapper style1 special">
+		<div class="inner">
+			<header>
+				<h2>Our Team</h2>
+				<p>Check our emotions</p>
+			</header>
+			<div class="flex flex-4">
+				<div class="box person">
+					<div class="image round">
+						<img src="images/pic03.jpg" alt="Person 1" />
+					</div>
+					<h3>Magna</h3>
+					<p>Cipdum dolor</p>
+				</div>
+				<div class="box person">
+					<div class="image round">
+						<img src="images/pic04.jpg" alt="Person 2" />
+					</div>
+					<h3>Ipsum</h3>
+					<p>Vestibulum comm</p>
+				</div>
+				<div class="box person">
+					<div class="image round">
+						<img src="images/pic05.jpg" alt="Person 3" />
+					</div>
+					<h3>Tempus</h3>
+					<p>Fusce pellentes</p>
+				</div>
+				<div class="box person">
+					<div class="image round">
+						<img src="images/pic06.jpg" alt="Person 4" />
+					</div>
+					<h3>Dolore</h3>
+					<p>Praesent placer</p>
+				</div>
+				<div class="box person">
+					<div class="image round">
+						<img src="images/pic03.jpg" alt="Person 1" />
+					</div>
+					<h3>Magna</h3>
+					<p>Cipdum dolor</p>
+				</div>
+				<div class="box person">
+					<div class="image round">
+						<img src="images/pic03.jpg" alt="Person 1" />
+					</div>
+					<h3>Magna</h3>
+					<p>Cipdum dolor</p>
+				</div>
+				<div class="box person">
+					<div class="image round">
+						<img src="images/pic03.jpg" alt="Person 1" />
+					</div>
+					<h3>Magna</h3>
+					<p>Cipdum dolor</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+<!-- Three -->
+	<section id="three" class="wrapper special">
+		<div class="inner">
+			<header class="align-center">
+				<h2>Nunc Dignissim</h2>
+				<p>Aliquam erat volutpat nam dui </p>
+			</header>
+			<div class="flex flex-2">
+				<article>
+					<div class="image fit">
+						<img src="images/pic01.jpg" alt="Pic 01" />
+					</div>
+					<header>
+						<h3>Praesent placerat magna</h3>
+					</header>
+					<p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor lorem ipsum.</p>
+					<footer>
+						<a href="#" class="button special">More</a>
+					</footer>
+				</article>
+				<article>
+					<div class="image fit">
+						<img src="images/pic02.jpg" alt="Pic 02" />
+					</div>
+					<header>
+						<h3>Fusce pellentesque tempus</h3>
+					</header>
+					<p>Sed adipiscing ornare risus. Morbi est est, blandit sit amet, sagittis vel, euismod vel, velit. Pellentesque egestas sem. Suspendisse commodo ullamcorper magna non comodo sodales tempus.</p>
+					<footer>
+						<a href="#" class="button special">More</a>
+					</footer>
+				</article>
+			</div>
+		</div>
+	</section>
+</div>
+
+
+<div id="feed" style="display:none"> // feedback page
+
+
+<!-- Header -->
+	<header id="header">
+		<div class="inner">
+			<a href="index.html" class="logo">Theory</a>
+			<nav id="nav">
+				<a href="homeuse.html">Homepage</a>
+				<a href="videouse.html">Videos</a>
+			</nav>
+			<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+		</div>
+	</header>
+
+<!-- Banner -->
+	<section id="banner">
+		<h1>Emotional Engagement</h1>
+		<p>Let your emotions speak for you!</p>
+	</section>
+
+
+	<!-- Three -->
+		<section id="three" class="wrapper special">
+			<div class="inner">
+				<header class="align-center">
+					<h2>Who are you</h2>
+					<input type="text" id="field1" name="field1" placeholder="Username" />
+					<!-- <input type="submit" value="provider" name="login" id="loginbutton" onclick="return show1('videopage','loginpage','loginpage','loginpage');"></input> -->
+					<p>User or Provider? </p>
+				</header>
+				<div class="flex flex-2">
+					<article>
+						<div class="image fit">
+							<img src="images/pic01.jpg" alt="Pic 01" />
+						</div>
+						<header>
+							<h3>User</h3>
+						</header>
+						<p>Users have the opportunity to...</p>
+						<footer>
+							<a href="indexuse.html" class="button special">User</a>
+						</footer>
+					</article>
+					<article>
+						<div class="image fit">
+							<img src="images/pic02.jpg" alt="Pic 02" />
+						</div>
+						<header>
+							<h3>Provider</h3>
+						</header>
+						<p>As a provider you can now...</p>
+						<footer>
+							<a href="indexpro.html" class="button special">Provider</a>
+						</footer>
+					</article>
+				</div>
+			</div>
+		</section>
+
+
+<!-- One -->
+	<section id="one" class="wrapper">
+		<div class="inner">
+			<div class="flex flex-3">
+				<article>
+					<header>
+						<h3>UI<br /> All about our web developement</h3>
+					</header>
+					<p>Bla bla bla...</p>
+					<footer>
+						<a href="#" class="button special">More</a>
+					</footer>
+				</article>
+				<article>
+					<header>
+						<h3>Server<br /> Communication and processing</h3>
+					</header>
+					<p>Bla bla bla...</p>
+					<footer>
+						<a href="#" class="button special">More</a>
+					</footer>
+				</article>
+				<article>
+					<header>
+						<h3>Machine Learning<br /> Recommendation using emotions</h3>
+					</header>
+					<p>Bla bla bla...</p>
+					<footer>
+						<a href="#" class="button special">More</a>
+					</footer>
+				</article>
+			</div>
+		</div>
+	</section>
+
+<!-- Two -->
+	<section id="two" class="wrapper style1 special">
+		<div class="inner">
+			<header>
+				<h2>Our Team</h2>
+				<p>Check our emotions</p>
+			</header>
+			<div class="flex flex-4">
+				<div class="box person">
+					<div class="image round">
+						<img src="images/pic03.jpg" alt="Person 1" />
+					</div>
+					<h3>Magna</h3>
+					<p>Cipdum dolor</p>
+				</div>
+				<div class="box person">
+					<div class="image round">
+						<img src="images/pic04.jpg" alt="Person 2" />
+					</div>
+					<h3>Ipsum</h3>
+					<p>Vestibulum comm</p>
+				</div>
+				<div class="box person">
+					<div class="image round">
+						<img src="images/pic05.jpg" alt="Person 3" />
+					</div>
+					<h3>Tempus</h3>
+					<p>Fusce pellentes</p>
+				</div>
+				<div class="box person">
+					<div class="image round">
+						<img src="images/pic06.jpg" alt="Person 4" />
+					</div>
+					<h3>Dolore</h3>
+					<p>Praesent placer</p>
+				</div>
+				<div class="box person">
+					<div class="image round">
+						<img src="images/pic03.jpg" alt="Person 1" />
+					</div>
+					<h3>Magna</h3>
+					<p>Cipdum dolor</p>
+				</div>
+				<div class="box person">
+					<div class="image round">
+						<img src="images/pic03.jpg" alt="Person 1" />
+					</div>
+					<h3>Magna</h3>
+					<p>Cipdum dolor</p>
+				</div>
+				<div class="box person">
+					<div class="image round">
+						<img src="images/pic03.jpg" alt="Person 1" />
+					</div>
+					<h3>Magna</h3>
+					<p>Cipdum dolor</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+<!-- Three -->
+	<section id="three" class="wrapper special">
+		<div class="inner">
+			<header class="align-center">
+				<h2>Nunc Dignissim</h2>
+				<p>Aliquam erat volutpat nam dui </p>
+			</header>
+			<div class="flex flex-2">
+				<article>
+					<div class="image fit">
+						<img src="images/pic01.jpg" alt="Pic 01" />
+					</div>
+					<header>
+						<h3>Praesent placerat magna</h3>
+					</header>
+					<p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor lorem ipsum.</p>
+					<footer>
+						<a href="#" class="button special">More</a>
+					</footer>
+				</article>
+				<article>
+					<div class="image fit">
+						<img src="images/pic02.jpg" alt="Pic 02" />
+					</div>
+					<header>
+						<h3>Fusce pellentesque tempus</h3>
+					</header>
+					<p>Sed adipiscing ornare risus. Morbi est est, blandit sit amet, sagittis vel, euismod vel, velit. Pellentesque egestas sem. Suspendisse commodo ullamcorper magna non comodo sodales tempus.</p>
+					<footer>
+						<a href="#" class="button special">More</a>
+					</footer>
+				</article>
+			</div>
+		</div>
+	</section>
+</div>
+
+
+
+
+
+
+
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/skel.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script src="assets/js/real.js"></script>
+		<script type="text/javascript" src="assets/js/pages.js"></script>
+		<script type="text/javascript" src="assets/js/json.js"></script>
+		<script type="text/javascript" src="assets/js/youtube.js"></script>
+		<script type="text/javascript" src="assets/js/takephoto.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+
+
+	</body>
+
+
+</html>
