@@ -1,8 +1,3 @@
-@charset "UTF-8";
-@import url(font-awesome.min.css);
-@import "https://fonts.googleapis.com/css?family=Raleway:100,300,600";
-
-
 html, body {
 	height: 100%;
 }
@@ -288,62 +283,3 @@ ul.style1 .first
   height:auto;
   display:inline-block;
 }
-/* Footer */
-
-	#footer .inner {
-		border-top: 1px solid #dbdbdb;
-		padding-top: 3em;
-	}
-
-	#footer .copyright {
-		color: #bbb;
-		font-size: 0.8em;
-		margin: 0 0 2em 0;
-		padding: 0;
-	}
-
-		#footer .copyright a {
-			color: #bbb;
-			text-decoration: none;
-		}
-
-			#footer .copyright a:hover {
-				color: #bbb;
-				text-decoration: underline;
-			}
-
-	#footer ul.icons li .icon {
-		font-size: 0.58em;
-	}
-
-	@media screen and (max-width: 736px) {
-
-		#footer .inner {
-			padding-top: 2em;
-		}
-
-		#footer .copyright {
-			-ms-flex-order: 2;
-			-moz-order: 2;
-			-webkit-order: 2;
-			-ms-order: 2;
-			order: 2;
-		}
-
-		#footer ul {
-			-ms-flex-order: 1;
-			-moz-order: 1;
-			-webkit-order: 1;
-			-ms-order: 1;
-			order: 1;
-		}
-
-		#footer .flex {
-			-moz-flex-direction: column;
-			-webkit-flex-direction: column;
-			-ms-flex-direction: column;
-			flex-direction: column;
-			text-align: center;
-		}
-
-	}

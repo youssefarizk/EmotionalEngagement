@@ -42,21 +42,36 @@ function stopVideo() {
   player.stopVideo();
 }
 
+
+
+
+
+
+
+
 function vid1() {
       if(counter == 0){
           counter =1;
 
 
             player.loadVideoById({'videoId': 'ZK3O402wf1c',
+                              'startSeconds':300,
+                                'endSeconds':600,
                            'suggestedQuality': 'default'});
                            vid="Lec 1 MIT 18.06 Linear Algebra Spring 2005";
+
+
+
       }
       else {
 
 
-  player.loadVideoById({'videoId': 'ZK3O402wf1c',
-                 'suggestedQuality': 'default'});
-                 vid="Lec 1 MIT 18.06 Linear Algebra Spring 2005";
+        player.loadVideoById({'videoId': 'ZK3O402wf1c',
+                          'startSeconds':300,
+                            'endSeconds':600,
+                       'suggestedQuality': 'default'});
+                       vid="Lec 1 MIT 18.06 Linear Algebra Spring 2005";
+
                  str = JSON.stringify(dict, null, 4);
                    console.log(str); // Logs output to dev tools console.
                    $.post("http://projectemotion.azurewebsites.net/",
@@ -64,13 +79,13 @@ function vid1() {
                          function(data, textStatus, jqXHR)
                          {
                              dict = [];
-                             alert(textStatus);
-                             alert(data);
+                          //   alert(textStatus);
+                          //   alert(data);
                          }).fail(function(jqXHR, textStatus, errorThrown)
                          {
                            dict = [];
                              //alert(jqXHR);
-                             alert(textStatus);
+                            // alert(textStatus);
                              //alert(errorThrown);
                          });
 
@@ -81,12 +96,16 @@ function vid2() {
       counter =1;
 
         player.loadVideoById({'videoId': 'mbyG85GZ0PI',
+                          'startSeconds':300,
+                            'endSeconds':600,
                        'suggestedQuality': 'default'});
                        vid="Lecture 01 - The Learning Problem";
   }
   else {
 
   player.loadVideoById({'videoId': 'mbyG85GZ0PI',
+                    'startSeconds':300,
+                      'endSeconds':600,
                  'suggestedQuality': 'default'});
                  vid="Lecture 01 - The Learning Problem";
                  str = JSON.stringify(dict, null, 4);
@@ -96,13 +115,13 @@ function vid2() {
                          function(data, textStatus, jqXHR)
                          {
                              dict = [];
-                             alert(textStatus);
-                             alert(data);
+                          //   alert(textStatus);
+                          //   alert(data);
                          }).fail(function(jqXHR, textStatus, errorThrown)
                          {
                              //alert(jqXHR);
                              dict = [];
-                             alert(textStatus);
+                            // alert(textStatus);
                              //alert(errorThrown);
                          });
 
@@ -112,12 +131,16 @@ function vid3() {
       counter =1;
 
         player.loadVideoById({'videoId': 'gv-AB35V2k8',
+                          'startSeconds':300,
+                            'endSeconds':600,
                        'suggestedQuality': 'default'});
                        vid="Lec 1 MIT 18.086 Mathematical Methods for Engineers II";
   }
   else {
 
   player.loadVideoById({'videoId': 'gv-AB35V2k8',
+                    'startSeconds':300,
+                      'endSeconds':600,
                  'suggestedQuality': 'default'});
                  vid="Lec 1 MIT 18.086 Mathematical Methods for Engineers II";
                  str = JSON.stringify(dict, null, 4);
@@ -127,13 +150,13 @@ function vid3() {
                          function(data, textStatus, jqXHR)
                          {
                              dict = [];
-                             alert(textStatus);
-                             alert(data);
+                          //   alert(textStatus);
+                          //   alert(data);
                          }).fail(function(jqXHR, textStatus, errorThrown)
                          {
                              //alert(jqXHR);
                              dict = [];
-                             alert(textStatus);
+                            // alert(textStatus);
                              //alert(errorThrown);
                          });
 
@@ -143,12 +166,16 @@ function vid4() {
       counter =1;
 
         player.loadVideoById({'videoId': 'T_I-CUOc_bk',
+                          'startSeconds':300,
+                            'endSeconds':600,
                        'suggestedQuality': 'default'});
                        vid="Big Picture: Derivatives";
   }
   else {
 
   player.loadVideoById({'videoId': 'T_I-CUOc_bk',
+                    'startSeconds':300,
+                      'endSeconds':600,
                  'suggestedQuality': 'default'});
                  vid="Big Picture: Derivatives";
                  str = JSON.stringify(dict, null, 4);
@@ -158,13 +185,13 @@ function vid4() {
                          function(data, textStatus, jqXHR)
                          {
                              dict = [];
-                             alert(textStatus);
-                             alert(data);
+                          //   alert(textStatus);
+                          //   alert(data);
                          }).fail(function(jqXHR, textStatus, errorThrown)
                          {
                              //alert(jqXHR);
                              dict = [];
-                             alert(textStatus);
+                          //   alert(textStatus);
                              //alert(errorThrown);
                          });
 
@@ -174,12 +201,16 @@ function vid5() {
       counter =1;
 
         player.loadVideoById({'videoId': 'oo1ZZlvT2LQ',
+                          'startSeconds':300,
+                            'endSeconds':600,
                        'suggestedQuality': 'default'});
                        vid="The Exponential Function";
   }
   else {
 
   player.loadVideoById({'videoId': 'oo1ZZlvT2LQ',
+                    'startSeconds':300,
+                      'endSeconds':600,
                  'suggestedQuality': 'default'});
                  vid="The Exponential Function";
                  str = JSON.stringify(dict, null, 4);
@@ -189,13 +220,13 @@ function vid5() {
                          function(data, textStatus, jqXHR)
                          {
                              dict = [];
-                             alert(textStatus);
-                             alert(data);
+                          //   alert(textStatus);
+                          //   alert(data);
                          }).fail(function(jqXHR, textStatus, errorThrown)
                          {
                              //alert(jqXHR);
                              dict = [];
-                             alert(textStatus);
+                          //   alert(textStatus);
                              //alert(errorThrown);
                          });
 }}
