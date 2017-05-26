@@ -11,7 +11,7 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 // 3. This function creates an <iframe> (and YouTube player)
 //    after the API code downloads.
 // var picURL;
-
+var counter = 0;
 var player;
 function onYouTubeIframeAPIReady() {
   player = new YT.Player('player', {
@@ -43,6 +43,17 @@ function stopVideo() {
 }
 
 function vid1() {
+      if(counter == 0){
+          counter =1;
+
+
+            player.loadVideoById({'videoId': 'ZK3O402wf1c',
+                           'suggestedQuality': 'default'});
+                           vid="Lec 1 MIT 18.06 Linear Algebra Spring 2005";
+      }
+      else {
+
+
   player.loadVideoById({'videoId': 'ZK3O402wf1c',
                  'suggestedQuality': 'default'});
                  vid="Lec 1 MIT 18.06 Linear Algebra Spring 2005";
@@ -63,8 +74,18 @@ function vid1() {
                              //alert(errorThrown);
                          });
 
+  }
 }
 function vid2() {
+  if(counter == 0){
+      counter =1;
+
+        player.loadVideoById({'videoId': 'mbyG85GZ0PI',
+                       'suggestedQuality': 'default'});
+                       vid="Lecture 01 - The Learning Problem";
+  }
+  else {
+
   player.loadVideoById({'videoId': 'mbyG85GZ0PI',
                  'suggestedQuality': 'default'});
                  vid="Lecture 01 - The Learning Problem";
@@ -85,8 +106,17 @@ function vid2() {
                              //alert(errorThrown);
                          });
 
-}
+}}
 function vid3() {
+  if(counter == 0){
+      counter =1;
+
+        player.loadVideoById({'videoId': 'gv-AB35V2k8',
+                       'suggestedQuality': 'default'});
+                       vid="Lec 1 MIT 18.086 Mathematical Methods for Engineers II";
+  }
+  else {
+
   player.loadVideoById({'videoId': 'gv-AB35V2k8',
                  'suggestedQuality': 'default'});
                  vid="Lec 1 MIT 18.086 Mathematical Methods for Engineers II";
@@ -107,8 +137,17 @@ function vid3() {
                              //alert(errorThrown);
                          });
 
-}
+}}
 function vid4() {
+  if(counter == 0){
+      counter =1;
+
+        player.loadVideoById({'videoId': 'T_I-CUOc_bk',
+                       'suggestedQuality': 'default'});
+                       vid="Big Picture: Derivatives";
+  }
+  else {
+
   player.loadVideoById({'videoId': 'T_I-CUOc_bk',
                  'suggestedQuality': 'default'});
                  vid="Big Picture: Derivatives";
@@ -129,8 +168,17 @@ function vid4() {
                              //alert(errorThrown);
                          });
 
-}
+}}
 function vid5() {
+  if(counter == 0){
+      counter =1;
+
+        player.loadVideoById({'videoId': 'oo1ZZlvT2LQ',
+                       'suggestedQuality': 'default'});
+                       vid="The Exponential Function";
+  }
+  else {
+
   player.loadVideoById({'videoId': 'oo1ZZlvT2LQ',
                  'suggestedQuality': 'default'});
                  vid="The Exponential Function";
@@ -150,4 +198,4 @@ function vid5() {
                              alert(textStatus);
                              //alert(errorThrown);
                          });
-}
+}}
