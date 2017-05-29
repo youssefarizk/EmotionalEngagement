@@ -268,28 +268,6 @@ ul.style1 .first
 
 /* Footer */
 
-#footer {
-	overflow: hidden;
-	padding: 3em 0em;
-	border-top: 1px solid #D9D2A5;
-	color: #7A7762;
-}
-
-#footer p {
-	text-align: center;
-}
-
-#footer a {
-	color: #7A7762;
-}
-
-.divider{
-  width:10px;
-  height:auto;
-  display:inline-block;
-}
-/* Footer */
-
 	#footer .inner {
 		border-top: 1px solid #dbdbdb;
 		padding-top: 3em;
