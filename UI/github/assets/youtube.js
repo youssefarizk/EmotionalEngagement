@@ -64,26 +64,26 @@ function stopVideo() {
 //       // }
 //   }
 
-  var counter;
-var countere;
-
-document.getElementById("box1").addEventListener("mouseleave", function(){
-  counter = counter+1;
-},false);
-
-
-document.getElementById("box1").addEventListener("mouseout", function(){
-  countere=countere+1;
-alert("getin");
-},false);
-
+// var counter;
+// var countere;
+//
+// document.getElementById("box1").addEventListener("mouseleave", function(){
+//   counter = counter+1;
+// },false);
+//
+//
+// document.getElementById("box1").addEventListener("mouseout", function(){
+//   countere=countere+1;
+// alert("getin");
+// },false);
+//
 
 
 
 function vid1() {
 //  idleTime = 0;
-alert(counter);
-alert(countere);
+// alert(counter);
+// alert(countere);
       if(counter == 0){
           counter =1;
 
