@@ -130,6 +130,7 @@ function write_rate(valued) {
                 rate:valued.value,
                 time:player.getCurrentTime(),
                 videocompletion:player.getCurrentTime() / player.getDuration(),
+                numberofexit: lcounter,
                 frequencyofexit: lcounter / player.getCurrentTime(),
                 picuri:picURL
 
