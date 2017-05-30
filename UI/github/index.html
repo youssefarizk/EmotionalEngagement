@@ -11,6 +11,7 @@
           <div class="wrapper1">
           <div class="container1">
             <h1>Welcome</h1>
+            <p>Please log in as a user and remember to use the same username each time you want to access this platform.</p>
             <form class="form">
               <input type="text" id="field1" name="field1" placeholder="Username" />
               <input type="submit" value="Login as User" name="login" id="loginbutton1" onclick="return show1('videopage','loginpage','graphdiv2','graphp');"></input>
@@ -84,11 +85,8 @@
         <div id="page" class="container">
         	<div id="box1">
         		<!-- <h2 class="title"><a href="#">Choose a video you like.</a></h2> -->
-            <h2 class="title"><a>In order to use it, you have to click the shield icon above <br/> and click load unsafe script. It is fine.
-              <br/>
-            To send your data to the server, you can either click another video <br/> or pull the time bar to finish the video.</a></h2>
-          </br>
-
+            <h2 class="title">Welcome!!</h2>
+            <p>Hi and thanks for helping us with our project! Choose any of the videos we have available on our platform and watch them.<br/> As you watch, please rate the videos at different times in the video depending on your engagement levels.<br/> Do this as many times as you think is necessary. Also, please do not have the window where the platform is running on fullscreen.<br/> Please make sure you are in an environment where you are not facing any distractions.<br/> The more videos you are able to watch and rate the better!</p>
           <div class="dropdown">
             <button class="dropbtn" onclick="myFunction()">Video List</button>
             <div id="myDropdown" class="dropdown-content">
@@ -203,7 +201,7 @@
                       }
                   },
                   error: function (xhr, ajaxOptions, thrownError) {
-                  alert(xhr.status);
+                  //alert(xhr.status);
                   }
               });
               return "leave";
@@ -240,7 +238,7 @@
             //   }
             </script>
             <br/>
-            <canvas id="canvas"></canvas>
+            <canvas id="canvas" hidden></canvas>
             <br/>
             <br/>
             <br/>
