@@ -42,26 +42,48 @@ function stopVideo() {
   player.stopVideo();
 }
 
+//
+// var idleTime = 0;
+//   $(document).ready(function () {
+//       //Increment the idle time counter every minute.
+//       var idleInterval = setInterval(timerIncrement, 1000); // 1 minute
+//
+//       //Zero the idle timer on mouse movement.
+//       // $(this).mousemove(function (e) {
+//       //     idleTime = 0;
+//       // });
+//       // $(this).keypress(function (e) {
+//       //     idleTime = 0;
+//       // });
+//   });
+//
+//   function timerIncrement() {
+//       idleTime = idleTime + 1;
+//       // if (idleTime > 19) { // 20 minutes
+//       //     window.location.reload();
+//       // }
+//   }
 
-  //
-  //
-  // function timerIncrement() {
-  //     idleTime = idleTime + 1;
-  //     // if (idleTime > 19) { // 20 minutes
-  //     //     window.location.reload();
-  //     // }
-  // }
+  var counter;
+var countere;
 
+document.getElementById("box1").addEventListener("mouseleave", function(){
+  counter = counter+1;
+},false);
+
+
+document.getElementById("box1").addEventListener("mouseout", function(){
+  countere=countere+1;
+alert("getin");
+},false);
 
 
 
 
 function vid1() {
-  // var idleTime = 0;
-  //   $(document).ready(function () {
-  //       //Increment the idle time counter every minute.
-  //       var idleInterval = setInterval(timerIncrement(), 1000); // 1 sec
-  //   });
+//  idleTime = 0;
+alert(counter);
+alert(countere);
       if(counter == 0){
           counter =1;
 
@@ -100,13 +122,7 @@ function vid1() {
   }
 }
 function vid2() {
-  // var idleTime = 0;
-  //   $(document).ready(function () {
-  //       //Increment the idle time counter every minute.
-  //       var idleInterval = setInterval(timerIncrement(), 1000); // 1 sec
-  //   });
-  //   alert("hrllo");
-  //   alert(idleTime);
+
   if(counter == 0){
       counter =1;
 

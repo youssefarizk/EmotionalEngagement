@@ -130,7 +130,7 @@ function write_rate(valued) {
                 rate:valued.value,
                 time:player.getCurrentTime(),
                 videocompletion:player.getCurrentTime() / player.getDuration(),
-              //  idlemouse:idleTime / player.getDuration(),
+                // idlemouse:idleTime / player.getDuration(),
                 picuri:picURL
 
             }
