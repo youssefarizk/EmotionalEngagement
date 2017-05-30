@@ -28,6 +28,7 @@ function onPlayerStateChange(event) {
     //  downloadCSV({ filename: "data.csv" });
       str = JSON.stringify(dict, null, 4);
         console.log(str); // Logs output to dev tools console.
+        //alert(counter);
       //  alert(str);
         //document.getElementById('test').innerHTML = (str); // Displays output using window.alert()
       // $.ajax({
@@ -128,7 +129,9 @@ function write_rate(valued) {
                 rate:valued.value,
                 time:player.getCurrentTime(),
                 videocompletion:player.getCurrentTime() / player.getDuration(),
+                idlemouse:idleTime / player.getDuration(),
                 picuri:picURL
+
             }
           );
   dataAcc += String(player.getCurrentTime())+ ", " +valued.value + "\n";
