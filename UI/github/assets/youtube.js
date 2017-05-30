@@ -78,11 +78,20 @@ function stopVideo() {
 // },false);
 //
 
+var lcounter=0;
+
+$(document).mouseleave(function(){
+  lcounter=lcounter+1;
+  //console.log(lcounter);
+});
+
 
 
 function vid1() {
 //  idleTime = 0;
-// alert(counter);
+//counter=0;
+ //alert(lcounter);
+ lcounter=0;
 // alert(countere);
       if(counter == 0){
           counter =1;
@@ -122,7 +131,8 @@ function vid1() {
   }
 }
 function vid2() {
-
+ lcounter=0;
+ //alert(str);
   if(counter == 0){
       counter =1;
 
@@ -154,6 +164,7 @@ function vid2() {
 
 }}
 function vid3() {
+  lcounter=0;
   if(counter == 0){
       counter =1;
 
@@ -185,6 +196,7 @@ function vid3() {
 
 }}
 function vid4() {
+  lcounter=0;
   if(counter == 0){
       counter =1;
 
@@ -216,6 +228,7 @@ function vid4() {
 
 }}
 function vid5() {
+  lcounter=0;
   if(counter == 0){
       counter =1;
 
@@ -246,6 +259,7 @@ function vid5() {
                          });
 }}
 function vid6() {
+  lcounter=0;
       if(counter == 0){
           counter =1;
 
@@ -284,6 +298,7 @@ function vid6() {
   }
 }
 function vid7() {
+  lcounter=0;
       if(counter == 0){
           counter =1;
 
@@ -322,6 +337,7 @@ function vid7() {
   }
 }
 function vid8() {
+  lcounter=0;
       if(counter == 0){
           counter =1;
 
@@ -360,6 +376,7 @@ function vid8() {
   }
 }
 function vid9() {
+  lcounter=0;
       if(counter == 0){
           counter =1;
 
@@ -398,6 +415,7 @@ function vid9() {
   }
 }
 function vid10() {
+  lcounter=0;
       if(counter == 0){
           counter =1;
 
@@ -436,6 +454,7 @@ function vid10() {
   }
 }
 function vid11() {
+  lcounter=0;
       if(counter == 0){
           counter =1;
 
@@ -474,6 +493,7 @@ function vid11() {
   }
 }
 function vid12() {
+  lcounter=0;
       if(counter == 0){
           counter =1;
 
@@ -512,6 +532,7 @@ function vid12() {
   }
 }
 function vid13() {
+  lcounter=0;
       if(counter == 0){
           counter =1;
 
@@ -550,6 +571,7 @@ function vid13() {
   }
 }
 function vid14() {
+  lcounter=0;
       if(counter == 0){
           counter =1;
 
@@ -588,6 +610,7 @@ function vid14() {
   }
 }
 function vid15() {
+  lcounter=0;
       if(counter == 0){
           counter =1;
 
@@ -626,6 +649,7 @@ function vid15() {
   }
 }
 function vid16() {
+  lcounter=0;
       if(counter == 0){
           counter =1;
 
@@ -664,6 +688,7 @@ function vid16() {
   }
 }
 function vid17() {
+  lcounter=0;
       if(counter == 0){
           counter =1;
 
@@ -702,6 +727,7 @@ function vid17() {
   }
 }
 function vid18() {
+  lcounter=0;
       if(counter == 0){
           counter =1;
 
@@ -740,6 +766,7 @@ function vid18() {
   }
 }
 function vid19() {
+  lcounter=0;
       if(counter == 0){
           counter =1;
 
@@ -778,6 +805,7 @@ function vid19() {
   }
 }
 function vid20() {
+  lcounter=0;
       if(counter == 0){
           counter =1;
 
@@ -816,6 +844,7 @@ function vid20() {
   }
 }
 function vid21() {
+  lcounter=0;
       if(counter == 0){
           counter =1;
 
@@ -854,6 +883,7 @@ function vid21() {
   }
 }
 function vid22() {
+  lcounter=0;
       if(counter == 0){
           counter =1;
 
@@ -892,6 +922,7 @@ function vid22() {
   }
 }
 function vid23() {
+  lcounter=0;
       if(counter == 0){
           counter =1;
 
@@ -930,6 +961,7 @@ function vid23() {
   }
 }
 function vid24() {
+  lcounter=0;
       if(counter == 0){
           counter =1;
 
@@ -968,6 +1000,7 @@ function vid24() {
   }
 }
 function vid25() {
+  lcounter=0;
       if(counter == 0){
           counter =1;
 
@@ -1006,6 +1039,7 @@ function vid25() {
   }
 }
 function vid26() {
+  lcounter=0;
       if(counter == 0){
           counter =1;
 
@@ -1044,6 +1078,7 @@ function vid26() {
   }
 }
 function vid27() {
+  lcounter=0;
       if(counter == 0){
           counter =1;
 
@@ -1082,6 +1117,7 @@ function vid27() {
   }
 }
 function vid28() {
+  lcounter=0;
       if(counter == 0){
           counter =1;
 
@@ -1120,6 +1156,7 @@ function vid28() {
   }
 }
 function vid29() {
+  lcounter=0;
       if(counter == 0){
           counter =1;
 
@@ -1158,6 +1195,7 @@ function vid29() {
   }
 }
 function vid30() {
+  lcounter=0;
       if(counter == 0){
           counter =1;
 
@@ -1196,6 +1234,7 @@ function vid30() {
   }
 }
 function vid31() {
+  lcounter=0;
       if(counter == 0){
           counter =1;
 
@@ -1234,6 +1273,7 @@ function vid31() {
   }
 }
 function vid32() {
+  lcounter=0;
       if(counter == 0){
           counter =1;
 
@@ -1272,6 +1312,7 @@ function vid32() {
   }
 }
 function vid33() {
+  lcounter=0;
       if(counter == 0){
           counter =1;
 
@@ -1310,6 +1351,7 @@ function vid33() {
   }
 }
 function vid34() {
+  lcounter=0;
       if(counter == 0){
           counter =1;
 
@@ -1348,6 +1390,7 @@ function vid34() {
   }
 }
 function vid35() {
+  lcounter=0;
       if(counter == 0){
           counter =1;
 
