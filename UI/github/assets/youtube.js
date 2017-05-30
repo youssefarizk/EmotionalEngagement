@@ -43,7 +43,7 @@ function stopVideo() {
 }
 
 
-  // 
+  //
   //
   // function timerIncrement() {
   //     idleTime = idleTime + 1;
@@ -67,8 +67,6 @@ function vid1() {
 
 
             player.loadVideoById({'videoId': 'ZK3O402wf1c',
-                              'startSeconds':300,
-                                'endSeconds':600,
                            'suggestedQuality': 'default'});
                            vid="Lec 1 MIT 18.06 Linear Algebra Spring 2005";
 
@@ -79,8 +77,6 @@ function vid1() {
 
 
         player.loadVideoById({'videoId': 'ZK3O402wf1c',
-                          'startSeconds':300,
-                            'endSeconds':600,
                        'suggestedQuality': 'default'});
                        vid="Lec 1 MIT 18.06 Linear Algebra Spring 2005";
 
@@ -115,16 +111,12 @@ function vid2() {
       counter =1;
 
         player.loadVideoById({'videoId': 'mbyG85GZ0PI',
-                          'startSeconds':300,
-                            'endSeconds':600,
                        'suggestedQuality': 'default'});
                        vid="Lecture 01 - The Learning Problem";
   }
   else {
 
   player.loadVideoById({'videoId': 'mbyG85GZ0PI',
-                    'startSeconds':300,
-                      'endSeconds':600,
                  'suggestedQuality': 'default'});
                  vid="Lecture 01 - The Learning Problem";
                  str = JSON.stringify(dict, null, 4);
@@ -150,16 +142,12 @@ function vid3() {
       counter =1;
 
         player.loadVideoById({'videoId': 'gv-AB35V2k8',
-                          'startSeconds':300,
-                            'endSeconds':600,
                        'suggestedQuality': 'default'});
                        vid="Lec 1 MIT 18.086 Mathematical Methods for Engineers II";
   }
   else {
 
   player.loadVideoById({'videoId': 'gv-AB35V2k8',
-                    'startSeconds':300,
-                      'endSeconds':600,
                  'suggestedQuality': 'default'});
                  vid="Lec 1 MIT 18.086 Mathematical Methods for Engineers II";
                  str = JSON.stringify(dict, null, 4);
@@ -185,16 +173,12 @@ function vid4() {
       counter =1;
 
         player.loadVideoById({'videoId': 'T_I-CUOc_bk',
-                          'startSeconds':300,
-                            'endSeconds':600,
                        'suggestedQuality': 'default'});
                        vid="Big Picture: Derivatives";
   }
   else {
 
   player.loadVideoById({'videoId': 'T_I-CUOc_bk',
-                    'startSeconds':300,
-                      'endSeconds':600,
                  'suggestedQuality': 'default'});
                  vid="Big Picture: Derivatives";
                  str = JSON.stringify(dict, null, 4);
@@ -220,16 +204,12 @@ function vid5() {
       counter =1;
 
         player.loadVideoById({'videoId': 'oo1ZZlvT2LQ',
-                          'startSeconds':300,
-                            'endSeconds':600,
                        'suggestedQuality': 'default'});
                        vid="The Exponential Function";
   }
   else {
 
   player.loadVideoById({'videoId': 'oo1ZZlvT2LQ',
-                    'startSeconds':300,
-                      'endSeconds':600,
                  'suggestedQuality': 'default'});
                  vid="The Exponential Function";
                  str = JSON.stringify(dict, null, 4);
@@ -255,8 +235,6 @@ function vid6() {
 
 
             player.loadVideoById({'videoId': '1A_CAkYt3GY',
-                              'startSeconds':300,
-                                'endSeconds':600,
                            'suggestedQuality': 'default'});
                            vid="What is Philosophy?: Crash Course Philosophy #1";
 
@@ -267,8 +245,6 @@ function vid6() {
 
 
         player.loadVideoById({'videoId': '1A_CAkYt3GY',
-                          'startSeconds':300,
-                            'endSeconds':600,
                        'suggestedQuality': 'default'});
                        vid="What is Philosophy?: Crash Course Philosophy #1";
 
@@ -297,8 +273,6 @@ function vid7() {
 
 
             player.loadVideoById({'videoId': 'vCGtkDzELAI',
-                              'startSeconds':300,
-                                'endSeconds':600,
                            'suggestedQuality': 'default'});
                            vid="Determinism vs Free Will: Crash Course Philosophy #24";
 
@@ -309,8 +283,6 @@ function vid7() {
 
 
         player.loadVideoById({'videoId': 'vCGtkDzELAI',
-                          'startSeconds':300,
-                            'endSeconds':600,
                        'suggestedQuality': 'default'});
                        vid="Determinism vs Free Will: Crash Course Philosophy #24";
 
@@ -339,8 +311,6 @@ function vid8() {
 
 
             player.loadVideoById({'videoId': 'H0CTHVCkm90',
-                              'startSeconds':300,
-                                'endSeconds':600,
                            'suggestedQuality': 'default'});
                            vid="What Is Justice?: Crash Course Philosophy #40";
 
@@ -351,8 +321,6 @@ function vid8() {
 
 
         player.loadVideoById({'videoId': 'H0CTHVCkm90',
-                          'startSeconds':300,
-                            'endSeconds':600,
                        'suggestedQuality': 'default'});
                        vid="What Is Justice?: Crash Course Philosophy #40";
 
@@ -381,8 +349,6 @@ function vid9() {
 
 
             player.loadVideoById({'videoId': 'sQK3Yr4Sc_k',
-                              'startSeconds':300,
-                                'endSeconds':600,
                            'suggestedQuality': 'default'});
                            vid="Photosynthesis: Crash Course Biology #8";
 
@@ -393,8 +359,6 @@ function vid9() {
 
 
         player.loadVideoById({'videoId': 'sQK3Yr4Sc_k',
-                          'startSeconds':300,
-                            'endSeconds':600,
                        'suggestedQuality': 'default'});
                        vid="Photosynthesis: Crash Course Biology #8";
 
@@ -423,8 +387,6 @@ function vid10() {
 
 
             player.loadVideoById({'videoId': 'UPggkvB9_dc',
-                              'startSeconds':300,
-                                'endSeconds':600,
                            'suggestedQuality': 'default'});
                            vid="Human Evolution: Crash Course Big History #6";
 
@@ -435,8 +397,6 @@ function vid10() {
 
 
         player.loadVideoById({'videoId': 'UPggkvB9_dc',
-                          'startSeconds':300,
-                            'endSeconds':600,
                        'suggestedQuality': 'default'});
                        vid="Human Evolution: Crash Course Big History #6";
 
@@ -465,8 +425,6 @@ function vid11() {
 
 
             player.loadVideoById({'videoId': 'tq6be-CZJ3w',
-                              'startSeconds':300,
-                                'endSeconds':600,
                            'suggestedQuality': 'default'});
                            vid="The Big Bang: Crash Course Big History #1";
 
@@ -477,8 +435,6 @@ function vid11() {
 
 
         player.loadVideoById({'videoId': 'tq6be-CZJ3w',
-                          'startSeconds':300,
-                            'endSeconds':600,
                        'suggestedQuality': 'default'});
                        vid="The Big Bang: Crash Course Big History #1";
 
@@ -507,8 +463,6 @@ function vid12() {
 
 
             player.loadVideoById({'videoId': 'Fi30zjQhtWY',
-                              'startSeconds':300,
-                                'endSeconds':600,
                            'suggestedQuality': 'default'});
                            vid="Exploring the Universe: Crash Course Big History #2";
 
@@ -519,8 +473,6 @@ function vid12() {
 
 
         player.loadVideoById({'videoId': 'Fi30zjQhtWY',
-                          'startSeconds':300,
-                            'endSeconds':600,
                        'suggestedQuality': 'default'});
                        vid="Exploring the Universe: Crash Course Big History #2";
 
@@ -549,8 +501,6 @@ function vid13() {
 
 
             player.loadVideoById({'videoId': 'l26oaHV7D40',
-                              'startSeconds':300,
-                                'endSeconds':600,
                            'suggestedQuality': 'default'});
                            vid="Programming Basics: Statements and Functions: Crash Course Computer Science #12";
 
@@ -561,8 +511,6 @@ function vid13() {
 
 
         player.loadVideoById({'videoId': 'l26oaHV7D40',
-                          'startSeconds':300,
-                            'endSeconds':600,
                        'suggestedQuality': 'default'});
                        vid="Programming Basics: Statements and Functions: Crash Course Computer Science #12";
 
@@ -591,8 +539,6 @@ function vid14() {
 
 
             player.loadVideoById({'videoId': 'rL8X2mlNHPM',
-                              'startSeconds':300,
-                                'endSeconds':600,
                            'suggestedQuality': 'default'});
                            vid="Intro to Algorithms: Crash Course Computer Science #13";
 
@@ -603,8 +549,6 @@ function vid14() {
 
 
         player.loadVideoById({'videoId': 'rL8X2mlNHPM',
-                          'startSeconds':300,
-                            'endSeconds':600,
                        'suggestedQuality': 'default'});
                        vid="Intro to Algorithms: Crash Course Computer Science #13";
 
@@ -633,8 +577,6 @@ function vid15() {
 
 
             player.loadVideoById({'videoId': '7kb1VT0J3DE',
-                              'startSeconds':300,
-                                'endSeconds':600,
                            'suggestedQuality': 'default'});
                            vid="Quantum Mechanics - Part 1: Crash Course Physics #43";
 
@@ -645,8 +587,6 @@ function vid15() {
 
 
         player.loadVideoById({'videoId': '7kb1VT0J3DE',
-                          'startSeconds':300,
-                            'endSeconds':600,
                        'suggestedQuality': 'default'});
                        vid="Quantum Mechanics - Part 1: Crash Course Physics #43";
 
@@ -675,8 +615,6 @@ function vid16() {
 
 
             player.loadVideoById({'videoId': 'rrBPoVOawFc',
-                              'startSeconds':300,
-                                'endSeconds':600,
                            'suggestedQuality': 'default'});
                            vid="Stop Waiting for Life to Happen | Peter Sage | TED Talks";
 
@@ -687,8 +625,6 @@ function vid16() {
 
 
         player.loadVideoById({'videoId': 'rrBPoVOawFc',
-                          'startSeconds':300,
-                            'endSeconds':600,
                        'suggestedQuality': 'default'});
                        vid="Stop Waiting for Life to Happen | Peter Sage | TED Talks";
 
@@ -717,8 +653,6 @@ function vid17() {
 
 
             player.loadVideoById({'videoId': '_YZVvPqq3As',
-                              'startSeconds':300,
-                                'endSeconds':600,
                            'suggestedQuality': 'default'});
                            vid="Bill Gates 7 Rules of Success | Microsoft Founder | Entrepreneur | Motivational Speech";
 
@@ -729,8 +663,6 @@ function vid17() {
 
 
         player.loadVideoById({'videoId': '_YZVvPqq3As',
-                          'startSeconds':300,
-                            'endSeconds':600,
                        'suggestedQuality': 'default'});
                        vid="Bill Gates 7 Rules of Success | Microsoft Founder | Entrepreneur | Motivational Speech";
 
@@ -759,8 +691,6 @@ function vid18() {
 
 
             player.loadVideoById({'videoId': 'V7vpw4AH8QQ',
-                              'startSeconds':300,
-                                'endSeconds':600,
                            'suggestedQuality': 'default'});
                            vid="Time Travel: Einstein's big idea (Theory of Relativity)";
 
@@ -771,8 +701,6 @@ function vid18() {
 
 
         player.loadVideoById({'videoId': 'V7vpw4AH8QQ',
-                          'startSeconds':300,
-                            'endSeconds':600,
                        'suggestedQuality': 'default'});
                        vid="Time Travel: Einstein's big idea (Theory of Relativity)";
 
@@ -801,8 +729,6 @@ function vid19() {
 
 
             player.loadVideoById({'videoId': '0NbBjNiw4tk',
-                              'startSeconds':300,
-                                'endSeconds':600,
                            'suggestedQuality': 'default'});
                            vid="Michio Kaku: The Universe in a Nutshell";
 
@@ -813,8 +739,6 @@ function vid19() {
 
 
         player.loadVideoById({'videoId': '0NbBjNiw4tk',
-                          'startSeconds':300,
-                            'endSeconds':600,
                        'suggestedQuality': 'default'});
                        vid="Michio Kaku: The Universe in a Nutshell";
 
@@ -843,8 +767,6 @@ function vid20() {
 
 
             player.loadVideoById({'videoId': '30KfPtHec4s',
-                              'startSeconds':300,
-                                'endSeconds':600,
                            'suggestedQuality': 'default'});
                            vid="Einstein's Theory Of Relativity Made Easy";
 
@@ -855,8 +777,6 @@ function vid20() {
 
 
         player.loadVideoById({'videoId': '30KfPtHec4s',
-                          'startSeconds':300,
-                            'endSeconds':600,
                        'suggestedQuality': 'default'});
                        vid="Einstein's Theory Of Relativity Made Easy";
 
@@ -885,8 +805,6 @@ function vid21() {
 
 
             player.loadVideoById({'videoId': '60Qz051rD_w',
-                              'startSeconds':300,
-                                'endSeconds':600,
                            'suggestedQuality': 'default'});
                            vid="Semiconductor introduction";
 
@@ -897,8 +815,6 @@ function vid21() {
 
 
         player.loadVideoById({'videoId': '60Qz051rD_w',
-                          'startSeconds':300,
-                            'endSeconds':600,
                        'suggestedQuality': 'default'});
                        vid="Semiconductor introduction";
 
@@ -927,8 +843,6 @@ function vid22() {
 
 
             player.loadVideoById({'videoId': 'MSKYeWfsNO0',
-                              'startSeconds':300,
-                                'endSeconds':600,
                            'suggestedQuality': 'default'});
                            vid="Signal-to-Noise Ratio";
 
@@ -939,8 +853,6 @@ function vid22() {
 
 
         player.loadVideoById({'videoId': 'MSKYeWfsNO0',
-                          'startSeconds':300,
-                            'endSeconds':600,
                        'suggestedQuality': 'default'});
                        vid="Signal-to-Noise Ratio";
 
@@ -969,8 +881,6 @@ function vid23() {
 
 
             player.loadVideoById({'videoId': 'MlF1mf6s94w',
-                              'startSeconds':300,
-                                'endSeconds':600,
                            'suggestedQuality': 'default'});
                            vid="How To Make A Web App In 7 Minutes";
 
@@ -981,8 +891,6 @@ function vid23() {
 
 
         player.loadVideoById({'videoId': 'MlF1mf6s94w',
-                          'startSeconds':300,
-                            'endSeconds':600,
                        'suggestedQuality': 'default'});
                        vid="How To Make A Web App In 7 Minutes";
 
@@ -1011,8 +919,6 @@ function vid24() {
 
 
             player.loadVideoById({'videoId': 'ToEFkUxFURg',
-                              'startSeconds':300,
-                                'endSeconds':600,
                            'suggestedQuality': 'default'});
                            vid="1. Introduction and Basic Concepts";
 
@@ -1023,8 +929,6 @@ function vid24() {
 
 
         player.loadVideoById({'videoId': 'ToEFkUxFURg',
-                          'startSeconds':300,
-                            'endSeconds':600,
                        'suggestedQuality': 'default'});
                        vid="1. Introduction and Basic Concepts";
 
@@ -1053,8 +957,6 @@ function vid25() {
 
 
             player.loadVideoById({'videoId': '7FYHt5XviKc',
-                              'startSeconds':300,
-                                'endSeconds':600,
                            'suggestedQuality': 'default'});
                            vid="EEVblog #600 - OpAmps Tutorial - What is an Operational Amplifier?";
 
@@ -1065,8 +967,6 @@ function vid25() {
 
 
         player.loadVideoById({'videoId': '7FYHt5XviKc',
-                          'startSeconds':300,
-                            'endSeconds':600,
                        'suggestedQuality': 'default'});
                        vid="EEVblog #600 - OpAmps Tutorial - What is an Operational Amplifier?";
 
@@ -1095,8 +995,6 @@ function vid26() {
 
 
             player.loadVideoById({'videoId': 'vEROU2XtPR8',
-                              'startSeconds':300,
-                                'endSeconds':600,
                            'suggestedQuality': 'default'});
                            vid="JavaScript Fundamentals For Beginners";
 
@@ -1107,8 +1005,6 @@ function vid26() {
 
 
         player.loadVideoById({'videoId': 'vEROU2XtPR8',
-                          'startSeconds':300,
-                            'endSeconds':600,
                        'suggestedQuality': 'default'});
                        vid="JavaScript Fundamentals For Beginners";
 
@@ -1137,8 +1033,6 @@ function vid27() {
 
 
             player.loadVideoById({'videoId': '41IO4Qe5Jzw',
-                              'startSeconds':300,
-                                'endSeconds':600,
                            'suggestedQuality': 'default'});
                            vid="Raspberry Pi Robotics #1: GPIO Control";
 
@@ -1149,8 +1043,6 @@ function vid27() {
 
 
         player.loadVideoById({'videoId': '41IO4Qe5Jzw',
-                          'startSeconds':300,
-                            'endSeconds':600,
                        'suggestedQuality': 'default'});
                        vid="Raspberry Pi Robotics #1: GPIO Control";
 
@@ -1217,8 +1109,6 @@ function vid29() {
 
 
             player.loadVideoById({'videoId': 'hmReJCupbNU',
-                              'startSeconds':300,
-                                'endSeconds':600,
                            'suggestedQuality': 'default'});
                            vid="4. Divide and Conquer: van Emde Boas Trees";
 
@@ -1229,8 +1119,6 @@ function vid29() {
 
 
         player.loadVideoById({'videoId': 'hmReJCupbNU',
-                          'startSeconds':300,
-                            'endSeconds':600,
                        'suggestedQuality': 'default'});
                        vid="4. Divide and Conquer: van Emde Boas Trees";
 
@@ -1259,8 +1147,6 @@ function vid30() {
 
 
             player.loadVideoById({'videoId': 'Tw1k46ywN6E',
-                              'startSeconds':300,
-                                'endSeconds':600,
                            'suggestedQuality': 'default'});
                            vid="10. Dynamic Programming: Advanced DP";
 
@@ -1271,8 +1157,6 @@ function vid30() {
 
 
         player.loadVideoById({'videoId': 'Tw1k46ywN6E',
-                          'startSeconds':300,
-                            'endSeconds':600,
                        'suggestedQuality': 'default'});
                        vid="10. Dynamic Programming: Advanced DP";
 
@@ -1301,8 +1185,6 @@ function vid31() {
 
 
             player.loadVideoById({'videoId': 'tKwnms5iRBU',
-                              'startSeconds':300,
-                                'endSeconds':600,
                            'suggestedQuality': 'default'});
                            vid="12. Greedy Algorithms: Minimum Spanning Tree";
 
@@ -1313,8 +1195,6 @@ function vid31() {
 
 
         player.loadVideoById({'videoId': 'tKwnms5iRBU',
-                          'startSeconds':300,
-                            'endSeconds':600,
                        'suggestedQuality': 'default'});
                        vid="12. Greedy Algorithms: Minimum Spanning Tree";
 
@@ -1343,8 +1223,6 @@ function vid32() {
 
 
             player.loadVideoById({'videoId': 'KqqOXndnvic',
-                              'startSeconds':300,
-                                'endSeconds':600,
                            'suggestedQuality': 'default'});
                            vid="21. Cryptography: Hash Functions";
 
@@ -1355,8 +1233,6 @@ function vid32() {
 
 
         player.loadVideoById({'videoId': 'KqqOXndnvic',
-                          'startSeconds':300,
-                            'endSeconds':600,
                        'suggestedQuality': 'default'});
                        vid="21. Cryptography: Hash Functions";
 
@@ -1385,8 +1261,6 @@ function vid33() {
 
 
             player.loadVideoById({'videoId': '6poHQ2h00ZA',
-                              'startSeconds':300,
-                                'endSeconds':600,
                            'suggestedQuality': 'default'});
                            vid="Evidence of a Ninth Planet";
 
@@ -1397,8 +1271,6 @@ function vid33() {
 
 
         player.loadVideoById({'videoId': '6poHQ2h00ZA',
-                          'startSeconds':300,
-                            'endSeconds':600,
                        'suggestedQuality': 'default'});
                        vid="Evidence of a Ninth Planet";
 
@@ -1427,8 +1299,6 @@ function vid34() {
 
 
             player.loadVideoById({'videoId': 'XUQAIldqPww',
-                              'startSeconds':300,
-                                'endSeconds':600,
                            'suggestedQuality': 'default'});
                            vid="Introductory Astronomy: Parallax  the Parsec and Distances";
 
@@ -1439,8 +1309,6 @@ function vid34() {
 
 
         player.loadVideoById({'videoId': 'XUQAIldqPww',
-                          'startSeconds':300,
-                            'endSeconds':600,
                        'suggestedQuality': 'default'});
                        vid="Introductory Astronomy: Parallax the Parsec and Distances";
 
@@ -1469,8 +1337,6 @@ function vid35() {
 
 
             player.loadVideoById({'videoId': 'PXHczjOg06w',
-                              'startSeconds':300,
-                                'endSeconds':600,
                            'suggestedQuality': 'default'});
                            vid="Boaz Almog levitates a superconductor";
 
@@ -1481,8 +1347,6 @@ function vid35() {
 
 
         player.loadVideoById({'videoId': 'PXHczjOg06w',
-                          'startSeconds':300,
-                            'endSeconds':600,
                        'suggestedQuality': 'default'});
                        vid="Boaz Almog levitates a superconductor";
 
