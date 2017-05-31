@@ -28,7 +28,6 @@ function onPlayerStateChange(event) {
     //  downloadCSV({ filename: "data.csv" });
       str = JSON.stringify(dict, null, 4);
         console.log(str); // Logs output to dev tools console.
-        //alert(str);
         //alert(counter);
       //  alert(str);
         //document.getElementById('test').innerHTML = (str); // Displays output using window.alert()
@@ -60,7 +59,7 @@ function onPlayerStateChange(event) {
                 // alert(data);
             }).fail(function(jqXHR, textStatus, errorThrown)
             {
-
+              dict=[];
                 // alert(jqXHR);
                 // alert(textStatus);
                 // alert(errorThrown);

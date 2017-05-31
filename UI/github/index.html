@@ -68,12 +68,13 @@
         <script type="text/javascript" src="assets/graph.js"></script>
         <script type="text/javascript" src="assets/pages.js"></script>
         <script type="text/javascript" src="assets/youtube.js"></script>
+        <script type="text/javascript" src="assets/veds.js"></script>
         <!-- <script type="text/javascript" src="webgazer.js"></script> -->
         <script type="text/javascript" src="assets/takephoto.js"></script>
-        <!-- <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700|Archivo+Narrow:400,700" rel="stylesheet" type="text/css"/> -->
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700|Archivo+Narrow:400,700" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="assets/default.css" type="text/css" media="all" />
         <link rel="stylesheet" src="assets/graph.css" type="text/css" media="all" />
-        <link rel="stylesheet" src="assets/googlefonts.css" type="text/css" media="all" />
+        <!-- <link rel="stylesheet" src="assets/googlefonts.css" type="text/css" media="all" /> -->
         <link rel="stylesheet" href="assets/button.css" type="text/css" media="all" />
         <link rel="stylesheet" href="assets/dropdown.css" type="text/css" media="all" />
       </head>
@@ -108,7 +109,42 @@
             <button class="dropbtn" onclick="myFunction()">Video List</button>
             <div id="myDropdown" class="dropdown-content">
               <input type="text" placeholder="Search Video Here" id="myInput" onkeyup="filterFunction()"></input>
-              <a id="video1" onclick="vid1()">Lec 1 MIT 18.06 Linear Algebra Spring 2005</a>
+              <a id="video0" value = '0'onclick="vid1('0')"><script>document.write(videosIDname[0])</script></a>
+              <a id="video1" value = '1' onclick="vid1('1')"><script>document.write(videosIDname[1])</script></a>
+              <a id="video2" value = '2' onclick="vid1('2')"><script>document.write(videosIDname[2])</script></a>
+              <a id="video3" value = '3' onclick="vid1('3')"><script>document.write(videosIDname[3])</script></a>
+              <a id="video4" value = '4' onclick="vid1('4')"><script>document.write(videosIDname[4])</script></a>
+              <a id="video5" value = '5' onclick="vid1('5')"><script>document.write(videosIDname[5])</script></a>
+              <a id="video6" value = '6' onclick="vid1('6')"><script>document.write(videosIDname[6])</script></a>
+              <a id="video7" value = '7' onclick="vid1('7')"><script>document.write(videosIDname[7])</script></a>
+              <a id="video8" value = '8' onclick="vid1('8')"><script>document.write(videosIDname[8])</script></a>
+              <a id="video9" value = '9' onclick="vid1('9')"><script>document.write(videosIDname[9])</script></a>
+              <a id="video10" value = '10' onclick="vid1('10')"><script>document.write(videosIDname[10])</script></a>
+              <a id="video11" value = '11' onclick="vid1('11')"><script>document.write(videosIDname[11])</script></a>
+              <a id="video12" value = '12' onclick="vid1('12')"><script>document.write(videosIDname[12])</script></a>
+              <a id="video13" value = '13' onclick="vid1('13')"><script>document.write(videosIDname[13])</script></a>
+              <a id="video14" value = '14' onclick="vid1('14')"><script>document.write(videosIDname[14])</script></a>
+              <a id="video15" value = '15' onclick="vid1('15')"><script>document.write(videosIDname[15])</script></a>
+              <a id="video16" value = '16' onclick="vid1('16')"><script>document.write(videosIDname[16])</script></a>
+              <a id="video17" value = '17' onclick="vid1('17')"><script>document.write(videosIDname[17])</script></a>
+              <a id="video18" value = '18' onclick="vid1('18')"><script>document.write(videosIDname[18])</script></a>
+              <a id="video19" value = '19' onclick="vid1('19')"><script>document.write(videosIDname[19])</script></a>
+              <a id="video20" value = '20' onclick="vid1('20')"><script>document.write(videosIDname[20])</script></a>
+              <a id="video21" value = '21' onclick="vid1('21')"><script>document.write(videosIDname[21])</script></a>
+              <a id="video22" value = '22' onclick="vid1('22')"><script>document.write(videosIDname[22])</script></a>
+              <a id="video23" value = '23' onclick="vid1('23')"><script>document.write(videosIDname[23])</script></a>
+              <a id="video24" value = '24' onclick="vid1('24')"><script>document.write(videosIDname[24])</script></a>
+              <a id="video25" value = '25' onclick="vid1('25')"><script>document.write(videosIDname[25])</script></a>
+              <a id="video26" value = '26' onclick="vid1('26')"><script>document.write(videosIDname[26])</script></a>
+              <a id="video27" value = '27' onclick="vid1('27')"><script>document.write(videosIDname[27])</script></a>
+              <a id="video28" value = '28' onclick="vid1('28')"><script>document.write(videosIDname[28])</script></a>
+              <a id="video29" value = '29' onclick="vid1('29')"><script>document.write(videosIDname[29])</script></a>
+              <a id="video30" value = '30' onclick="vid1('30')"><script>document.write(videosIDname[30])</script></a>
+              <a id="video31" value = '31' onclick="vid1('31')"><script>document.write(videosIDname[31])</script></a>
+              <a id="video32" value = '32' onclick="vid1('32')"><script>document.write(videosIDname[32])</script></a>
+              <a id="video33" value = '33' onclick="vid1('33')"><script>document.write(videosIDname[33])</script></a>
+              <a id="video34" value = '34' onclick="vid1('34')"><script>document.write(videosIDname[34])</script></a>
+              <!-- <a id="video1" onclick="vid1()">Lec 1 MIT 18.06 Linear Algebra Spring 2005</a>
               <a id="video2" onclick="vid2()">Lecture 01 - The Learning Problem</a>
               <a id="video3" onclick="vid3()">Lec 1 MIT 18.086 Mathematical Methods for Engineers II</a>
               <a id="video4" onclick="vid4()">Big Picture: Derivatives</a>
@@ -142,7 +178,7 @@
               <a id="video32" onclick="vid32()">21. Cryptography: Hash Functions</a>
               <a id="video33" onclick="vid33()">Evidence of a Ninth Planet</a>
               <a id="video34" onclick="vid34()">Introductory Astronomy: Parallax the Parsec and Distances</a>
-              <a id="video35" onclick="vid35()">Boaz Almog levitates a superconductor</a>
+              <a id="video35" onclick="vid35()">Boaz Almog levitates a superconductor</a> -->
 
 
             <!-- <button id=video1 class="button" onclick="vid1()">Video1</button>

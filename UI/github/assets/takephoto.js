@@ -64,7 +64,7 @@
     var video32 = document.getElementById('video32');
     var video33 = document.getElementById('video33');
     var video34 = document.getElementById('video34');
-    var video35 = document.getElementById('video35');
+    var video0 = document.getElementById('video0');
 
 
     navigator.getMedia = ( navigator.getUserMedia ||
@@ -512,9 +512,9 @@ document.getElementById("graphdiv2"),
 dataAcc        // options
 );
 }, false);
-video35.addEventListener('click', function(ev){
+video0.addEventListener('click', function(ev){
 takepicture();
-write_rate(video35);
+write_rate(video0);
 ev.preventDefault();
 g2 = new Dygraph(
 document.getElementById("graphdiv2"),
