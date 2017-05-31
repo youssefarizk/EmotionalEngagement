@@ -56,14 +56,14 @@ function onPlayerStateChange(event) {
             function(data, textStatus, jqXHR)
             {
                 dict = [];
-              //  alert(textStatus);
-              //  alert(data);
+                // alert(textStatus);
+                // alert(data);
             }).fail(function(jqXHR, textStatus, errorThrown)
             {
 
-                //alert(jqXHR);
-              //  alert(textStatus);
-                //alert(errorThrown);
+                // alert(jqXHR);
+                // alert(textStatus);
+                // alert(errorThrown);
             });
     }
 }

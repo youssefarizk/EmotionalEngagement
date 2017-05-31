@@ -1,7 +1,7 @@
 
 <html>
 
-      <div id="loginpage"> // login page
+      <div id="loginpage">
         <head>
           <meta charset="UTF-8">
           <script type="text/javascript" src="assets/pages.js"></script>
@@ -10,13 +10,29 @@
         <body1>
           <div class="wrapper1">
           <div class="container1">
-            <h1>Welcome</h1>
-            <p>Please log in as a user and remember to use the same username each time you want to access this platform.</p>
+            <h1>Welcome!</h1>
+            <h2 class="title">Important: click the shield above on the URL and choose "load unsafe script" , it will allow the data to be sent to the server. <img src="assets/load.png"> <br/>This app does not work on phone at the moment, also if possible Google Chrome is preferred.</h2>
+
             <form class="form">
-              <input type="text" id="field1" name="field1" placeholder="Username" />
-              <input type="submit" value="Login as User" name="login" id="loginbutton1" onclick="return show1('videopage','loginpage','graphdiv2','graphp');"></input>
-              <input type="submit" value="Login as Provider" name="login" id="loginbutton" onclick="return show1('videopage','loginpage','loginpage','loginpage');"></input>
+              <input type="text" id="field1" name="field1" placeholder="Username" onkeyup="checkinput()" />
+              <input type="submit" value="Login as User" name="login" id="loginbutton1" onclick="return show1('videopage','loginpage','graphdiv2');"></input>
+              <input type="submit" value="Login as Provider" name="login" id="loginbutton" onclick="return show1('videopage','loginpage','loginpage');"></input>
             </form>
+            <p>Please log in as a user and remember to use the same username each time you want to access this platform.</p>
+            <p>Username should be at least 3 characters or numbers.</p>
+
+            <script language="JavaScript">
+            window.addEventListener('load', checkinput());
+            function checkinput(){
+            if(document.getElementById("field1").value.length < 3){
+              document.getElementById("loginbutton1").disabled = true;
+              document.getElementById("loginbutton").disabled = true;
+            }else if(document.getElementById("field1").value.length >= 3){
+              document.getElementById("loginbutton1").disabled = false;
+              document.getElementById("loginbutton").disabled = false;
+            }
+          }
+            </script>
 
           </div>
             <ul class="bg-bubbles">
@@ -40,22 +56,24 @@
 
 
 
-      <div id="videopage" style="display:none"> // Video page
+      <div id="videopage" style="display:none">
         <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="keywords" content="" />
         <meta name="description" content="" />
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
         <script type="text/javascript" src="assets/dropdown.js"></script>
+        <!-- <script type="text/javascript" src="assets/ajax1.js"></script> -->
         <script type="text/javascript" src="assets/json.js"></script>
         <script type="text/javascript" src="assets/graph.js"></script>
         <script type="text/javascript" src="assets/pages.js"></script>
         <script type="text/javascript" src="assets/youtube.js"></script>
         <!-- <script type="text/javascript" src="webgazer.js"></script> -->
         <script type="text/javascript" src="assets/takephoto.js"></script>
-        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700|Archivo+Narrow:400,700" rel="stylesheet" type="text/css"/>
+        <!-- <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700|Archivo+Narrow:400,700" rel="stylesheet" type="text/css"/> -->
         <link rel="stylesheet" href="assets/default.css" type="text/css" media="all" />
         <link rel="stylesheet" src="assets/graph.css" type="text/css" media="all" />
+        <link rel="stylesheet" src="assets/googlefonts.css" type="text/css" media="all" />
         <link rel="stylesheet" href="assets/button.css" type="text/css" media="all" />
         <link rel="stylesheet" href="assets/dropdown.css" type="text/css" media="all" />
       </head>
@@ -64,21 +82,19 @@
           php include('CORS1.php');
           </script>
 
-          <h2>Hello! Alpha version 0.2.1</h2>
+          <h2 id="title2">Hello!!</h2>
+<!-- <script>document.write(document.getElementById('field1'));</script> -->
+          <br/>
+          <p>Alpha version 0.2.4</p>
         <div id="logo" class="container">
-        	<h1><a href="#">Emotional Engagement</a></h1>
+        	<h1><a href="#" style="text-transform:uppercase">Emotional Engagement</a></h1>
         </div>
         <div id="menu-wrapper">
         	<div id="menu" class="container">
         		<ul>
-<!--        			<li><a href="indexlog.html">Homepage</a></li>
-        			<li class="current_page_item"><a href="Video.html">Video</a></li>
-        			<li><a href="Graph.html">Garphical Result</a></li> -->
-              <li><a onclick="return show1('homepage','videopage','videopage','videopage');">HOMEPAGE</a></li>
+              <!-- <li><a onclick="return show1('homepage','videopage','videopage','videopage');">HOMEPAGE</a></li> -->
               <li><a class="current_page_item">VIDEO</a></li>
-              <li><a id="graphp" onclick="return show1('graphpage','videopage','videopage','videopage');">GRAPHICAL RESULT</a></li>
-
-
+              <!-- <li><a id="graphp" onclick="return show1('graphpage','videopage','videopage','videopage');">GRAPHICAL RESULT</a></li> -->
         		</ul>
         	</div>
         </div>
@@ -86,7 +102,8 @@
         	<div id="box1">
         		<!-- <h2 class="title"><a href="#">Choose a video you like.</a></h2> -->
             <h2 class="title">Welcome!!</h2>
-            <p>Hi and thanks for helping us with our project! Choose any of the videos we have available on our platform and watch them.<br/> As you watch, please rate the videos at different times in the video depending on your engagement levels.<br/> Do this as many times as you think is necessary. Also, please do not have the window where the platform is running on fullscreen.<br/> Please make sure you are in an environment where you are not facing any distractions.<br/> The more videos you are able to watch and rate the better!</p>
+            <h2 class="title">Important: click the shield above on the URL and choose "load unsafe script" <br/> <img src="assets/load.png">,<br/> it will allow the data to be sent to the server.<br/>This app does not work on phone at the moment, if possible Google Chrome is preferred.</h2>
+            <p>Hi and thanks for helping us with our project!<br/> Choose any of the videos we have available on our platform and watch them.<br/> As you watch, please rate the videos at different times in the video depending on your engagement levels.<br/> Do this as many times as you think is necessary. Also, please do not have the window where the platform is running on fullscreen.<br/> Please make sure you are in an environment where you are not facing any distractions.<br/> The more videos you are able to watch and rate the better!</p>
           <div class="dropdown">
             <button class="dropbtn" onclick="myFunction()">Video List</button>
             <div id="myDropdown" class="dropdown-content">
@@ -238,7 +255,7 @@
             //   }
             </script>
             <br/>
-            <canvas id="canvas" hidden></canvas>
+            <canvas id="canvas" ></canvas>
             <br/>
             <br/>
             <br/>
@@ -273,10 +290,10 @@
           </footer>
         </div>
 
-      </div>
+    <!--  </div>
 
 
-      <div id="homepage" style="display:none">
+       <div id="homepage" style="display:none">
       <body>
         <h2>Hello!</h2>
       <div id="logo" class="container">
@@ -297,7 +314,7 @@
         </div>
       </div>
     </body>
-    <!-- Footer -->
+
       <footer id="footer">
         <div class="inner">
           <div class="flex">
@@ -316,18 +333,18 @@
       </footer>
     </div>
 
-    </div>
+    </div> -->
 
-    <div id="graphpage" style="display:none">
+    <!-- <div id="graphpage">
       <body>
         <h2>Hello!</h2>
       <div id="logo" class="container">
-        <h1><a href="#">Emotional Engagement</a></h1>
+        <h1><a href="#" style="text-transform:uppercase">Emotional Engagement</a></h1>
       </div>
-      <div id="menu-wrapper">
+      <div id="menu-wrapper">aa
         <div id="menu" class="container">
           <ul>
-            <li><a onclick="return show1('homepage','graphpage','graphpage','graphpage');">HOMEPAGE</a></li>
+             <li><a onclick="return show1('homepage','graphpage','graphpage','graphpage');">HOMEPAGE</a></li>
             <li><a onclick="return show1('videopage','graphpage','graphpage','graphpage');">VIDEO</a></li>
             <li><a class="current_page_item">GRAPHICAL RESULT</a></li>
           </ul>
@@ -339,7 +356,7 @@
         </div>
       </div>
     </body>
-    <!-- Footer -->
+
       <footer id="footer">
         <div class="inner">
           <div class="flex">
@@ -358,5 +375,5 @@
       </footer>
     </div>
 
-    </div>
+  </div>-->
 </html>
