@@ -93,7 +93,7 @@ function vid1(a) {
 // alert(countere);
 player.loadVideoById({'videoId': videosID[a],
                'suggestedQuality': 'default'});
-               vid=videosIDname[a];
+               vid=a;
 
       if(counter == 0){
           counter =1;
