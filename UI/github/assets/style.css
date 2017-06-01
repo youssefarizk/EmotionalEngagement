@@ -38,8 +38,8 @@ body1 :-ms-input-placeholder {
 }
 .wrapper1 {
   background: #50a3a2;
-  background: -webkit-linear-gradient(top left, #50a3a2 0%, #53e3a6 100%);
-  background: linear-gradient(to bottom right, #50a3a2 0%, #53e3a6 100%);
+  background: -webkit-linear-gradient(top left, #50a3a2 0%, #1F88CA 100%);
+  background: linear-gradient(to bottom right, #50a3a2 0%, #1F88CA 100%);
   position: absolute;
 
   left: 0;
@@ -60,7 +60,7 @@ body1 :-ms-input-placeholder {
   text-align: center;
 }
 .container1 h1 {
-  font-size: 40px;
+  font-size: 30px;
   -webkit-transition-duration: 1s;
           transition-duration: 1s;
   -webkit-transition-timing-function: ease-in-put;

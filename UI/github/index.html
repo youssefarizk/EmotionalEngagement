@@ -10,13 +10,26 @@
         <body1>
           <div class="wrapper1">
           <div class="container1">
-            <h1>Welcome!</h1>
-            <h2 class="title">Important: click the shield above on the URL and choose "load unsafe script" , it will allow the data to be sent to the server. <img src="assets/load.png"> <br/>This app does not work on phone at the moment, also if possible Google Chrome is preferred.</h2>
+            <h1 class="title">Welcome!</h1>
+            <h2 class="title">Important: please watch this video first.</h2>
+            <video id="myVideo1" width="509" height="250" controls="controls">
+            <source src="Video/Good.webm" type="video/webm">
+            Your browser does not support HTML5 video.
+          </video>
+            <script>
+            var vid123 = document.getElementById("myVideo1");
+            function enableAutoplay() {
+                vid123.autoplay = true;
+                vid123.load();
+            }
+            enableAutoplay();
+            </script>
+
 
             <form class="form">
               <input type="text" id="field1" name="field1" placeholder="Username" onkeyup="checkinput()" />
               <input type="submit" value="Login as User" name="login" id="loginbutton1" onclick="return show1('videopage','loginpage','graphdiv2');"></input>
-              <!-- <input type="submit" value="Login as Provider" name="login" id="loginbutton" onclick="return show1('videopage','loginpage','loginpage');"></input> -->
+              <input type="submit" value="Login as Provider" name="login" id="loginbutton" onclick="return show1('videopage','loginpage','loginpage');"></input>
             </form>
             <p>Please log in as a user and remember to use the same username each time you want to access this platform.</p>
             <p>Username should be at least 3 characters or numbers.</p>
@@ -36,6 +49,9 @@
 
           </div>
             <ul class="bg-bubbles">
+              <li></li>
+              <li></li>
+              <li></li>
               <li></li>
               <li></li>
               <li></li>
@@ -103,7 +119,7 @@
         	<div id="box1">
         		<!-- <h2 class="title"><a href="#">Choose a video you like.</a></h2> -->
             <h2 class="title">Welcome!!</h2>
-            <h2 class="title">Important: click the shield above on the URL and choose "load unsafe script" <br/> <img src="assets/load.png">,<br/> it will allow the data to be sent to the server.<br/>This app does not work on phone at the moment, if possible Google Chrome is preferred.</h2>
+            <h2 class="title">Important:<br/>This app does not work on phone at the moment, if possible Google Chrome is preferred.</h2>
             <p>Hi and thanks for helping us with our project!<br/> Choose any of the videos we have available on our platform and watch them.<br/> As you watch, please rate the videos at different times in the video depending on your engagement levels.<br/> Do this as many times as you think is necessary. Also, please do not have the window where the platform is running on fullscreen.<br/> Please make sure you are in an environment where you are not facing any distractions.<br/> The more videos you are able to watch and rate the better!</p>
           <div class="dropdown">
             <button class="dropbtn" onclick="myFunction()">Video List</button>
@@ -140,7 +156,7 @@
               <a id="video28" value = '28' onclick="vid1('28')"><script>document.write(videosIDname[28])</script></a>
               <a id="video29" value = '29' onclick="vid1('29')"><script>document.write(videosIDname[29])</script></a>
               <a id="video30" value = '30' onclick="vid1('30')"><script>document.write(videosIDname[30])</script></a>
-              <a id="video31" value = '31' onclick="vid1('31')"><script>document.write(videosIDname[31])</script></a>is
+              <a id="video31" value = '31' onclick="vid1('31')"><script>document.write(videosIDname[31])</script></a>
               <a id="video32" value = '32' onclick="vid1('32')"><script>document.write(videosIDname[32])</script></a>
               <a id="video33" value = '33' onclick="vid1('33')"><script>document.write(videosIDname[33])</script></a>
               <a id="video34" value = '34' onclick="vid1('34')"><script>document.write(videosIDname[34])</script></a>

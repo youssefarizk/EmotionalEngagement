@@ -160,8 +160,8 @@ ul.style1 .first
 	overflow: hidden;
 	height: 52px;
 	margin-bottom: 2em;
-	border-top: 1px solid #D7CFAD;
-	border-bottom: 1px solid #D7CFAD;
+	border-top: 1px solid #ADD7D4;
+	border-bottom: 1px solid #ADD7D4;
 }
 
 #menu {
@@ -196,7 +196,7 @@ ul.style1 .first
 }
 
 #menu a:hover, #menu .current_page_item a {
-	background: #D7CFAD;
+	background: #ADD7C8;
 	text-decoration: none;
 	color: #706C53;
 }
@@ -212,7 +212,7 @@ ul.style1 .first
 	width: 1100px;
 	margin-bottom: 3em;
 	padding: 1em 50px;
-	background: #FCFAC4;
+	background: #ECFFFB;
 	border: 1px solid #D9D2A5;
 }
 
