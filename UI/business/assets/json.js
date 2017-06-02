@@ -30,7 +30,7 @@ function onPlayerStateChange(event) {
         console.log(str); // Logs output to dev tools console.
 
         //alert(counter);
-       //alert(str);
+       alert(str);
         //document.getElementById('test').innerHTML = (str); // Displays output using window.alert()
       // $.ajax({
       //     url: "http://projectemotion.azurewebsites.net/",

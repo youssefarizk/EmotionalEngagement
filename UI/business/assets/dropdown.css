@@ -44,3 +44,8 @@
 .dropdown:hover .dropbtn {
     background-color: #3e8e41;
 }
+.scrollable-menu {
+    height: auto;
+    max-height: 200px;
+    overflow-x: hidden;
+}

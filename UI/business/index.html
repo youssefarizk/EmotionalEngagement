@@ -53,14 +53,14 @@ Although you can use them, for a more unique website, replace these images with 
             <div class="collapse navbar-collapse" id="navbar">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="active">
-                        <a href="#">Home</a>
+                        <a onclick="return show1()">Home</a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="#">Products</a>
                     </li>
                     <li>
                         <a href="#">Graph results</a>
-                    </li>
+                    </li> -->
 					<!-- <li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Services <span class="caret"></span></a>
 						<ul class="dropdown-menu" aria-labelledby="about-us">
@@ -119,35 +119,44 @@ Although you can use them, for a more unique website, replace these images with 
                 </script>
             </div>
         </div>
-
+</header>
 
   <div id="videopage" style="display:none">
     <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="" />
     <meta name="description" content="" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/dropdown.js"></script>
+    <script type="text/javascript" src="assets/json.js"></script>
+    <script type="text/javascript" src="assets/graph.js"></script>
+    <script type="text/javascript" src="assets/pages.js"></script>
+    <script type="text/javascript" src="assets/youtube.js"></script>
+    <script type="text/javascript" src="assets/veds.js"></script>
+    <script type="text/javascript" src="assets/takephoto.js"></script>
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700|Archivo+Narrow:400,700" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" src="assets/graph.css" type="text/css" media="all" />
     <link rel="stylesheet" href="assets/button.css" type="text/css" media="all" />
     <link rel="stylesheet" href="assets/dropdown.css" type="text/css" media="all" />
   </head>
-    <body>
+  <header>
+
       <script type="text/php">
       php include('CORS1.php');
       </script>
-      <h2 id="title2">Hello!!</h2>
-<!-- <script>document.write(document.getElementById('field1'));</script> -->
-      <br/>
-      <p>Alpha version 0.2.4</p>
 
+</br>
+</br>
+</br>
+</br>
 
         <!-- <h2 class="title"><a href="#">Choose a video you like.</a></h2> -->
-        <h2 class="title">Welcome!!</h2>
-        <h2 class="title">Important:<br/>This app does not work on phone at the moment, if possible Google Chrome is preferred.</h2>
-        <p>Hi and thanks for helping us with our project!<br/> Choose any of the videos we have available on our platform and watch them.<br/> As you watch, please rate the videos at different times in the video depending on your engagement levels.<br/> Do this as many times as you think is necessary. Also, please do not have the window where the platform is running on fullscreen.<br/> Please make sure you are in an environment where you are not facing any distractions.<br/> The more videos you are able to watch and rate the better!</p>
-      <div class="dropdown">
+        <h2 class="title" style="margin-left:50px;">Welcome!!</h2>
+        <h2 class="title" style="margin-left:50px;">Important:<br/>This app does not work on phone at the moment, if possible Google Chrome is preferred.</h2>
+        <p style="margin-left:50px;">Hi and thanks for helping us with our project!<br/> Choose any of the videos we have available on our platform and watch them.<br/> As you watch, please rate the videos at different times in the video depending on your engagement levels.<br/> Do this as many times as you think is necessary. Also, please do not have the window where the platform is running on fullscreen.<br/> Please make sure you are in an environment where you are not facing any distractions.<br/> The more videos you are able to watch and rate the better!</p>
+      <div class="dropdown" style="margin-left:50px;">
         <button class="dropbtn" onclick="myFunction()">Video List</button>
-        <div id="myDropdown" class="dropdown-content">
+        <div id="myDropdown" class="dropdown-content scrollable-menu">
           <input type="text" placeholder="Search Video Here" id="myInput" onkeyup="filterFunction()"></input>
           <a id="video0" value = '0'onclick="vid1('0')"><script>document.write(videosIDname[0])</script></a>
           <a id="video1" value = '1' onclick="vid1('1')"><script>document.write(videosIDname[1])</script></a>
@@ -189,7 +198,7 @@ Although you can use them, for a more unique website, replace these images with 
 
 
         <div style="clear: both;">&nbsp;</div>
-        <div class="entry">
+        <div class="entry" style="margin-left:50px;">
           <br/>
           <br/>
           <br/>
@@ -200,15 +209,15 @@ Although you can use them, for a more unique website, replace these images with 
         </div>
         <p>
           <br/>
-          <font size="5">How engaged are you?
+          <font size="5">How engaged are you?</font>
         </p>
 
         <br/>
-        <button class="button" id=objButton1 value="1">Unengaged</button>
-        <button class="button" id=objButton2 value="2">Slightly Unengaged</button>
-        <button class="button" id=objButton3 value="3">Neutral</button>
-        <button class="button" id=objButton4 value="4">Slightly Engaged</button>
-        <button class="button" id=objButton5 value="5">Engaged</button>
+        <button class="button" id="objButton1" value="1">Unengaged</button>
+        <button class="button" id="objButton2" value="2">Slightly Unengaged</button>
+        <button class="button" id="objButton3" value="3">Neutral</button>
+        <button class="button" id="objButton4" value="4">Slightly Engaged</button>
+        <button class="button" id="objButton5" value="5">Engaged</button>
         <br/>
         <br/>
         Please be advised that photographs will be taken when Engagement buttons are pressed <br/>for use on the recommendation service only.<br/> Your picture will not be saved or used on other purposes.
@@ -256,11 +265,10 @@ Although you can use them, for a more unique website, replace these images with 
         </script> -->
         <br/>
       </div>
-      </div>
 
-    </body>
+
   </header>
-
+</div>
 
 
 	<!-- Footer -->
@@ -276,14 +284,7 @@ Although you can use them, for a more unique website, replace these images with 
     </footer> -->
 
     <!-- jQuery -->
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-    <script type="text/javascript" src="assets/dropdown.js"></script>
-    <script type="text/javascript" src="assets/json.js"></script>
-    <script type="text/javascript" src="assets/graph.js"></script>
-    <script type="text/javascript" src="assets/pages.js"></script>
-    <script type="text/javascript" src="assets/youtube.js"></script>
-    <script type="text/javascript" src="assets/veds.js"></script>
-    <script type="text/javascript" src="assets/takephoto.js"></script>
+
     <script src="js/jquery-1.11.3.min.js"></script>
 
     <script type="text/javascript" src="assets/pages.js"></script>
