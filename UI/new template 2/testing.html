@@ -1,0 +1,66 @@
+<div id="loginpage">
+        <head>
+          <meta charset="UTF-8">
+          <script type="text/javascript" src="assets/pages.js"></script>
+          <link rel="stylesheet" href="assets/css/style.css"/>
+        </head>
+        <body1>
+          <div class="wrapper1">
+          <div class="container1">
+            <h1 class="title">Welcome!</h1>
+            <h2 class="title">Important: please watch this video first.</h2>
+            <video id="myVideo1" width="509" height="250" controls="controls">
+            <source src="Video/Good.webm" type="video/webm">
+            Your browser does not support HTML5 video.
+          </video>
+            <script>
+            var vid123 = document.getElementById("myVideo1");
+            function enableAutoplay() {
+                vid123.autoplay = true;
+                vid123.load();
+            }
+            enableAutoplay();
+            </script>
+
+
+            <form class="form">
+              <input type="text" id="field1" name="field1" placeholder="Username" onkeyup="checkinput()" />
+              <input type="submit" value="Login as User" name="login" id="loginbutton1" onclick="jsonforname('0'); return show1('videopage','loginpage','graphdiv2'); "></input>
+              <input type="submit" value="Login as Provider" name="login" id="loginbutton" onclick="jsonforname('1'); return show1('videopage','loginpage','loginpage'); "></input>
+            </form>
+            <p>Please log in as a user and remember to use the same username each time you want to access this platform.</p>
+            <p>Username should be at least 3 characters or numbers.</p>
+
+            <script language="JavaScript">
+            window.addEventListener('load', checkinput());
+            function checkinput(){
+            if(document.getElementById("field1").value.length < 3){
+              document.getElementById("loginbutton1").disabled = true;
+              document.getElementById("loginbutton").disabled = true;
+            }else if(document.getElementById("field1").value.length >= 3){
+              document.getElementById("loginbutton1").disabled = false;
+              document.getElementById("loginbutton").disabled = false;
+            }
+          }
+            </script>
+
+          </div>
+            <ul class="bg-bubbles">
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+          <script src="assets/index.js"></script>
+        </body1>
+      </div>

@@ -1,0 +1,405 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Emotional Engagement</title>
+		<link rel="stylesheet" href="assets/css/style.css"/>
+	</head>
+	<script type="text/php">
+		php include('CORS1.php');
+	</script>
+	<body>
+		
+		<div id="loginpage">
+      <body1>
+        <div class="wrapper1">
+        	<div class="container1">
+          	<h1 class="title">Welcome!</h1>
+            <h2 class="title">Important: please watch this video first.</h2>
+            <video id="myVideo1" width="509" height="250" controls="controls">
+            	<source src="Video/Good.webm" type="video/webm">
+            	Your browser does not support HTML5 video.
+          	</video>
+            <script>
+	            var vid123 = document.getElementById("myVideo1");
+	            function enableAutoplay() {
+	                vid123.autoplay = true;
+	                vid123.load();
+	            }
+	            enableAutoplay();
+            </script>
+            <form class="form">
+              <input type="text" id="field1" name="field1" placeholder="Username" onkeyup="checkinput()" />
+              <input type="submit" value="Login as User" name="login" id="loginbutton1" onclick="jsonforname('0'); return show1('videopage','loginpage','graphdiv2'); "></input>
+              <input type="submit" value="Login as Provider" name="login" id="loginbutton" onclick="jsonforname('1'); return show1('videopage','loginpage','loginpage'); "></input>
+            </form>
+            <p>Please log in as a user and remember to use the same username each time you want to access this platform.</p>
+            <p>Username should be at least 3 characters or numbers.</p>
+            <script language="JavaScript">
+	            window.addEventListener('load', checkinput());
+	            function checkinput(){
+	            if(document.getElementById("field1").value.length < 3){
+	              document.getElementById("loginbutton1").disabled = true;
+	              document.getElementById("loginbutton").disabled = true;
+	            }else if(document.getElementById("field1").value.length >= 3){
+	              document.getElementById("loginbutton1").disabled = false;
+	              document.getElementById("loginbutton").disabled = false;
+	            }
+	          	}
+            </script>
+          </div>
+          <ul class="bg-bubbles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+        <script src="assets/index.js"></script>
+      </body1>
+    </div>
+
+
+
+<div id="videopro" style="display:none"> // video pro page
+
+		<body class="subpage">
+
+			<!-- Header -->
+				<header id="header">
+					<div class="inner">
+						<a href="index.html" class="logo">Theory</a>
+						<nav id="nav">
+							<a onclick="return show1('homepro','videopro');">Homepage</a>
+							<a onclick="return show1('videopro','videopro');">Video</a>
+							<a onclick="return show1('feedpro','videopro');">Feedback</a>
+						</nav>
+						<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+					</div>
+				</header>
+
+			<!-- Three -->
+				<section id="three" class="wrapper">
+					<div class="inner">
+						<header class="align-center">
+							<h2>Videos</h2>
+							<p>Choose which lectrure you want to watch</p>
+						</header>
+
+						<button class="button" onclick="vid1()">Video1</button>
+						<button class="button" onclick="vid2()">Video2</button>
+						<button class="button" onclick="vid3()">Video3</button>
+						<button class="button" onclick="vid4()">Video4</button>
+						<button class="button" onclick="vid5()">Video5</button>
+						<br/>
+						<br/>
+						<div id="player"></div>
+						<br/>
+						<br/>
+						<br/>
+						<div class="camera">
+					  	<video id="video" hidden>Video stream not available.</video>
+					  </div>
+						<p>
+	          	<br/>
+	            <font size="5">How engaged are you?
+	          </p>
+						<br/>
+						<button class="button" id=objButton1 value="1">Unengaged</button>
+						<button class="button" id=objButton2 value="2">Slightly Unengaged</button>
+						<button class="button" id=objButton3 value="3">Neutral</button>
+						<button class="button" id=objButton4 value="4">Slightly Engaged</button>
+						<button class="button" id=objButton5 value="5">Engaged</button>
+						<br/>
+						<br/>
+						<!-- <script>
+	            // window.onbeforeunload = function(){
+
+	              downloadCSV({ filename: "data.csv" });
+
+	              str = JSON.stringify(dict, null, 4);
+	                console.log(str); // Logs output to dev tools console.
+									alert(str);
+	                //document.getElementById('test').innerHTML = (str); // Displays output using window.alert()
+	              $.ajax({
+	                  url: "https://requestb.in/186phle1",
+	                  type: "POST",
+	                  data: str,
+	                  dataType: "json",
+	                  success: function (result) {
+	                      switch (result) {
+	                          case true:
+	                              processResponse(result);
+	                              break;
+	                          default:
+	                              resultDiv.html(result);
+	                      }
+	                  },
+	                  error: function (xhr, ajaxOptions, thrownError) {
+	                  alert(xhr.status);
+	                  }
+	              });
+	            }
+	            </script> -->
+	            <br/>
+							<p>
+								<br/>
+								<font size="5">Here you can see the pictures that are taken
+							</p>
+
+	            <canvas id="canvas"></canvas>
+	            <br/>
+	            <br/>
+	            <br/>
+					</div>
+				</section>
+
+
+			<!-- Footer -->
+				<footer id="footer">
+					<div class="inner">
+						<div class="flex">
+							<div class="copyright">
+								&copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com">Unsplash</a>.
+							</div>
+							<ul class="icons">
+								<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+								<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="#" class="icon fa-linkedin"><span class="label">linkedIn</span></a></li>
+								<li><a href="#" class="icon fa-pinterest-p"><span class="label">Pinterest</span></a></li>
+								<li><a href="#" class="icon fa-vimeo"><span class="label">Vimeo</span></a></li>
+							</ul>
+						</div>
+					</div>
+				</footer>
+</div>
+
+<div id="id01" class="modal" hidden>
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="container">
+      <label><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+
+      <label><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <label><b>Repeat Password</b></label>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+      <input type="checkbox" checked="checked"> Remember me
+      <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signupbtn">Sign Up</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+<div id="homepro" hidden> // home page
+
+
+<!-- Header -->
+	<header id="header">
+		<div class="inner">
+			<a href="index.html" class="logo">Theory</a>
+			<nav id="nav">
+				<a onclick="document.getElementById('id01').style.display='block'">Sign Up</a>
+
+			</nav>
+			<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+		</div>
+	</header>
+
+<!-- Banner -->
+	<section id="banner">
+		<h1>Emotional Engagement</h1>
+		<p>Let your emotions speak for you!</p>
+	</section>
+
+
+
+
+
+<!-- One -->
+	<section id="one" class="wrapper">
+		<div class="inner">
+			<div class="flex flex-3">
+				<article>
+					<header>
+						<h3>UI<br /> All about our web developement</h3>
+					</header>
+					<p>Bla bla bla...</p>
+					<footer>
+						<a href="#" class="button special">More</a>
+					</footer>
+				</article>
+				<article>
+					<header>
+						<h3>Server<br /> Communication and processing</h3>
+					</header>
+					<p>Bla bla bla...</p>
+					<footer>
+						<a href="#" class="button special">More</a>
+					</footer>
+				</article>
+				<article>
+					<header>
+						<h3>Machine Learning<br /> Recommendation using emotions</h3>
+					</header>
+					<p>Bla bla bla...</p>
+					<footer>
+						<a href="#" class="button special">More</a>
+					</footer>
+				</article>
+			</div>
+		</div>
+	</section>
+
+<!-- Two -->
+	<section id="two" class="wrapper style1 special">
+		<div class="inner">
+			<header>
+				<h2>Our Team</h2>
+				<p>Check our emotions</p>
+			</header>
+			<div class="flex flex-4">
+				<div class="box person">
+					<div class="image round">
+						<img src="images/pic03.jpg" alt="Person 1" />
+					</div>
+					<h3>Magna</h3>
+					<p>Cipdum dolor</p>
+				</div>
+				<div class="box person">
+					<div class="image round">
+						<img src="images/pic04.jpg" alt="Person 2" />
+					</div>
+					<h3>Ipsum</h3>
+					<p>Vestibulum comm</p>
+				</div>
+				<div class="box person">
+					<div class="image round">
+						<img src="images/pic05.jpg" alt="Person 3" />
+					</div>
+					<h3>Tempus</h3>
+					<p>Fusce pellentes</p>
+				</div>
+				<div class="box person">
+					<div class="image round">
+						<img src="images/pic06.jpg" alt="Person 4" />
+					</div>
+					<h3>Dolore</h3>
+					<p>Praesent placer</p>
+				</div>
+				<div class="box person">
+					<div class="image round">
+						<img src="images/pic03.jpg" alt="Person 1" />
+					</div>
+					<h3>Magna</h3>
+					<p>Cipdum dolor</p>
+				</div>
+				<div class="box person">
+					<div class="image round">
+						<img src="images/pic03.jpg" alt="Person 1" />
+					</div>
+					<h3>Magna</h3>
+					<p>Cipdum dolor</p>
+				</div>
+				<div class="box person">
+					<div class="image round">
+						<img src="images/pic03.jpg" alt="Person 1" />
+					</div>
+					<h3>Magna</h3>
+					<p>Cipdum dolor</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+<!-- Three -->
+	<section id="three" class="wrapper special">
+		<div class="inner">
+			<header class="align-center">
+				<h2>Nunc Dignissim</h2>
+				<p>Aliquam erat volutpat nam dui </p>
+			</header>
+			<div class="flex flex-2">
+				<article>
+					<div class="image fit">
+						<img src="images/pic01.jpg" alt="Pic 01" />
+					</div>
+					<header>
+						<h3>Praesent placerat magna</h3>
+					</header>
+					<p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor lorem ipsum.</p>
+					<footer>
+						<a href="#" class="button special">More</a>
+					</footer>
+				</article>
+				<article>
+					<div class="image fit">
+						<img src="images/pic02.jpg" alt="Pic 02" />
+					</div>
+					<header>
+						<h3>Fusce pellentesque tempus</h3>
+					</header>
+					<p>Sed adipiscing ornare risus. Morbi est est, blandit sit amet, sagittis vel, euismod vel, velit. Pellentesque egestas sem. Suspendisse commodo ullamcorper magna non comodo sodales tempus.</p>
+					<footer>
+						<a href="#" class="button special">More</a>
+					</footer>
+				</article>
+			</div>
+		</div>
+	</section>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/skel.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script src="assets/js/real.js"></script>
+		<script type="text/javascript" src="assets/js/pages.js"></script>
+		<script type="text/javascript" src="assets/js/json.js"></script>
+		<script type="text/javascript" src="assets/js/youtube.js"></script>
+		<script type="text/javascript" src="assets/js/takephoto.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+
+
+	</body>
+
+
+</html>
