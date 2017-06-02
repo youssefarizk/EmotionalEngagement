@@ -28,7 +28,8 @@ function onPlayerStateChange(event) {
     //  downloadCSV({ filename: "data.csv" });
       str = JSON.stringify(dict, null, 4);
         console.log(str); // Logs output to dev tools console.
-        alert(str);
+        //alert(counter);
+      //  alert(str);
         //document.getElementById('test').innerHTML = (str); // Displays output using window.alert()
       // $.ajax({
       //     url: "http://projectemotion.azurewebsites.net/",
@@ -54,14 +55,14 @@ function onPlayerStateChange(event) {
             function(data, textStatus, jqXHR)
             {
                 dict = [];
-                alert(textStatus);
-                alert(data);
+                // alert(textStatus);
+                // alert(data);
             }).fail(function(jqXHR, textStatus, errorThrown)
             {
-
-                //alert(jqXHR);
-                alert(textStatus);
-                //alert(errorThrown);
+              dict=[];
+                // alert(jqXHR);
+                // alert(textStatus);
+                // alert(errorThrown);
             });
     }
 }
@@ -128,7 +129,10 @@ function write_rate(valued) {
                 rate:valued.value,
                 time:player.getCurrentTime(),
                 videocompletion:player.getCurrentTime() / player.getDuration(),
+                numberofexit: lcounter,
+                frequencyofexit: lcounter / player.getCurrentTime(),
                 picuri:picURL
+
             }
           );
   dataAcc += String(player.getCurrentTime())+ ", " +valued.value + "\n";

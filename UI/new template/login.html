@@ -2,12 +2,14 @@
 <html>
 	<head>
 		<title>Emotional Engagement</title>
-		<meta charset="utf-8" />
+		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/default.css" type="text/css" media="all" />
 		<link rel="stylesheet" src="assets/css/graph.css" type="text/css" media="all" />
 		<link rel="stylesheet" href="assets/css/button.css" type="text/css" media="all" />
+		<link rel="stylesheet" href="assets/css/dropdown.css" type="text/css" media="all" />
+		<link rel="stylesheet" href="assets/css/style.css" type="text/css" media="all"/>
 		<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700|Archivo+Narrow:400,700" rel="stylesheet" type="text/css"/>
 	</head>
 
@@ -18,67 +20,65 @@
 		</script>
 
 		<div id="loginpage"> // login page
-		<!-- Banner -->
-			<section id="banner">
-				<h1>Emotional Engagement</h1>
-				<p>Let your emotions speak for you!</p>
-			</section>
-			<!-- Three -->
-				<section id="three" class="wrapper special">
-					<div class="inner">
-						<header class="align-center">
-							<h2>Who are you</h2>
-              <input type="text" id="field1" name="field1" placeholder="Username" />
-							<p>User or Provider? </p>
-						</header>
-						<div class="flex flex-2">
-							<article>
-								<div class="image fit">
-									<img src="images/pic01.jpg" alt="Pic 01" />
-								</div>
-								<header>
-									<h3>User</h3>
-								</header>
-								<p>Users have the opportunity to...</p>
-								<footer>
-									<button class="button special"onclick="return show1('videopro','loginpage');">User</button>
-								</footer>
-							</article>
-							<article>
-								<div class="image fit">
-									<img src="images/pic02.jpg" alt="Pic 02" />
-								</div>
-								<header>
-									<h3>Provider</h3>
-								</header>
-								<p>As a provider you can now...</p>
-								<footer>
-									<button class="button special" onclick="return show1('videopro','loginpage');">Provider</button>
-								</footer>
-							</article>
-						</div>
-					</div>
-				</section>
+			<body1>
+				<div class="wrapper1">
+				<div class="container1">
+					<h1 class="title">Welcome!</h1>
+					<h2 class="title">Important: please watch this video first.</h2>
+					<!-- <video id="myVideo1" width="509" height="250" controls="controls">
+					<source src="Video/Good.webm" type="video/webm">
+					Your browser does not support HTML5 video.
+				</video>
+				<script>
+					var vid123 = document.getElementById("myVideo1");
+					function enableAutoplay() {
+							vid123.autoplay = true;
+							vid123.load();
+					}
+					enableAutoplay();
+					</script> -->
 
-		<!-- Footer -->
-			<footer id="footer">
-				<div class="inner">
-					<div class="flex">
-						<div class="copyright">
-							&copy; By Imperial College Electrical and Electronic Department
-						</div>
-						<ul class="icons">
-							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon fa-linkedin"><span class="label">linkedIn</span></a></li>
-							<li><a href="#" class="icon fa-pinterest-p"><span class="label">Pinterest</span></a></li>
-							<li><a href="#" class="icon fa-vimeo"><span class="label">Vimeo</span></a></li>
-						</ul>
-					</div>
+
+					<form class="form">
+						<input type="text" id="field1" name="field1" placeholder="Username" onkeyup="checkinput()" />
+						<input type="submit" value="Login as User" name="login" id="loginbutton1" onclick="jsonforname('0'); return show1('videopro','loginpage','graphdiv2'); "></input>
+						<input type="submit" value="Login as Provider" name="login" id="loginbutton" onclick="jsonforname('1'); return show1('videopro','loginpage','loginpage'); "></input>
+					</form>
+					<p>Please log in as a user and remember to use the same username each time you want to access this platform.</p>
+					<p>Username should be at least 3 characters or numbers.</p>
+
+					<script language="JavaScript">
+					window.addEventListener('load', checkinput());
+					function checkinput(){
+					if(document.getElementById("field1").value.length < 3){
+						document.getElementById("loginbutton1").disabled = true;
+						document.getElementById("loginbutton").disabled = true;
+					}else if(document.getElementById("field1").value.length >= 3){
+						document.getElementById("loginbutton1").disabled = false;
+						document.getElementById("loginbutton").disabled = false;
+					}
+				}
+					</script>
+
 				</div>
-			</footer>
-		</div>
+					<ul class="bg-bubbles">
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+				</div>
 
+			</body1>
 
 <div id="videopro" style="display:none"> // video pro page
 
@@ -100,98 +100,180 @@
 			<!-- Three -->
 				<section id="three" class="wrapper">
 					<div class="inner">
-						<header class="align-center">
-							<h2>Videos</h2>
-							<p>Choose which lectrure you want to watch</p>
-						</header>
 
-						        			<button id=video1 class="button" onclick="vid1()">Video1</button>
-						        			<button id=video2 class="button" onclick="vid2()">Video2</button>
-						        			<button id=video3 class="button" onclick="vid3()">Video3</button>
-						        			<button id=video4 class="button" onclick="vid4()">Video4</button>
-						        			<button id=video5 class="button" onclick="vid5()">Video5</button>
-						<br/>
-						<br/>
-						<div id="player"></div>
-						<br/>
-						<br/>
-						<br/>
-						<div class="camera">
-					  	<video id="video" hidden>Video stream not available.</video>
-					  </div>
-						<p>
-	          	<br/>
-	            <font size="5">How engaged are you?
-	          </p>
-						<br/>
-						<button1 class="button" id=objButton0 value="0"></button1>
-						<button class="button" id=objButton1 value="1">Unengaged</button>
-						<button class="button" id=objButton2 value="2">Slightly Unengaged</button>
-						<button class="button" id=objButton3 value="3">Neutral</button>
-						<button class="button" id=objButton4 value="4">Slightly Engaged</button>
-						<button class="button" id=objButton5 value="5">Engaged</button>
-						<br/>
-						<br/>
-						<!-- <script>
-	            // window.onbeforeunload = function(){
+			        <head>
+			        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+			        <meta name="keywords" content="" />
+			        <meta name="description" content="" />
+			        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+			        <script type="text/javascript" src="assets/dropdown.js"></script>
+			        <!-- <script type="text/javascript" src="assets/ajax1.js"></script> -->
+			        <script type="text/javascript" src="assets/json.js"></script>
+			        <script type="text/javascript" src="assets/graph.js"></script>
+			        <script type="text/javascript" src="assets/pages.js"></script>
+			        <script type="text/javascript" src="assets/youtube.js"></script>
+			        <script type="text/javascript" src="assets/veds.js"></script>
+			        <!-- <script type="text/javascript" src="webgazer.js"></script> -->
+			        <script type="text/javascript" src="assets/takephoto.js"></script>
+			        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700|Archivo+Narrow:400,700" rel="stylesheet" type="text/css"/>
+			        <link rel="stylesheet" href="assets/default.css" type="text/css" media="all" />
+			        <link rel="stylesheet" src="assets/graph.css" type="text/css" media="all" />
+			        <!-- <link rel="stylesheet" src="assets/googlefonts.css" type="text/css" media="all" /> -->
+			        <link rel="stylesheet" href="assets/button.css" type="text/css" media="all" />
+			        <link rel="stylesheet" href="assets/dropdown.css" type="text/css" media="all" />
+			      </head>
+			        <body>
+			          <script type="text/php">
+			          php include('CORS1.php');
+			          </script>
 
-	              downloadCSV({ filename: "data.csv" });
+			          <h2 id="title2">Hello!!</h2>
+			<!-- <script>document.write(document.getElementById('field1'));</script> -->
+			          <br/>
+			          <p>Alpha version 0.2.4</p>
+			        		<!-- <h2 class="title"><a href="#">Choose a video you like.</a></h2> -->
+			            <h2 class="title">Welcome!!</h2>
+			            <h2 class="title">Important: click the shield above on the URL and choose "load unsafe script" <br/> <img src="assets/load.png">,<br/> it will allow the data to be sent to the server.<br/>This app does not work on phone at the moment, if possible Google Chrome is preferred.</h2>
+			            <p>Hi and thanks for helping us with our project!<br/> Choose any of the videos we have available on our platform and watch them.<br/> As you watch, please rate the videos at different times in the video depending on your engagement levels.<br/> Do this as many times as you think is necessary. Also, please do not have the window where the platform is running on fullscreen.<br/> Please make sure you are in an environment where you are not facing any distractions.<br/> The more videos you are able to watch and rate the better!</p>
+			          <div class="dropdown">
+			            <button class="dropbtn" onclick="myFunction()">Video List</button>
+			            <div id="myDropdown" class="dropdown-content">
+			              <input type="text" placeholder="Search Video Here" id="myInput" onkeyup="filterFunction()"></input>
+			              <a id="video0" value = '0'onclick="vid1('0')"><script>document.write(videosIDname[0])</script></a>
+			              <a id="video1" value = '1' onclick="vid1('1')"><script>document.write(videosIDname[1])</script></a>
+			              <a id="video2" value = '2' onclick="vid1('2')"><script>document.write(videosIDname[2])</script></a>
+			              <a id="video3" value = '3' onclick="vid1('3')"><script>document.write(videosIDname[3])</script></a>
+			              <a id="video4" value = '4' onclick="vid1('4')"><script>document.write(videosIDname[4])</script></a>
+			              <a id="video5" value = '5' onclick="vid1('5')"><script>document.write(videosIDname[5])</script></a>
+			              <a id="video6" value = '6' onclick="vid1('6')"><script>document.write(videosIDname[6])</script></a>
+			              <a id="video7" value = '7' onclick="vid1('7')"><script>document.write(videosIDname[7])</script></a>
+			              <a id="video8" value = '8' onclick="vid1('8')"><script>document.write(videosIDname[8])</script></a>
+			              <a id="video9" value = '9' onclick="vid1('9')"><script>document.write(videosIDname[9])</script></a>
+			              <a id="video10" value = '10' onclick="vid1('10')"><script>document.write(videosIDname[10])</script></a>
+			              <a id="video11" value = '11' onclick="vid1('11')"><script>document.write(videosIDname[11])</script></a>
+			              <a id="video12" value = '12' onclick="vid1('12')"><script>document.write(videosIDname[12])</script></a>
+			              <a id="video13" value = '13' onclick="vid1('13')"><script>document.write(videosIDname[13])</script></a>
+			              <a id="video14" value = '14' onclick="vid1('14')"><script>document.write(videosIDname[14])</script></a>
+			              <a id="video15" value = '15' onclick="vid1('15')"><script>document.write(videosIDname[15])</script></a>
+			              <a id="video16" value = '16' onclick="vid1('16')"><script>document.write(videosIDname[16])</script></a>
+			              <a id="video17" value = '17' onclick="vid1('17')"><script>document.write(videosIDname[17])</script></a>
+			              <a id="video18" value = '18' onclick="vid1('18')"><script>document.write(videosIDname[18])</script></a>
+			              <a id="video19" value = '19' onclick="vid1('19')"><script>document.write(videosIDname[19])</script></a>
+			              <a id="video20" value = '20' onclick="vid1('20')"><script>document.write(videosIDname[20])</script></a>
+			              <a id="video21" value = '21' onclick="vid1('21')"><script>document.write(videosIDname[21])</script></a>
+			              <a id="video22" value = '22' onclick="vid1('22')"><script>document.write(videosIDname[22])</script></a>
+			              <a id="video23" value = '23' onclick="vid1('23')"><script>document.write(videosIDname[23])</script></a>
+			              <a id="video24" value = '24' onclick="vid1('24')"><script>document.write(videosIDname[24])</script></a>
+			              <a id="video25" value = '25' onclick="vid1('25')"><script>document.write(videosIDname[25])</script></a>
+			              <a id="video26" value = '26' onclick="vid1('26')"><script>document.write(videosIDname[26])</script></a>
+			              <a id="video27" value = '27' onclick="vid1('27')"><script>document.write(videosIDname[27])</script></a>
+			              <a id="video28" value = '28' onclick="vid1('28')"><script>document.write(videosIDname[28])</script></a>
+			              <a id="video29" value = '29' onclick="vid1('29')"><script>document.write(videosIDname[29])</script></a>
+			              <a id="video30" value = '30' onclick="vid1('30')"><script>document.write(videosIDname[30])</script></a>
+			              <a id="video31" value = '31' onclick="vid1('31')"><script>document.write(videosIDname[31])</script></a>is
+			              <a id="video32" value = '32' onclick="vid1('32')"><script>document.write(videosIDname[32])</script></a>
+			              <a id="video33" value = '33' onclick="vid1('33')"><script>document.write(videosIDname[33])</script></a>
+			              <a id="video34" value = '34' onclick="vid1('34')"><script>document.write(videosIDname[34])</script></a>
+			          </div>
+			        </div>
 
-	              str = JSON.stringify(dict, null, 4);
-	                console.log(str); // Logs output to dev tools console.
-									alert(str);
-	                //document.getElementById('test').innerHTML = (str); // Displays output using window.alert()
-	              $.ajax({
-	                  url: "https://requestb.in/186phle1",
-	                  type: "POST",
-	                  data: str,
-	                  dataType: "json",
-	                  success: function (result) {
-	                      switch (result) {
-	                          case true:
-	                              processResponse(result);
-	                              break;
-	                          default:
-	                              resultDiv.html(result);
-	                      }
-	                  },
-	                  error: function (xhr, ajaxOptions, thrownError) {
-	                  alert(xhr.status);
-	                  }
-	              });
-	            }
-	            </script> -->
-	            <br/>
-							<p>
-								<br/>
-								<font size="5">Here you can see the pictures that are taken
-							</p>
 
-	            <canvas id="canvas"></canvas>
-	            <br/>
-	            <br/>
-	            <br/>
-					</div>
+			            <div style="clear: both;">&nbsp;</div>
+			        		<div class="entry">
+			              <br/>
+			              <br/>
+			              <br/>
+
+			            <div id="player"></div>
+			            <div class="camera">
+			              <video id="video" hidden>Video stream not available.</video>
+			            </div>
+			            <p>
+			            	<br/>
+			            	<font size="5">How engaged are you?
+			            </p>
+			            <br/>
+			            <button class="button" id=objButton1 value="1">Unengaged</button>
+			            <button class="button" id=objButton2 value="2">Slightly Unengaged</button>
+			            <button class="button" id=objButton3 value="3">Neutral</button>
+			            <button class="button" id=objButton4 value="4">Slightly Engaged</button>
+			            <button class="button" id=objButton5 value="5">Engaged</button>
+			            <br/>
+			            <br/>
+			            Please be advised that photographs will be taken when Engagement buttons are pressed <br/>for use on the redcommendation service only.<br/> Your picture will not be saved or used on other purposes.
+			            <script type="text/javascript">
+			            window.onbeforeunload=function(){
+			                // dict.push(
+			                //           {
+			                //               username:user.value,
+			                //               movieId:vid,
+			                //               time:player.getCurrentTime(),
+			                //               videocompletion:player.getCurrentTime() / player.getDuration(),
+			                //           }
+			                //         );
+			              //leavepage();
+			              //console.log("function alrt WORKS !!!!");
+			              //window.alert("closing now.....");
+			              str = JSON.stringify(dict, null, 4);
+			              console.log(str); // Logs output to dev tools console.
+			              $.ajax({
+			                  async : false,
+			                  url: "http://projectemotion.azurewebsites.net/",
+			                  type: "POST",
+			                  data: str,
+			                  dataType: "json",
+			                  timeout: 10000,
+			                  success: function (result) {
+			                      switch (result) {
+			                          case true:
+			                              processResponse(result);
+			                              break;
+			                          default:
+			                              resultDiv.html(result);
+			                      }
+			                  },
+			                  error: function (xhr, ajaxOptions, thrownError) {
+			                  //alert(xhr.status);
+			                  }
+			              });
+			              return "leave";
+
+			            }
+			            </script>
+			            <br/>
+			            <canvas id="canvas" ></canvas>
+			            <br/>
+			            <br/>
+			            <br/>
+			            <div id="graphdiv2" style="width:500px; height:300px;"></div>
+			            <script type="text/javascript">
+			              g2 = new Dygraph(
+			                document.getElementById("graphdiv2"),
+			                "Time, Engagement Level\n" + dataAcc        // options
+			              );
+			            </script>
+			        		<br/>
+			        	</div>
+			        	</div>
+			        </div>
+			        </body>
+			        <!-- Footer -->
+			          <footer id="footer">
+			            <div class="inner">
+			              <div class="flex">
+			                <div class="copyright">
+			                  &copy; Imperial College Electrical and Electronic Department 2017
+			                </div>
+			                <ul class="icons">
+			                  <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+			                  <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+			                  <li><a href="#" class="icon fa-linkedin"><span class="label">linkedIn</span></a></li>
+			                  <li><a href="#" class="icon fa-pinterest-p"><span class="label">Pinterest</span></a></li>
+			                  <li><a href="#" class="icon fa-vimeo"><span class="label">Vimeo</span></a></li>
+			                </ul>
+			          </footer>
+
 				</section>
-
-
-			<!-- Footer -->
-				<footer id="footer">
-					<div class="inner">
-						<div class="flex">
-							<div class="copyright">
-								&copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com">Unsplash</a>.
-							</div>
-							<ul class="icons">
-								<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon fa-linkedin"><span class="label">linkedIn</span></a></li>
-								<li><a href="#" class="icon fa-pinterest-p"><span class="label">Pinterest</span></a></li>
-								<li><a href="#" class="icon fa-vimeo"><span class="label">Vimeo</span></a></li>
-							</ul>
-						</div>
-					</div>
-				</footer>
 </div>
 
 
@@ -794,11 +876,14 @@
 
 
 		<!-- Scripts -->
+		<script type="text/javascript" src="assets/pages.js"></script>
 		<script src="assets/js/jquery.min.js"></script>
 		<script src="assets/js/skel.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
 		<script src="assets/js/real.js"></script>
+		<script src="assets/js/veds.js"></script>
+		<script src="assets/index.js"></script>
 		<script type="text/javascript" src="assets/js/pages.js"></script>
 		<script type="text/javascript" src="assets/js/json.js"></script>
 		<script type="text/javascript" src="assets/js/youtube.js"></script>
