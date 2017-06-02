@@ -16,8 +16,8 @@ ourRequest.onload=function(){
 ourRequest.send();
 
 */
-
-
+//
+// var useer ={};
 var dataAcc = "";
 var testing = document.getElementById('test');
 var dict = [];
@@ -28,8 +28,9 @@ function onPlayerStateChange(event) {
     //  downloadCSV({ filename: "data.csv" });
       str = JSON.stringify(dict, null, 4);
         console.log(str); // Logs output to dev tools console.
+
         //alert(counter);
-      //  alert(str);
+       alert(str);
         //document.getElementById('test').innerHTML = (str); // Displays output using window.alert()
       // $.ajax({
       //     url: "http://projectemotion.azurewebsites.net/",
@@ -65,6 +66,36 @@ function onPlayerStateChange(event) {
                 // alert(errorThrown);
             });
     }
+}
+
+
+function jsonforname(c){
+  var  useer={username:user.value,
+                mode:c};
+
+  nam = JSON.stringify(useer, null, 4);
+    console.log(nam); // Logs output to dev tools console.
+
+    //alert(counter);
+   alert(nam);
+
+  $.post("http://projectemotion.azurewebsites.net/",
+        nam,
+        function(data, textStatus, jqXHR)
+        {
+            useer = [];
+            // alert(textStatus);
+
+             alert(data);
+
+        }).fail(function(jqXHR, textStatus, errorThrown)
+        {
+          useer = [];
+            // alert(jqXHR);
+            // alert(textStatus);
+            // alert(errorThrown);
+        });
+
 }
 
 function convertArrayOfObjectsToCSV(args) {

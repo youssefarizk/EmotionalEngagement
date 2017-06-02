@@ -2,12 +2,14 @@
 <html>
 	<head>
 		<title>Emotional Engagement</title>
-		<meta charset="utf-8" />
+		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/default.css" type="text/css" media="all" />
 		<link rel="stylesheet" src="assets/css/graph.css" type="text/css" media="all" />
 		<link rel="stylesheet" href="assets/css/button.css" type="text/css" media="all" />
+		<link rel="stylesheet" href="assets/css/dropdown.css" type="text/css" media="all" />
+		<link rel="stylesheet" href="assets/css/style.css" type="text/css" media="all"/>
 		<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700|Archivo+Narrow:400,700" rel="stylesheet" type="text/css"/>
 	</head>
 
@@ -18,67 +20,65 @@
 		</script>
 
 		<div id="loginpage"> // login page
-		<!-- Banner -->
-			<section id="banner">
-				<h1>Emotional Engagement</h1>
-				<p>Let your emotions speak for you!</p>
-			</section>
-			<!-- Three -->
-				<section id="three" class="wrapper special">
-					<div class="inner">
-						<header class="align-center">
-							<h2>Who are you</h2>
-              <input type="text" id="field1" name="field1" placeholder="Username" />
-							<p>User or Provider? </p>
-						</header>
-						<div class="flex flex-2">
-							<article>
-								<div class="image fit">
-									<img src="images/pic01.jpg" alt="Pic 01" />
-								</div>
-								<header>
-									<h3>User</h3>
-								</header>
-								<p>Users have the opportunity to...</p>
-								<footer>
-									<button class="button special"onclick="return show1('videopro','loginpage');">User</button>
-								</footer>
-							</article>
-							<article>
-								<div class="image fit">
-									<img src="images/pic02.jpg" alt="Pic 02" />
-								</div>
-								<header>
-									<h3>Provider</h3>
-								</header>
-								<p>As a provider you can now...</p>
-								<footer>
-									<button class="button special" onclick="return show1('videopro','loginpage');">Provider</button>
-								</footer>
-							</article>
-						</div>
-					</div>
-				</section>
+			<body1>
+				<div class="wrapper1">
+				<div class="container1">
+					<h1 class="title">Welcome!</h1>
+					<h2 class="title">Important: please watch this video first.</h2>
+					<!-- <video id="myVideo1" width="509" height="250" controls="controls">
+					<source src="Video/Good.webm" type="video/webm">
+					Your browser does not support HTML5 video.
+				</video>
+				<script>
+					var vid123 = document.getElementById("myVideo1");
+					function enableAutoplay() {
+							vid123.autoplay = true;
+							vid123.load();
+					}
+					enableAutoplay();
+					</script> -->
 
-		<!-- Footer -->
-			<footer id="footer">
-				<div class="inner">
-					<div class="flex">
-						<div class="copyright">
-							&copy; By Imperial College Electrical and Electronic Department
-						</div>
-						<ul class="icons">
-							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon fa-linkedin"><span class="label">linkedIn</span></a></li>
-							<li><a href="#" class="icon fa-pinterest-p"><span class="label">Pinterest</span></a></li>
-							<li><a href="#" class="icon fa-vimeo"><span class="label">Vimeo</span></a></li>
-						</ul>
-					</div>
+
+					<form class="form">
+						<input type="text" id="field1" name="field1" placeholder="Username" onkeyup="checkinput()" />
+						<input type="submit" value="Login as User" name="login" id="loginbutton1" onclick="jsonforname('0'); return show1('videopro','loginpage','graphdiv2'); "></input>
+						<input type="submit" value="Login as Provider" name="login" id="loginbutton" onclick="jsonforname('1'); return show1('videopro','loginpage','loginpage'); "></input>
+					</form>
+					<p>Please log in as a user and remember to use the same username each time you want to access this platform.</p>
+					<p>Username should be at least 3 characters or numbers.</p>
+
+					<script language="JavaScript">
+					window.addEventListener('load', checkinput());
+					function checkinput(){
+					if(document.getElementById("field1").value.length < 3){
+						document.getElementById("loginbutton1").disabled = true;
+						document.getElementById("loginbutton").disabled = true;
+					}else if(document.getElementById("field1").value.length >= 3){
+						document.getElementById("loginbutton1").disabled = false;
+						document.getElementById("loginbutton").disabled = false;
+					}
+				}
+					</script>
+
 				</div>
-			</footer>
-		</div>
+					<ul class="bg-bubbles">
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+				</div>
 
+			</body1>
 
 <div id="videopro" style="display:none"> // video pro page
 
@@ -876,11 +876,14 @@
 
 
 		<!-- Scripts -->
+		<script type="text/javascript" src="assets/pages.js"></script>
 		<script src="assets/js/jquery.min.js"></script>
 		<script src="assets/js/skel.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
 		<script src="assets/js/real.js"></script>
+		<script src="assets/js/veds.js"></script>
+		<script src="assets/index.js"></script>
 		<script type="text/javascript" src="assets/js/pages.js"></script>
 		<script type="text/javascript" src="assets/js/json.js"></script>
 		<script type="text/javascript" src="assets/js/youtube.js"></script>
