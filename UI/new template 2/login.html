@@ -2,14 +2,16 @@
 <html>
 	<head>
 		<title>Emotional Engagement</title>
-		<link rel="stylesheet" href="assets/css/style.css"/>
 	</head>
 	<script type="text/php">
 		php include('CORS1.php');
 	</script>
 	<body>
-		
+
 		<div id="loginpage">
+		<style scoped>
+		@import "assets/css/style.css";
+		</style>
       <body1>
         <div class="wrapper1">
         	<div class="container1">
@@ -19,6 +21,8 @@
             	<source src="Video/Good.webm" type="video/webm">
             	Your browser does not support HTML5 video.
           	</video>
+					<br/>
+					<br/>
             <script>
 	            var vid123 = document.getElementById("myVideo1");
 	            function enableAutoplay() {
@@ -29,8 +33,8 @@
             </script>
             <form class="form">
               <input type="text" id="field1" name="field1" placeholder="Username" onkeyup="checkinput()" />
-              <input type="submit" value="Login as User" name="login" id="loginbutton1" onclick="jsonforname('0'); return show1('videopage','loginpage','graphdiv2'); "></input>
-              <input type="submit" value="Login as Provider" name="login" id="loginbutton" onclick="jsonforname('1'); return show1('videopage','loginpage','loginpage'); "></input>
+              <input type="submit" value="Login as User" name="login" id="loginbutton1" onclick="jsonforname('0'); return show1('videopro','loginpage'); "></input>
+              <input type="submit" value="Login as Provider" name="login" id="loginbutton" onclick="jsonforname('1'); return show1('videopro','loginpage'); "></input>
             </form>
             <p>Please log in as a user and remember to use the same username each time you want to access this platform.</p>
             <p>Username should be at least 3 characters or numbers.</p>
@@ -63,19 +67,23 @@
             <li></li>
           </ul>
         </div>
-        <script src="assets/index.js"></script>
+        <script src="assets/js/index.js"></script>
       </body1>
     </div>
 
 
 
 <div id="videopro" style="display:none"> // video pro page
-
+<style scoped>
+@import 						"assets/css/main.css";
+@import "assets/css/button.css";
+</style>
 		<body class="subpage">
 
 			<!-- Header -->
 				<header id="header">
 					<div class="inner">
+
 						<a href="index.html" class="logo">Theory</a>
 						<nav id="nav">
 							<a onclick="return show1('homepro','videopro');">Homepage</a>
@@ -120,35 +128,6 @@
 						<button class="button" id=objButton5 value="5">Engaged</button>
 						<br/>
 						<br/>
-						<!-- <script>
-	            // window.onbeforeunload = function(){
-
-	              downloadCSV({ filename: "data.csv" });
-
-	              str = JSON.stringify(dict, null, 4);
-	                console.log(str); // Logs output to dev tools console.
-									alert(str);
-	                //document.getElementById('test').innerHTML = (str); // Displays output using window.alert()
-	              $.ajax({
-	                  url: "https://requestb.in/186phle1",
-	                  type: "POST",
-	                  data: str,
-	                  dataType: "json",
-	                  success: function (result) {
-	                      switch (result) {
-	                          case true:
-	                              processResponse(result);
-	                              break;
-	                          default:
-	                              resultDiv.html(result);
-	                      }
-	                  },
-	                  error: function (xhr, ajaxOptions, thrownError) {
-	                  alert(xhr.status);
-	                  }
-	              });
-	            }
-	            </script> -->
 	            <br/>
 							<p>
 								<br/>

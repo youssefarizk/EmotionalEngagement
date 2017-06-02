@@ -1584,7 +1584,7 @@
 
 /* Type */
 
-	body, input, select, textarea {
+	body, input1, select, textarea {
 		color: #9a9a9a;
 		font-family: "Raleway", Arial, Helvetica, sans-serif;
 		font-size: 13pt;
@@ -1594,7 +1594,7 @@
 
 		@media screen and (max-width: 1680px) {
 
-			body, input, select, textarea {
+			body, input1, select, textarea {
 				font-size: 11pt;
 			}
 
@@ -1602,7 +1602,7 @@
 
 		@media screen and (max-width: 1280px) {
 
-			body, input, select, textarea {
+			body, input1, select, textarea {
 				font-size: 11pt;
 			}
 
@@ -1610,7 +1610,7 @@
 
 		@media screen and (max-width: 980px) {
 
-			body, input, select, textarea {
+			body, input1, select, textarea {
 				font-size: 12pt;
 			}
 
@@ -1618,7 +1618,7 @@
 
 		@media screen and (max-width: 736px) {
 
-			body, input, select, textarea {
+			body, input1, select, textarea {
 				font-size: 12pt;
 			}
 
@@ -1626,7 +1626,7 @@
 
 		@media screen and (max-width: 480px) {
 
-			body, input, select, textarea {
+			body, input1, select, textarea {
 				font-size: 12pt;
 			}
 
@@ -1992,10 +1992,10 @@
 		margin: 0 0 1em 0;
 	}
 
-	input[type="text"],
-	input[type="password"],
-	input[type="email"],
-	input[type="tel"],
+	input1[type="text"],
+	input1[type="password"],
+	input1[type="email"],
+	input1[type="tel"],
 	select,
 	textarea {
 		-moz-appearance: none;
@@ -2014,19 +2014,19 @@
 		width: 100%;
 	}
 
-		input[type="text"]:invalid,
-		input[type="password"]:invalid,
-		input[type="email"]:invalid,
-		input[type="tel"]:invalid,
+		input1[type="text"]:invalid,
+		input1[type="password"]:invalid,
+		input1[type="email"]:invalid,
+		input1[type="tel"]:invalid,
 		select:invalid,
 		textarea:invalid {
 			box-shadow: none;
 		}
 
-		input[type="text"]:focus,
-		input[type="password"]:focus,
-		input[type="email"]:focus,
-		input[type="tel"]:focus,
+		input1[type="text"]:focus,
+		input1[type="password"]:focus,
+		input1[type="email"]:focus,
+		input1[type="tel"]:focus,
 		select:focus,
 		textarea:focus {
 			border-color: #5385c1;
@@ -2066,9 +2066,9 @@
 			display: none;
 		}
 
-	input[type="text"],
-	input[type="password"],
-	input[type="email"],
+	input1[type="text"],
+	input1[type="password"],
+	input1[type="email"],
 	select {
 		height: 2.75em;
 	}
@@ -2077,8 +2077,8 @@
 		padding: 0.75em 1em;
 	}
 
-	input[type="checkbox"],
-	input[type="radio"] {
+	input1[type="checkbox"],
+	input1[type="radio"] {
 		-moz-appearance: none;
 		-webkit-appearance: none;
 		-ms-appearance: none;
@@ -2091,8 +2091,8 @@
 		z-index: -1;
 	}
 
-		input[type="checkbox"] + label,
-		input[type="radio"] + label {
+		input1[type="checkbox"] + label,
+		input1[type="radio"] + label {
 			text-decoration: none;
 			color: #9a9a9a;
 			cursor: pointer;
@@ -2104,8 +2104,8 @@
 			position: relative;
 		}
 
-			input[type="checkbox"] + label:before,
-			input[type="radio"] + label:before {
+			input1[type="checkbox"] + label:before,
+			input1[type="radio"] + label:before {
 				-moz-osx-font-smoothing: grayscale;
 				-webkit-font-smoothing: antialiased;
 				font-family: FontAwesome;
@@ -2114,8 +2114,8 @@
 				text-transform: none !important;
 			}
 
-			input[type="checkbox"] + label:before,
-			input[type="radio"] + label:before {
+			input1[type="checkbox"] + label:before,
+			input1[type="radio"] + label:before {
 				background: rgba(144, 144, 144, 0.075);
 				border-radius: 0;
 				border: solid 1px #dbdbdb;
@@ -2130,29 +2130,29 @@
 				width: 1.65em;
 			}
 
-		input[type="checkbox"]:checked + label:before,
-		input[type="radio"]:checked + label:before {
+		input1[type="checkbox"]:checked + label:before,
+		input1[type="radio"]:checked + label:before {
 			background: #5a5a5a;
 			border-color: #5a5a5a;
 			color: #ffffff;
 			content: '\f00c';
 		}
 
-		input[type="checkbox"]:focus + label:before,
-		input[type="radio"]:focus + label:before {
+		input1[type="checkbox"]:focus + label:before,
+		input1[type="radio"]:focus + label:before {
 			border-color: #5385c1;
 			box-shadow: 0 0 0 1px #5385c1;
 		}
 
-	input[type="checkbox"] + label:before {
+	input1[type="checkbox"] + label:before {
 		border-radius: 0;
 	}
 
-	input[type="radio"] + label:before {
+	input1[type="radio"] + label:before {
 		border-radius: 100%;
 	}
 
-	::-webkit-input-placeholder {
+	::-webkit-input1-placeholder {
 		color: #bbb !important;
 		opacity: 1.0;
 	}
@@ -2167,7 +2167,7 @@
 		opacity: 1.0;
 	}
 
-	:-ms-input-placeholder {
+	:-ms-input1-placeholder {
 		color: #bbb !important;
 		opacity: 1.0;
 	}
@@ -2536,9 +2536,9 @@
 
 /* Button */
 
-	input[type="submit"],
-	input[type="reset"],
-	input[type="button"],
+	input1[type="submit"],
+	input1[type="reset"],
+	input1[type="button"],
 	button,
 	.button {
 		-moz-appearance: none;
@@ -2564,41 +2564,41 @@
 		white-space: nowrap;
 	}
 
-		input[type="submit"]:hover,
-		input[type="reset"]:hover,
-		input[type="button"]:hover,
+		input1[type="submit"]:hover,
+		input1[type="reset"]:hover,
+		input1[type="button"]:hover,
 		button:hover,
 		.button:hover {
 			background-color: #676767;
 		}
 
-		input[type="submit"]:active,
-		input[type="reset"]:active,
-		input[type="button"]:active,
+		input1[type="submit"]:active,
+		input1[type="reset"]:active,
+		input1[type="button"]:active,
 		button:active,
 		.button:active {
 			background-color: #4d4d4d;
 		}
 
-		input[type="submit"].icon,
-		input[type="reset"].icon,
-		input[type="button"].icon,
+		input1[type="submit"].icon,
+		input1[type="reset"].icon,
+		input1[type="button"].icon,
 		button.icon,
 		.button.icon {
 			padding-left: 1.35em;
 		}
 
-			input[type="submit"].icon:before,
-			input[type="reset"].icon:before,
-			input[type="button"].icon:before,
+			input1[type="submit"].icon:before,
+			input1[type="reset"].icon:before,
+			input1[type="button"].icon:before,
 			button.icon:before,
 			.button.icon:before {
 				margin-right: 0.5em;
 			}
 
-		input[type="submit"].fit,
-		input[type="reset"].fit,
-		input[type="button"].fit,
+		input1[type="submit"].fit,
+		input1[type="reset"].fit,
+		input1[type="button"].fit,
 		button.fit,
 		.button.fit {
 			display: block;
@@ -2606,25 +2606,25 @@
 			width: 100%;
 		}
 
-		input[type="submit"].small,
-		input[type="reset"].small,
-		input[type="button"].small,
+		input1[type="submit"].small,
+		input1[type="reset"].small,
+		input1[type="button"].small,
 		button.small,
 		.button.small {
 			font-size: 0.8em;
 		}
 
-		input[type="submit"].big,
-		input[type="reset"].big,
-		input[type="button"].big,
+		input1[type="submit"].big,
+		input1[type="reset"].big,
+		input1[type="button"].big,
 		button.big,
 		.button.big {
 			font-size: 1.35em;
 		}
 
-		input[type="submit"].alt,
-		input[type="reset"].alt,
-		input[type="button"].alt,
+		input1[type="submit"].alt,
+		input1[type="reset"].alt,
+		input1[type="button"].alt,
 		button.alt,
 		.button.alt {
 			background-color: transparent;
@@ -2632,60 +2632,60 @@
 			color: #555 !important;
 		}
 
-			input[type="submit"].alt:hover,
-			input[type="reset"].alt:hover,
-			input[type="button"].alt:hover,
+			input1[type="submit"].alt:hover,
+			input1[type="reset"].alt:hover,
+			input1[type="button"].alt:hover,
 			button.alt:hover,
 			.button.alt:hover {
 				background-color: rgba(144, 144, 144, 0.075);
 			}
 
-			input[type="submit"].alt:active,
-			input[type="reset"].alt:active,
-			input[type="button"].alt:active,
+			input1[type="submit"].alt:active,
+			input1[type="reset"].alt:active,
+			input1[type="button"].alt:active,
 			button.alt:active,
 			.button.alt:active {
 				background-color: rgba(144, 144, 144, 0.2);
 			}
 
-			input[type="submit"].alt.icon:before,
-			input[type="reset"].alt.icon:before,
-			input[type="button"].alt.icon:before,
+			input1[type="submit"].alt.icon:before,
+			input1[type="reset"].alt.icon:before,
+			input1[type="button"].alt.icon:before,
 			button.alt.icon:before,
 			.button.alt.icon:before {
 				color: #bbb;
 			}
 
-		input[type="submit"].special,
-		input[type="reset"].special,
-		input[type="button"].special,
+		input1[type="submit"].special,
+		input1[type="reset"].special,
+		input1[type="button"].special,
 		button.special,
 		.button.special {
 			background-color: #5385c1;
 			color: #ffffff !important;
 		}
 
-			input[type="submit"].special:hover,
-			input[type="reset"].special:hover,
-			input[type="button"].special:hover,
+			input1[type="submit"].special:hover,
+			input1[type="reset"].special:hover,
+			input1[type="button"].special:hover,
 			button.special:hover,
 			.button.special:hover {
 				background-color: #6692c8;
 			}
 
-			input[type="submit"].special:active,
-			input[type="reset"].special:active,
-			input[type="button"].special:active,
+			input1[type="submit"].special:active,
+			input1[type="reset"].special:active,
+			input1[type="button"].special:active,
 			button.special:active,
 			.button.special:active {
 				background-color: #4278b8;
 			}
 
-		input[type="submit"].disabled, input[type="submit"]:disabled,
-		input[type="reset"].disabled,
-		input[type="reset"]:disabled,
-		input[type="button"].disabled,
-		input[type="button"]:disabled,
+		input1[type="submit"].disabled, input1[type="submit"]:disabled,
+		input1[type="reset"].disabled,
+		input1[type="reset"]:disabled,
+		input1[type="button"].disabled,
+		input1[type="button"]:disabled,
 		button.disabled,
 		button:disabled,
 		.button.disabled,
@@ -2699,9 +2699,9 @@
 
 		@media screen and (max-width: 480px) {
 
-			input[type="submit"],
-			input[type="reset"],
-			input[type="button"],
+			input1[type="submit"],
+			input1[type="reset"],
+			input1[type="button"],
 			button,
 			.button {
 				padding: 0;
