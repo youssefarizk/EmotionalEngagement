@@ -32,9 +32,8 @@ Although you can use them, for a more unique website, replace these images with 
       php include('CORS1.php');
     </script>
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700|Archivo+Narrow:400,700" rel="stylesheet" type="text/css"/>
-    <link rel="stylesheet" href="assets/default.css" type="text/css" media="all" />
     <!-- <link rel="stylesheet" src="assets/googlefonts.css" type="text/css" media="all" /> -->
-    <link rel="stylesheet" href="assets/css/dropdown.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="css/dropdown.css" type="text/css" media="all" />
 
 </head>
 
@@ -59,27 +58,16 @@ Although you can use them, for a more unique website, replace these images with 
             <!-- Navbar links -->
             <div class="collapse navbar-collapse" id="navbar">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="active">
-                        <a href="#" >Login</a>
+                    <li>
+                        <a onclick=" return show2('homepage','videopage','graphpage');">Homepage</a>
                     </li>
                     <li>
-                        <a href="#">Videos</a>
+                      <a onclick=" return show2('videopage','homepage','graphpage');">Watch Videos</a>
                     </li>
                     <li>
-                        <a href="#">Graphical Results</a>
+                      <a onclick=" return show2('homepage','videopage','graphpage');">Graphical results</a>
                     </li>
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Homepage <span class="caret"></span></a>
-						<ul class="dropdown-menu" aria-labelledby="about-us">
-							<li><a href="#">What we do</a></li>
-							<li><a href="#">UI</a></li>
-							<li><a href="#">Server</a></li>
-              <li><a href="#">Machine Learning</a></li>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Contact</a></li>
 
-						</ul>
-					</li>
 
                 </ul>
 
@@ -110,8 +98,8 @@ Although you can use them, for a more unique website, replace these images with 
                     </script>
                     <ul class="log-buttons">
                       <input type="text" id="field1" name="field1" placeholder="Username" onkeyup="checkinput()" />
-                      <input type="submit"value="Login as User" name="login" id="loginbutton1" onclick="jsonforname('0'); return show1('videopage','loginpage'); "></input>
-                      <input type="submit" value="Login as Provider" name="login" id="loginbutton" onclick="jsonforname('1'); return show1('videopage','loginpage'); "></input>
+                      <input type="submit"value="Login as User" name="login" id="loginbutton1" onclick="jsonforname('0'); return show1('homepage','loginpage'); "></input>
+                      <input type="submit" value="Login as Provider" name="login" id="loginbutton" onclick="jsonforname('1'); return show1('homepage','loginpage'); "></input>
                     </ul>
                     <p>Please log in as a user and remember to use the same username each time you want to access this platform.</p>
                     <p>Username should be at least 3 characters or numbers.</p>
@@ -131,13 +119,14 @@ Although you can use them, for a more unique website, replace these images with 
             </div>
 
             <div id="videopage" class="header-content" style="display:none">
-                <div class="header-content-inner">
+              <script type="text/javascript" src="js/veds.js"></script>     <!-- Videos Array -->
+                <div class="header-content-inner" style="margin-left:50px;">
                   <h2 class="title">Welcome!!</h2>
                   <h2 class="title">Important:<br/>This app does not work on phone at the moment, if possible Google Chrome is preferred.</h2>
                   <p>Hi and thanks for helping us with our project!<br/> Choose any of the videos we have available on our platform and watch them.<br/> As you watch, please rate the videos at different times in the video depending on your engagement levels.<br/> Do this as many times as you think is necessary. Also, please do not have the window where the platform is running on fullscreen.<br/> Please make sure you are in an environment where you are not facing any distractions.<br/> The more videos you are able to watch and rate the better!</p>
                   <div class="dropdown2">
                   <button class="dropbtn2" onclick="myFunction()">Video List</button>
-                  <div id="myDropdown" class="dropdown2-content">
+                  <div id="myDropdown" class="dropdown2-content scrollable-menu">
                     <input type="text" placeholder="Search Video Here" id="myInput" onkeyup="filterFunction()"></input>
                     <a id="video0" value = '0'onclick="vid1('0')"><script>document.write(videosIDname[0])</script></a>
                     <a id="video1" value = '1' onclick="vid1('1')"><script>document.write(videosIDname[1])</script></a>
@@ -247,6 +236,119 @@ Although you can use them, for a more unique website, replace these images with 
                 </div>
             </div>
 
+            <div id="homepage" class="header-content" style="display:none">
+              <header>
+                  <div class="header-content">
+                      <div class="header-content-inner">
+                          <h1>Dramatically Engaged</h1>
+                          <p>Use your emotions for better user experience</p>
+                      </div>
+                  </div>
+              </header>
+
+            <!-- Intro Section -->
+              <section class="intro">
+                  <div class="container">
+                      <div class="row">
+                          <div class="col-lg-8 col-lg-offset-2">
+                            <span class="glyphicon glyphicon-apple" style="font-size: 60px"></span>
+                              <h2 class="section-heading">What we do?</h2>
+                              <p class="text-light">Professionally cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-leveling customer service for state of the art customer service.</p>
+                          </div>
+                      </div>
+                  </div>
+              </section>
+
+            <!-- Content 1 -->
+              <section class="content">
+                  <div class="container">
+                      <div class="row">
+                          <div class="col-sm-6">
+                              <img class="img-responsive img-circle center-block" src="images/microphone.jpg" alt="">
+                          </div>
+                          <div class="col-sm-6">
+                            <h2 class="section-header">Best in Class</h2>
+                            <p class="lead text-muted">Holisticly predominate extensible testing procedures for reliable supply chains. Dynamically innovate resource-leveling customer service for state of the art customer service.</p>
+                            <a href="#" class="btn btn-primary btn-lg">Classify It</a>
+                          </div>
+
+                      </div>
+                  </div>
+              </section>
+
+            <!-- Content 2 -->
+               <section class="content content-2">
+                  <div class="container">
+                      <div class="row">
+                          <div class="col-sm-6">
+                            <h2 class="section-header">Superior Quality</h2>
+                            <p class="lead text-light">Holisticly predominate extensible testing procedures for reliable supply chains. Dynamically innovate resource-leveling customer service for state of the art customer service.</p>
+                            <a href="#" class="btn btn-default btn-lg">Test It</a>
+                          </div>
+                          <div class="col-sm-6">
+                              <img class="img-responsive img-circle center-block" src="images/iphone.jpg" alt="">
+                          </div>
+
+                      </div>
+                  </div>
+              </section>
+
+              <!-- Promos -->
+            <div class="container-fluid">
+                  <div class="row promo">
+                    <a href="#">
+                  <div class="col-md-4 promo-item item-1">
+                    <h3>
+                      Unleash
+                    </h3>
+                  </div>
+                      </a>
+                      <a href="#">
+                  <div class="col-md-4 promo-item item-2">
+                    <h3>
+                      Synergize
+                    </h3>
+                  </div>
+                      </a>
+
+                <a href="#">
+                  <div class="col-md-4 promo-item item-3">
+                    <h3>
+                      Procrastinate
+                    </h3>
+                  </div>
+                      </a>
+                  </div>
+              </div><!-- /.container-fluid -->
+
+            <!-- Content 3 -->
+               <section class="content content-3">
+                  <div class="container">
+                <h2 class="section-header"><span class="glyphicon glyphicon-pushpin text-primary"></span><br> Sanity Check</h2>
+                <p class="lead text-muted">Holisticly predominate extensible testing procedures for reliable supply chains. Dynamically innovate resource-leveling customer service for state of the art customer service.</p>
+                              <a href="#" class="btn btn-primary btn-lg">Check Now</a>
+                      </div>
+              </section>
+
+            <!-- Footer -->
+              <footer class="page-footer">
+
+                <!-- Contact Us -->
+                  <div class="contact">
+                    <div class="container">
+                  <h2 class="section-heading">Contact Us</h2>
+                  <p><span class="glyphicon glyphicon-earphone"></span><br> +1(23) 456 7890</p>
+                  <p><span class="glyphicon glyphicon-envelope"></span><br> info@example.com</p>
+                    </div>
+                  </div>
+
+                  <!-- Copyright etc -->
+                  <div class="small-print">
+                    <div class="container">
+                      <p>Copyright &copy; Example.com 2015</p>
+                    </div>
+                  </div>
+            </div>
 
 
 
@@ -270,7 +372,6 @@ Although you can use them, for a more unique website, replace these images with 
     <script type="text/javascript" src="js/json.js"></script>     <!-- Send ajax requests(JSON) -->
     <script type="text/javascript" src="js/graph.js"></script>     <!-- Show graphical results -->
     <script type="text/javascript" src="js/youtube.js"></script>     <!-- Steam Youtube Videos -->
-    <script type="text/javascript" src="js/veds.js"></script>     <!-- Videos Array -->
     <script type="text/javascript" src="js/takephoto.js"></script>     <!-- Take photos -->
 
 </body>
